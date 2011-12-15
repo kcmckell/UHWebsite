@@ -1,0 +1,4 @@
+<ul id="navlistteach">
+	<li id="navteach-ee341l"><a href="EE341L.html">EE 341L</a></li>
+	<li id="navteach-ecen5018"><a href="ECEN5018.html">ECEN 5018</a></li> 
+</ul>

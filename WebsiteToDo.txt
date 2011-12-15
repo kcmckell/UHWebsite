@@ -1,0 +1,12 @@
+Webpage Issues:
+
+Fix:
+
+To-Do:
+Replace PNG files with JPG equivalents on images that have no transparency (to save server space).
+
+Notes:
+UHunix include command is a COMMENT <!-- XXX -->
+mckell/public_html% chmod -R 755 *
+Okina: &#699
+Macron on "a": &#257
