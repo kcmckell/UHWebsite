@@ -33,7 +33,8 @@
 <link rel="stylesheet" href="css/grid.css">
 <link rel="stylesheet" href="css/superfish.css">
 <link rel="stylesheet" href="css/flexslider.css" />
-<link rel="stylesheet" href="css/style_1.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css"/>
 <!-- end CSS-->
     
 <!-- JS-->
