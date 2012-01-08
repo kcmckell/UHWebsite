@@ -11,6 +11,16 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
+footer {
+/*    text-align: center;*/
+}
+
+footer #username {
+/*    background-image: url(../img/footersprite.gif);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;*/
+}
+
 #subfoot {
     font-size: x-small
 }
