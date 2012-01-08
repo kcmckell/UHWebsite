@@ -1,0 +1,46 @@
+<div id="contactdiv">
+<ul class="sidelist1">
+<li>
+	Contact:
+</li>
+	<ul class="sidelist2">
+	<li>
+		Kenneth "Clay" McKell
+	</li>
+	<li>
+		Dept. of Electrical Engineering
+	</li>
+	<li>
+		University of Hawai&#699i at M&#257noa
+	</li>
+	<li>
+		Holmes Hall 483
+	</li>
+	<li>
+		2540 Dole St.
+	</li>
+	<li>
+		Honolulu, HI 96822, USA
+	</li>
+	</ul>
+<li>
+	email:
+</li>
+	<ul class="sidelist2">
+	<li>
+	mckell &lt at &gt hawaii &lt dot &gt edu
+	</li>
+	</ul>
+<li>
+	Office:
+</li>
+	<ul class="sidelist2">
+	<li>
+		Holmes Hall 390
+	</li>
+	<li>
+		+1 (808) 956-5209
+	</li>
+	</ul>
+</ul>
+</div>
