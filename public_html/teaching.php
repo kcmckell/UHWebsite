@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-    <base href="http://localhost:8888/UHWebsite/public_html/" />
+    <base href="http://localhost:8888/UHWebsite/public_html/"></base>
 <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>K. Clay McKell at the University of Hawai&#699i at M&#257noa</title>
+  <title>K. Clay McKell: Teaching</title>
   <meta name="description" content="Online webspace for the academic escapades of K. Clay McKell at the University of Hawaii at Manoa.">
   <meta name="author" content="K. Clay McKell">
 
@@ -66,77 +66,24 @@
 		<!--#include virtual="nav.html"-->
         <?php require('nav.html'); ?>
         
-<!-- responsive FlexSlider image slideshow -->
-<!--    <div class="flexslider">
-	    <ul class="slides">
-	    	<li>
-	    		<img src="img/pic1.jpg" />
-	    		<p class="flex-caption">Birds...</p>
-	    	</li>
-	    	<li>
-	    		<a href="http://www.prowebdesign.ro"><img src="img/pic2.jpg" /></a>
-	    		<p class="flex-caption">and bees. This image is also wrapped in a link!</p>
-	    	</li>
-	    	<li>
-	    		<img src="img/pic3.jpg" />
-                <p class="flex-caption">Macro bugger!</p>
-	    	</li>
-	    	<li>
-	    		<img src="img/pic4.jpg" />
-                <p class="flex-caption">Photos by &copy; Konstantin Chuenkov</p>
-	    	</li>
-	    </ul>
-	  </div>-->
-<!-- FlexSlider -->
-        
     </header><!-- end header -->
     
 
 <!-- main content area -->   
     <div id="main" role="main">
     
-<!-- left sidebar -->    
-<!--    <aside class="grid_4">
-    <h2>Secondary Section menu</h2>
-        <nav id="secondary-navigation">
-        		<ul>
-					<li><a href="#">menu item</a></li>
-					<li><a href="#">menu item</a></li>
-					<li><a href="#">menu item</a></li>
-				</ul>
-         </nav>
-
-      </aside>-->
-<!-- #end left sidebar -->
-    
 <!-- content area -->    
       <div id="content">
-          <div class="grid_7">
-              <section id="bio">
-                  <h1>Graduate Student, University of Hawai&#699i at M&#257noa</h1>
-            <p>
-                As a PhD student I am researching game theoretic methods of controlling distributed networks.  As technology advances, networks of devices will only grow larger, and centralized control algorithms prove to be deficient in both robustness and computational tractability, we will lean towards more decentralized control.
-            </p>
-            <p>
-				Game theory is a rich topic thats uses have primarily been to describe the possible outcomes of complicated systems of self-interested agents.  From an engineering standpoint, I hope to turn game theory into a design tool that may provide definitive bounds on the efficiencies of distributed control laws.
-            </p>
-              </section>
-          </div>
-          <div class="grid_5">
-              <section id="education">
-                  <h1>Education</h1>
-                  <p>
-                  <details>
-                      <summary>Master of Science in Mechanical Engineering</summary>
-                      <div>2007 from the University of California, Los Angeles</div>
-                  </details>
-                  <details>
-                      <summary>Bachelor of Science in Mechanical Engineering</summary>
-                      <div>2006 <span class="latin">summa cum laude</span> from the University of California, Los Angeles</div>
-                  </details>
-              </p>
-              </section>
-          </div>
+          <section>
+              <details>
+                  <summary>Spring 2010 - ECEN 5018 Game Theory and Multiagent Systems</summary>
+                  <div>Substitute lecturer and TA office hours at the  University of Colorado at Boulder.</div>
+              </details>
+              <details>
+                  <summary>Fall 2009 - EE 341L Communication Systems Lab</summary>
+                  <div>Two 3-hour sections per week.  From the University of Hawaii course catalog:  Experiments illustrating the basic principles of communication systems.</div>
+              </details>
+          </section>
       </div><!-- #end content area -->
       
  <!-- columns demo-->

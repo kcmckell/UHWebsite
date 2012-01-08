@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-    <base href="http://localhost:8888/UHWebsite/public_html/" />
+    <base href="http://localhost:8888/UHWebsite/public_html/"></base>
 <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>K. Clay McKell at the University of Hawai&#699i at M&#257noa</title>
+  <title>K. Clay McKell: Personal</title>
   <meta name="description" content="Online webspace for the academic escapades of K. Clay McKell at the University of Hawaii at Manoa.">
   <meta name="author" content="K. Clay McKell">
 
@@ -67,26 +67,35 @@
         <?php require('nav.html'); ?>
         
 <!-- responsive FlexSlider image slideshow -->
-<!--    <div class="flexslider">
+    <div class="flexslider">
 	    <ul class="slides">
 	    	<li>
-	    		<img src="img/pic1.jpg" />
-	    		<p class="flex-caption">Birds...</p>
+	    		<a href="http://www.flickr.com/photos/claymckell/3677267015/" class="ext"><img src="Personal_files/LookingSkyward.png" /></a>
+	    		<p class="flex-caption">
+				<span class="caption_head">Photography</span>
+                I picked up a camera in 2007, and since then I've really become passionate about photography.
+				For a look at my most recent work, please check out my <a href="http://www.flickr.com/photos/claymckell" class="ext">Flickr</a> page.  You can find my portfolio <a href="http://www.flickr.com/photos/claymckell/collections/72157622398426752/" class="ext">here</a>.
+				For details about bookings, please contact me through <a href="http://snapm.com/users/15" class="ext">snapm</a>.
+                </p>
 	    	</li>
 	    	<li>
-	    		<a href="http://www.prowebdesign.ro"><img src="img/pic2.jpg" /></a>
-	    		<p class="flex-caption">and bees. This image is also wrapped in a link!</p>
+	    		<a href="http://www.flickr.com/photos/codybadger/1482061532/in/set-72157602260899223/" class="ext"><img src="Personal_files/AKpic.png" /></a>
+	    		<p class="flex-caption">
+                    <span class="caption_head">Travel</span>
+                    "Travel is fatal to prejudice, bigotry, and narrow-mindedness" -Mark Twain.
+                    I am hard-pressed to sum up my thoughts on travel better than the great American novelist.  In addition to being a welcome reprieve from everyday monotony, I find travelling to truly be an education unto itself.
+                    No wonder I enjoy it so much!
+                </p>
 	    	</li>
 	    	<li>
-	    		<img src="img/pic3.jpg" />
-                <p class="flex-caption">Macro bugger!</p>
-	    	</li>
-	    	<li>
-	    		<img src="img/pic4.jpg" />
-                <p class="flex-caption">Photos by &copy; Konstantin Chuenkov</p>
+                <a href="http://afeinphoto.com/Home.html"><img src="Personal_files/ulty.png" /></a>
+                <p class="flex-caption">
+                    <span class="caption_head">Ultimate Frisbee</span>
+                    Greatest sport on earth!  I've been playing since 2002 and get my fix once or twice a week with the <a href="http://www.hawaiiultimate.com/" class="ext">Hawaii Ultiamte League Association</a>.
+                </p>
 	    	</li>
 	    </ul>
-	  </div>-->
+	  </div>
 <!-- FlexSlider -->
         
     </header><!-- end header -->
@@ -110,71 +119,14 @@
 <!-- #end left sidebar -->
     
 <!-- content area -->    
-      <div id="content">
-          <div class="grid_7">
-              <section id="bio">
-                  <h1>Graduate Student, University of Hawai&#699i at M&#257noa</h1>
-            <p>
-                As a PhD student I am researching game theoretic methods of controlling distributed networks.  As technology advances, networks of devices will only grow larger, and centralized control algorithms prove to be deficient in both robustness and computational tractability, we will lean towards more decentralized control.
-            </p>
-            <p>
-				Game theory is a rich topic thats uses have primarily been to describe the possible outcomes of complicated systems of self-interested agents.  From an engineering standpoint, I hope to turn game theory into a design tool that may provide definitive bounds on the efficiencies of distributed control laws.
-            </p>
-              </section>
-          </div>
-          <div class="grid_5">
-              <section id="education">
-                  <h1>Education</h1>
-                  <p>
-                  <details>
-                      <summary>Master of Science in Mechanical Engineering</summary>
-                      <div>2007 from the University of California, Los Angeles</div>
-                  </details>
-                  <details>
-                      <summary>Bachelor of Science in Mechanical Engineering</summary>
-                      <div>2006 <span class="latin">summa cum laude</span> from the University of California, Los Angeles</div>
-                  </details>
-              </p>
-              </section>
-          </div>
-      </div><!-- #end content area -->
+<!--      <div id="content">-->
+         
+<!--      </div>-->
+<!-- #end content area -->
+  
       
- <!-- columns demo-->
-<!--<div id="columnsdemo">
-<h2 style="width:100%; clear:both">Columns demo</h2>
-<div class="grid_12"><h1>12</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_11"><h1>11</h1></div>
-
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_10"><h1>10</h1></div>
-
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_9"><h1>9</h1></div>
-
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_8"><h1>8</h1></div>
-
-<div class="grid_5"><h1>5</h1></div>
-<div class="grid_7"><h1>7</h1></div>
-
-<div class="grid_6"><h1>6</h1></div>
-<div class="grid_6"><h1>6</h1></div>
-		
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-</div>-->
-<!-- end columns demo -->  
-      
-  </div><!-- #end main -->
+<!--  </div>-->
+<!-- #end main -->
     
 
 </div> <!--! end of #container --> 

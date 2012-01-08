@@ -14,3 +14,16 @@
 #subfoot {
     font-size: x-small
 }
+
+#blogdiv > iframe {
+    width: 90%;
+}
+
+#cvdiv > iframe {
+    width: 90%;
+}
+
+#education details div {
+    padding-left: 1em;
+/*    text-indent: 1em;*/
+}
