@@ -33,7 +33,13 @@ footer #username {
     width: 90%;
 }
 
-#education details div {
+details > div {
     padding-left: 1em;
 /*    text-indent: 1em;*/
+}
+
+div#content img.classimg {
+    float: right;
+    max-width: 480px;
+    width: 38%;
 }

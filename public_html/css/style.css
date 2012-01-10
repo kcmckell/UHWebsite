@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6{
 	font-family:'Cuprum', Arial, Helvetica, sans-serif; 
 	line-height:120%;
 	margin:0;
-	padding:0; font-family:'Cuprum', Arial, Helvetica, sans-serif; line-height:120%} 
+	padding:0; font-family:'Cuprum', Arial, Helvetica, sans-serif; line-height:150%} 
 
 
 /* links */
@@ -51,7 +51,7 @@ header h2{
 	margin:20px 0 20px 0;}
 
 #content {  
-	float:right;
+	float:left;
 	margin:0 0 20px 0;}
 #content ul, #content ol {
 	margin: 1em 0;
