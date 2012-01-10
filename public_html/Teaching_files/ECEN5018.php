@@ -1,4 +1,7 @@
 <!doctype html>
+<!-- ECEN 5018 Game Theory and Mutliagent Systems: ECEN5018.html -->
+<!--Copyright 2012 K. Clay McKell
+<!--mckell@hawaii.edu-->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
@@ -12,7 +15,7 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Game Theory Reading Group</title>
+  <title>K. Clay McKell: ECEN 5018</title>
   <meta name="description" content="Online webspace for the academic escapades of K. Clay McKell at the University of Hawaii at Manoa.">
   <meta name="author" content="K. Clay McKell">
 
@@ -54,6 +57,10 @@
 
 <!-- responsive FlexSlider slideshow by (C) http://flex.madebymufffin.com/ -->
 <script src="js/jquery.flexslider-min.js"></script>
+
+<!-- Shiv for HTML5 details tag in browsers other than Chrome: https://github.com/manuelbieh/Details-Polyfill -->
+<script src="js/mylibs/details.polyfill.min.js"></script>
+
 <!-- end JS-->
 </head>
 
@@ -65,76 +72,35 @@
     <header>
 		<!--#include virtual="nav.html"-->
         <?php require('../nav.html'); ?>
+        
     </header><!-- end header -->
     
 
 <!-- main content area -->   
     <div id="main" role="main">
-    <!-- content area -->    
-      <div id="content" class="grid_10">
-          <section id="calendar">
-              
-          </section>
-          <section id="pastpresentations">
-              
-          </section>
-          <section id="possibletopics">
-              
-          </section>
-         
-      </div><!-- #end content area -->
-        
-        
-<!-- right sidebar     -->
-    <aside class="grid_2">
-    <h2>Jump to</h2>
-        <nav id="secondary-navigation">
-        		<ul>
-					<li><a href="#calendar">Calendar</a></li>
-					<li><a href="#pastpresentations">Past Presentations</a></li>
-					<li><a href="#possibletopics">Possible Topics</a></li>
-				</ul>
-         </nav>
-
-      </aside>
-<!-- #end right sidebar -->
     
-
-      
- <!-- columns demo-->
-<!--<div id="columnsdemo">
-<h2 style="width:100%; clear:both">Columns demo</h2>
-<div class="grid_12"><h1>12</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_11"><h1>11</h1></div>
-
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_10"><h1>10</h1></div>
-
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_9"><h1>9</h1></div>
-
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_8"><h1>8</h1></div>
-
-<div class="grid_5"><h1>5</h1></div>
-<div class="grid_7"><h1>7</h1></div>
-
-<div class="grid_6"><h1>6</h1></div>
-<div class="grid_6"><h1>6</h1></div>
-		
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-</div>-->
-<!-- end columns demo -->  
+<!-- content area -->    
+      <div id="content">
+          <div class="grid_12">
+              <a href="http://www.flickr.com/photos/valerianasolaris/3700647391/" class="ext"><img class="classimg" id="gamecards" src="Teaching_files/ECEN5018_files/Gamecards.png" alt="Image derived from Valeriana Solaris."/></a>
+              <h1>Spring 2009</h1>
+              <h2>
+                  <a href="http://ecee.colorado.edu/marden/5018.html" class="ext">ECEN 4018/5018 Game Theory and Multiagent Systems</a> - Teaching Assistant
+              </h2>
+			  <h3>
+                Office Hours
+              </h3>
+                <p>
+                Mon 2-3 in ECEE 1B93, or by appointment
+                </p>
+			  <h3>
+                Lecture Notes
+			  </h3>
+			<ul>
+				<li> <a href="ECEN5018_files/GraphColoring.pdf">11 March - Graph Coloring</a> </li>
+			</ul>
+          </div>
+      </div><!-- #end content area -->
       
   </div><!-- #end main -->
     
@@ -144,7 +110,7 @@
 <footer>
 	<div id="colophon" class="clearfix">
                 <!--#include virtual="/contact.html"-->
-        <?php require('contact.html'); ?>
+        <?php require('../contact.html'); ?>
 
     </div>
 </footer>
