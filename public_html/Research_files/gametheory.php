@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-    <?php require('commonhead.php'); ?>
+    <?php require('../commonhead.php'); ?>
 
   <title>Game Theory Reading Group</title>
 
@@ -27,15 +27,20 @@
     <!-- content area -->    
       <div id="content" class="grid_10">
           <section id="calendar">
-              
-          </section>
-          <section id="pastpresentations">
+              <h1>Upcoming Events</h1>
+            <iframe src="https://www.google.com/calendar/b/0/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style=" border:solid 1px #777 " width="760" height="800" frameborder="0" scrolling="no"></iframe>          <section id="pastpresentations">
               
           </section>
           <section id="possibletopics">
-              
+              <h1>Possible Discussion Topics</h1>
+              <?php  
+//                $_GET['bib']=('../Reading Group Future.bib');
+                $_GET['bib']=('http://dl.dropbox.com/u/7288448/Literature/ReadingGroupFuture.bib')  ;
+                $_GET['all']=1;
+                include( '../php/bibtexbrowser.php' );  
+                ?>
           </section>
-         
+
       </div><!-- #end content area -->
         
         
@@ -45,7 +50,6 @@
         <nav id="secondary-navigation">
         		<ul>
 					<li><a href="#calendar">Calendar</a></li>
-					<li><a href="#pastpresentations">Past Presentations</a></li>
 					<li><a href="#possibletopics">Possible Topics</a></li>
 				</ul>
          </nav>
@@ -98,7 +102,7 @@
 <footer>
 	<div id="colophon" class="clearfix">
                 <!--#include virtual="/contact.html"-->
-        <?php require('contact.html'); ?>
+        <?php require('../contact.html'); ?>
 
     </div>
 </footer>
