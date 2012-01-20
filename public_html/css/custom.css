@@ -43,3 +43,31 @@ div#content img.classimg {
     max-width: 480px;
     width: 38%;
 }
+
+.flexslider .slides img {
+    display: inline;
+}
+
+
+.slides li {
+    text-align: center;
+    background: rgba(61,51,51,0.5);
+}
+
+.flexslider {
+    background: transparent;
+}
+
+.slides li p {
+    text-align: left;
+}
+
+.slides li span.caption_head {
+    display: block;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.flexslider .flex-pauseplay {
+    text-align: center;
+}

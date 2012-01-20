@@ -8,7 +8,7 @@
         <?php require('commonhead.php'); ?>
 
   <title>K. Clay McKell: Personal</title>
-  
+  <script src="js/jquery.flexslider-min.js"></script>
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
@@ -24,28 +24,48 @@
     <div class="flexslider">
 	    <ul class="slides">
 	    	<li>
-	    		<a href="http://www.flickr.com/photos/claymckell/3677267015/" class="ext"><img src="Personal_files/LookingSkyward.png" /></a>
+	    		<img src="Personal_files/4826LookingSkyward.jpg" />
 	    		<p class="flex-caption">
 				<span class="caption_head">Photography</span>
                 I picked up a camera in 2007, and since then I've really become passionate about photography.
-				For a look at my most recent work, please check out my <a href="http://www.flickr.com/photos/claymckell" class="ext">Flickr</a> page.  You can find my portfolio <a href="http://www.flickr.com/photos/claymckell/collections/72157622398426752/" class="ext">here</a>.
-				For details about bookings, please contact me through <a href="http://snapm.com/users/15" class="ext">snapm</a>.
                 </p>
 	    	</li>
-	    	<li>
-	    		<a href="http://www.flickr.com/photos/codybadger/1482061532/in/set-72157602260899223/" class="ext"><img src="Personal_files/AKpic.png" /></a>
+            <li>
+                <a href="http://www.flickr.com/photos/codybadger/1482061532/in/set-72157602260899223" class="ext" target="_blank"><img src="Personal_files/AKpic.jpg" /></a>
+	    		<p class="flex-caption">
+				<span class="caption_head">Photography</span>
+				For a look at my most recent work, please check out my <a href="http://blog.claymckell.com" class="ext">Blog</a> or browse my <a href="http://photography.claymckell.com/galleries.html">Portfolio</a>.
+                </p>
+	    	</li>
+            <li>
+	    		<img src="Personal_files/5499ClayFishing.jpg" />
 	    		<p class="flex-caption">
                     <span class="caption_head">Travel</span>
                     "Travel is fatal to prejudice, bigotry, and narrow-mindedness" -Mark Twain.
-                    I am hard-pressed to sum up my thoughts on travel better than the great American novelist.  In addition to being a welcome reprieve from everyday monotony, I find travelling to truly be an education unto itself.
-                    No wonder I enjoy it so much!
+                      
                 </p>
 	    	</li>
 	    	<li>
-                <a href="http://afeinphoto.com/Home.html"><img src="Personal_files/ulty.png" /></a>
+	    		<img src="Personal_files/NoBallGames.jpg" />
+	    		<p class="flex-caption">
+                    <span class="caption_head">Travel</span>
+                    I am hard-pressed to sum up my thoughts on travel better than the great American novelist.
+                </p>
+	    	</li>
+            <li>
+	    		<a href="https://www.facebook.com/photo.php?fbid=547525347676&set=a.515744925896.2199487.2532845&type=3&theater" class="ext" target="_blank"><img src="Personal_files/BiteSizedMcKinley.jpg" /></a>
+	    		<p class="flex-caption">
+                    <span class="caption_head">Travel</span>
+                    In addition to being a welcome reprieve from everyday monotony, I find travelling to truly be an education unto itself.
+                    No wonder I enjoy it so much!
+                </p>
+	    	</li>
+            
+	    	<li>
+                <a href="http://afeinbergphotography.com/" class="ext" target="_blank"><img src="Personal_files/FeinbergHopu09.jpg" /></a>
                 <p class="flex-caption">
                     <span class="caption_head">Ultimate Frisbee</span>
-                    Greatest sport on earth!  I've been playing since 2002 and get my fix once or twice a week with the <a href="http://www.hawaiiultimate.com/" class="ext">Hawaii Ultiamte League Association</a>.
+                    The greatest sport on earth!  I've been playing since 2002 and get my fix once or twice a week with the <a href="http://www.hawaiiultimate.com/" class="ext">Hawaii Ultiamte League Association</a>.
                 </p>
 	    	</li>
 	    </ul>
@@ -101,7 +121,12 @@
 	jQuery('ul.sf-menu').superfish();
 		
 	// initialise  slideshow
-	$('.flexslider').flexslider();
+	$('.flexslider').flexslider({
+        //option : 'value',
+        slideshowSpeed : 5000,
+        pausePlay : false,
+        controlsContainer : '.flexslider'
+    });
 
 	//mobile select menu
 	$('#mobileselect').mobileMenu({

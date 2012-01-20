@@ -44,7 +44,8 @@
 <script type="text/javascript" src="js/jquery.mobileselect.js"></script>
 
 <!-- responsive FlexSlider slideshow by (C) http://flex.madebymufffin.com/ -->
-<script src="js/jquery.flexslider-min.js"></script>
+<!-- Not needed on every page, ya? -->
+<!--<script src="js/jquery.flexslider-min.js"></script>-->
 
 <!-- Shiv for HTML5 details tag in browsers other than Chrome: https://github.com/manuelbieh/Details-Polyfill -->
 <script src="js/mylibs/details.polyfill.min.js"></script>
