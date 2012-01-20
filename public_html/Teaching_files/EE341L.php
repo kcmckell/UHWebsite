@@ -8,7 +8,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-     <?php require('commonhead.php'); ?>
+     <?php require('../commonhead.php'); ?>
 
     <title>K. Clay McKell: EE 341L</title>
   
