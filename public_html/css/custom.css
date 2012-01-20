@@ -71,3 +71,23 @@ div#content img.classimg {
 .flexslider .flex-pauseplay {
     text-align: center;
 }
+
+table.result .header {
+    visibility: hidden;
+    display: none;
+}
+
+/*
+table.result tr {
+    line-height: 2em;
+}*/
+
+.bibref, .bibitem {
+    padding: 3px;
+}
+
+div[class*="grid"] section:not(:first-child) {
+    margin-top: 2.5em;
+}
+
+/*:not(:first-child) {*/
