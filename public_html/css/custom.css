@@ -85,3 +85,26 @@ table.result .header {
 div[class*="grid"] section:not(:first-child) {
     margin-top: 2.5em;
 }
+
+article {
+    border-bottom: 2px dashed #aaa;
+    margin-bottom: 2em;
+}
+
+
+article > hgroup > h1 {
+    font-size: x-large;
+}
+
+aside#recentposts h1 {
+    color: #333;
+}
+
+aside#recentposts > h1 {
+    font-size: x-small;
+}
+
+aside#recentposts img {
+    max-width: 150px;
+    margin-bottom: 1em;
+}

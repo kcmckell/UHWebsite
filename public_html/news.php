@@ -9,6 +9,31 @@
 
   <title>K. Clay McKell: News</title>
   
+  <?php
+    require_once 'php/simplepie.inc';
+    $feed = new SimplePie();
+    $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
+    $feed->init();
+    $feed->handle_content_type();
+    function getnextNposts($thefeed,$curpostNumber,$N){
+        for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
+            $thispost = $thefeed->get_item($i);
+            echo "<article>";
+            echo "<hgroup><h1>" . $thispost->get_title() . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
+            echo $thispost->get_content();
+            echo "</article>";
+            
+        }
+//        return $outArray;
+    }
+    function get_first_image_url($html){
+        // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
+        if (preg_match('/<img.+?src="(.+?)"/', $html, $matches)) {
+            return $matches[1];
+        }
+        else return NULL; // or: 'url_of_default_image_if_post_has_no_img_tags.jpg';
+    }
+  ?>
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
@@ -29,11 +54,30 @@
 <!-- content area -->    
       <div id="content">
           <div id="blogdiv" class="grid_12">
-              <iframe src="http://kcmckell.blogspot.com/">
-              Your browser may not support inline frames.  Please visit my <a href="http://kcmckell.blogspot.com" target="http://kcmckell.blogspot.com">blog the old-fashioned way</a> (links to external site: Blogger.com).
-              </iframe>
-          </div>
-          
+              <?php
+                if ($feed == NULL) {
+                    echo "<p>Please read my blog <a href=\"http://kcmckell.blogspot.com/\" target=\"_blank\">externally</a>.</p>";
+                    echo '</div>'; //End div#blogdiv.grid_12;
+                }
+                else {
+                    echo "<h1>" . $feed->get_title() . "</h1>";
+                    echo "<h2>" . $feed->get_description() . "</h2>";
+                    // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
+                    echo '</div><div class="grid_8" id="postsdiv">';
+                    getnextNposts($feed,0,5);
+                    // End div#postsdiv.grid_8 and Begin aside.grid_4
+                    echo '</div><aside id="recentposts" class="grid_4">';
+                    echo '<hgroup><h1>Recent Posts</h1></hgroup>';
+                    for ($i=0; $i<5; $i++) {
+                        $recentpost = $feed->get_item($i);
+                        echo '<div class="recentpost"><h1>' . $recentpost->get_title() . '</h1>';
+                        if ($outurl = get_first_image_url($recentpost->get_content())) {
+                            echo '<img src="' . $outurl . '"/>';
+                        }
+                    }
+                    echo '</aside>';
+                }
+              ?>          
       </div><!-- #end content area -->
      
       
