@@ -34,7 +34,6 @@
           <section id="possibletopics">
               <h1>Possible Discussion Topics</h1>
               <?php  
-//                $_GET['bib']=('../Reading Group Future.bib');
                 $_GET['bib']=('http://dl.dropbox.com/u/7288448/Literature/ReadingGroupFuture.bib')  ;
                 $_GET['all']=1;
                 include( '../php/bibtexbrowser.php' );  
