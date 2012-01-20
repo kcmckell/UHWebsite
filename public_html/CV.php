@@ -8,6 +8,7 @@
     <?php require('commonhead.php'); ?>
 
   <title>K. Clay McKell: CV</title>
+  <script type="text/javascript" src="js/mylibs/pdfobject.js"></script>
 
 </head>
 
@@ -29,9 +30,6 @@
 <!-- content area -->    
       <div id="content">
           <div id="cvdiv" class="grid_12">
-            <iframe src="CV_files/McKellResume.pdf" type="application/pdf" id="cviframe">
-            The CV file <a href="CV_files/McKellResume.pdf">McKellResume.pdf</a> should begin downloading shortly.
-            </iframe>
           </div>
           
       </div><!-- #end content area -->
@@ -56,9 +54,6 @@
 	$(document).ready(function(){
 	// initialise menu
 	jQuery('ul.sf-menu').superfish();
-		
-	// initialise  slideshow
-	$('.flexslider').flexslider();
 
 	//mobile select menu
 	$('#mobileselect').mobileMenu({
@@ -66,7 +61,20 @@
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
 											  });
 		});
-
+        var mainloadwidth = $('#main').width();
+        var winloadheight = $(window).height();
+        var displayfraciton = 0.95;
+        var cvembed = new PDFObject({
+            url: "CV_files/McKellResume.pdf",
+            width: displayfraciton*mainloadwidth,
+            height: displayfraciton*winloadheight
+        }).embed("cvdiv");
+        $(window).resize(function(){
+            var mainwidth = $('#main').width();
+            var winheight = $(window).height();
+            $(cvembed).width(displayfraciton*mainwidth);
+            $(cvembed).height(displayfraciton*winheight);
+        });
 </script>
 	
   <!-- Change UA-XXXXX-X to be your site's ID -->
