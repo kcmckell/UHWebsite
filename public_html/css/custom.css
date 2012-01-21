@@ -96,8 +96,12 @@ article > hgroup > h1 {
     font-size: x-large;
 }
 
-aside#recentposts h1 {
-    color: #333;
+aside#recentposts {
+    background: rgba(10,10,10,0.2);
+}
+
+aside#recentposts ul {
+    list-style: none;
 }
 
 aside#recentposts > h1 {
@@ -105,6 +109,15 @@ aside#recentposts > h1 {
 }
 
 aside#recentposts img {
-    max-width: 150px;
+    max-width: 120px;
     margin-bottom: 1em;
+}
+
+aside#recentposts > hgroup {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.recentpost h1 {
+    font-size: medium;
 }

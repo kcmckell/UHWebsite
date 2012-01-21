@@ -18,8 +18,9 @@
     function getnextNposts($thefeed,$curpostNumber,$N){
         for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
             $thispost = $thefeed->get_item($i);
-            echo "<article>";
-            echo "<hgroup><h1>" . $thispost->get_title() . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
+            $thistitle = $thispost->get_title();
+            echo '<article id="' . str_replace(' ', '', $thistitle) . '">';
+            echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
             echo $thispost->get_content();
             echo "</article>";
             
@@ -63,19 +64,21 @@
                     echo "<h1>" . $feed->get_title() . "</h1>";
                     echo "<h2>" . $feed->get_description() . "</h2>";
                     // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
-                    echo '</div><div class="grid_8" id="postsdiv">';
+                    echo '</div><div class="grid_9" id="postsdiv">';
                     getnextNposts($feed,0,5);
                     // End div#postsdiv.grid_8 and Begin aside.grid_4
-                    echo '</div><aside id="recentposts" class="grid_4">';
+                    echo '</div><aside id="recentposts" class="grid_3">';
                     echo '<hgroup><h1>Recent Posts</h1></hgroup>';
+                    echo '<ul>';
                     for ($i=0; $i<5; $i++) {
                         $recentpost = $feed->get_item($i);
-                        echo '<div class="recentpost"><h1>' . $recentpost->get_title() . '</h1>';
+                        $posttitle = $recentpost->get_title();
+                        echo '<li class="recentpost"><a href="#' . str_replace(' ', '', $posttitle) . '"><h1>' . $posttitle . '</h1></a>';
                         if ($outurl = get_first_image_url($recentpost->get_content())) {
-                            echo '<img src="' . $outurl . '"/>';
+                            echo '<img src="' . $outurl . '"/></li>';
                         }
                     }
-                    echo '</aside>';
+                    echo '</ul></aside>';
                 }
               ?>          
       </div><!-- #end content area -->
