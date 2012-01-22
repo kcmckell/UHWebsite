@@ -17,7 +17,7 @@
   
 <!-- header area -->
     <header>
-		<!--#include virtual="nav.html"-->
+		
         <?php require('../nav.html'); ?>
     </header><!-- end header -->
     
@@ -74,7 +74,7 @@
 
 // Fireup the plugins
 	$(document).ready(function(){
-	// initialise menu
+    // initialise menu
 	jQuery('ul.sf-menu').superfish();
 		
 	// initialise  slideshow

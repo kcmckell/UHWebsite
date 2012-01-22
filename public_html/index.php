@@ -17,7 +17,7 @@
   
 <!-- header area -->
     <header>
-		<!--#include virtual="nav.html"-->
+		
         <?php require('nav.html'); ?>
         
 <!-- responsive FlexSlider image slideshow -->

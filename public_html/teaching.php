@@ -16,7 +16,7 @@
   
 <!-- header area -->
     <header>
-		<!--#include virtual="nav.html"-->
+		
         <?php require('nav.html'); ?>
         
     </header><!-- end header -->
