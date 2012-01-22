@@ -56,43 +56,7 @@
       </aside>
 <!-- #end right sidebar -->
     
-
-      
- <!-- columns demo-->
-<!--<div id="columnsdemo">
-<h2 style="width:100%; clear:both">Columns demo</h2>
-<div class="grid_12"><h1>12</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_11"><h1>11</h1></div>
-
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_10"><h1>10</h1></div>
-
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_9"><h1>9</h1></div>
-
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_8"><h1>8</h1></div>
-
-<div class="grid_5"><h1>5</h1></div>
-<div class="grid_7"><h1>7</h1></div>
-
-<div class="grid_6"><h1>6</h1></div>
-<div class="grid_6"><h1>6</h1></div>
-		
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-</div>-->
-<!-- end columns demo -->  
-      
+ 
   </div><!-- #end main -->
     
 
@@ -114,7 +78,7 @@
 	jQuery('ul.sf-menu').superfish();
 		
 	// initialise  slideshow
-	$('.flexslider').flexslider();
+	// $('.flexslider').flexslider();  //Don't fire up slideshow if not used on page.
 
 	//mobile select menu
 	$('#mobileselect').mobileMenu({
@@ -125,12 +89,11 @@
 
 </script>
 	
-  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.  	 63	 +       mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
+    var _gaq=[['_setAccount','UA-28257077-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';    s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
 
 
