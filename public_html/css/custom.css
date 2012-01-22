@@ -1,0 +1,123 @@
+/* 
+    Document   : custom
+    Created on : Dec 19, 2011, 7:22:41 PM
+    Author     : kcmckell
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+footer {
+/*    text-align: center;*/
+}
+
+footer #username {
+/*    background-image: url(../img/footersprite.gif);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;*/
+}
+
+#subfoot {
+    font-size: x-small
+}
+
+#blogdiv > iframe {
+    width: 90%;
+}
+
+#cvdiv > iframe {
+    width: 90%;
+}
+
+details > div {
+    padding-left: 1em;
+/*    text-indent: 1em;*/
+}
+
+div#content img.classimg {
+    float: right;
+    max-width: 480px;
+    width: 38%;
+}
+
+.flexslider .slides img {
+    display: inline;
+}
+
+
+.slides li {
+    text-align: center;
+    background: rgba(61,51,51,0.5);
+}
+
+.flexslider {
+    background: transparent;
+}
+
+.slides li p {
+    text-align: left;
+}
+
+.slides li span.caption_head {
+    display: block;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.flexslider .flex-pauseplay {
+    text-align: center;
+}
+
+table.result .header {
+    visibility: hidden;
+    display: none;
+}
+
+
+.bibref, .bibitem {
+    padding: 3px;
+}
+
+div[class*="grid"] section:not(:first-child) {
+    margin-top: 2.5em;
+}
+
+article {
+    border-bottom: 2px dashed #aaa;
+    margin-bottom: 2em;
+}
+
+
+article > hgroup > h1 {
+    font-size: x-large;
+}
+
+aside#recentposts {
+    background: rgba(10,10,10,0.2);
+}
+
+aside#recentposts ul {
+    list-style: none;
+}
+
+aside#recentposts > h1 {
+    font-size: x-small;
+}
+
+aside#recentposts img {
+    max-width: 120px;
+    margin-bottom: 1em;
+}
+
+aside#recentposts > hgroup {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.recentpost h1 {
+    font-size: medium;
+}

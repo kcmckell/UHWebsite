@@ -1,9 +1,0 @@
-<ul id="navlist">
-<li id="nav-home"><a href="../index.html">Home</a></li>
-<li id="nav-publications"><a href="../Publications.html">Publications</a></li>
-<li id="nav-teaching"><a href="../Teaching.html">Teaching</a></li>
-<li id="nav-personal"><a href="../Personal.html">Personal</a></li>
-<li id="nav-news"><a href="../News.html">News</a></li>
-<li id="nav-cv"><a href="../CV.html">CV</a></li>
-<li id="nav-spacer"></li>
-</ul>
