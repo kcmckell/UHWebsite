@@ -73,7 +73,7 @@
                     for ($i=0; $i<5; $i++) {
                         $recentpost = $feed->get_item($i);
                         $posttitle = $recentpost->get_title();
-                        echo '<li class="recentpost"><a href="#' . str_replace(' ', '', $posttitle) . '"><h1>' . $posttitle . '</h1></a>';
+                        echo '<li class="recentpost"><a href="news.php#' . str_replace(' ', '', $posttitle) . '"><h1>' . $posttitle . '</h1></a>';
                         if ($outurl = get_first_image_url($recentpost->get_content())) {
                             echo '<img src="' . $outurl . '"/></li>';
                         }
