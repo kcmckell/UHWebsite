@@ -36,42 +36,7 @@
           </p>
           
       </div><!-- #end content area -->
-      
- <!-- columns demo-->
-<!--<div id="columnsdemo">
-<h2 style="width:100%; clear:both">Columns demo</h2>
-<div class="grid_12"><h1>12</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_11"><h1>11</h1></div>
-
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_10"><h1>10</h1></div>
-
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_9"><h1>9</h1></div>
-
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_8"><h1>8</h1></div>
-
-<div class="grid_5"><h1>5</h1></div>
-<div class="grid_7"><h1>7</h1></div>
-
-<div class="grid_6"><h1>6</h1></div>
-<div class="grid_6"><h1>6</h1></div>
-		
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-</div>-->
-<!-- end columns demo -->  
-      
+            
   </div><!-- #end main -->
     
 
