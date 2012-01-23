@@ -1,3 +1,4 @@
+<base href="http://www-ee.eng.hawaii.edu/~mckell/" />
 <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
