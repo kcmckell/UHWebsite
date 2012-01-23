@@ -1,4 +1,4 @@
-<base href="http://localhost:8888/UHWebsite/public_html/" />
+<base href="http://www-ee.eng.hawaii.edu/~mckell/" />
 <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
