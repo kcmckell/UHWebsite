@@ -48,8 +48,8 @@
     <h2>Jump to</h2>
         <nav id="secondary-navigation">
         		<ul>
-					<li><a href="#calendar">Calendar</a></li>
-					<li><a href="#possibletopics">Possible Topics</a></li>
+					<li><a href="Research_files/gametheory.php#calendar">Calendar</a></li>
+					<li><a href="Research_files/gametheory.php#possibletopics">Possible Topics</a></li>
 				</ul>
          </nav>
 
