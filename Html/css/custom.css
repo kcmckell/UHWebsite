@@ -121,3 +121,7 @@ aside#recentposts > hgroup {
 .recentpost h1 {
     font-size: medium;
 }
+
+nav#topnav > ul.sf-menu {
+    margin-top: 0;
+}
