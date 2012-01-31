@@ -15,7 +15,9 @@
     $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
     $feed->init();
     $feed->handle_content_type();
+    $totPosts = 0;
     function getnextNposts($thefeed,$curpostNumber,$N){
+        global $totPosts;
         for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
             $thispost = $thefeed->get_item($i);
             $thistitle = $thispost->get_title();
@@ -23,9 +25,9 @@
             echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
             echo $thispost->get_content();
             echo "</article>";
-            
+            $totPosts++;
         }
-//        return $outArray;
+        return NULL;
     }
     function get_first_image_url($html){
         // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
@@ -66,8 +68,15 @@
                     // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
                     echo '</div><div class="grid_9" id="postsdiv">';
                     getnextNposts($feed,0,5);
-                    // End div#postsdiv.grid_8 and Begin aside.grid_4
-                    echo '</div><aside id="recentposts" class="grid_3">';
+                    global $totPosts;
+                    if ($totPosts < $feed->get_item_quantity(0)) {
+                        
+                        echo '<a id="moreposts" class="button">Load More Posts</a>';
+                    }
+                    // End div#postsdiv.grid_8
+                    echo '</div>';
+                    // Begin aside.grid_4
+                    echo '<aside id="recentposts" class="grid_3">';
                     echo '<hgroup><h1>Recent Posts</h1></hgroup>';
                     echo '<ul>';
                     for ($i=0; $i<5; $i++) {
@@ -110,7 +119,11 @@
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
 											  });
 		});
-
+        
+    $('a#moreposts').click(function(){
+        alert('<?php echo preg_replace('\'','_',"Hello gov'na"); ?>');
+        //$('article:last').after('<?php #global $totPosts; getnextNposts($feed, $totPosts, 2); ?>');
+    })
 </script>
 	
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.  	 63	 +       mathiasbynens.be/notes/async-analytics-snippet -->
