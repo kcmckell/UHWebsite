@@ -15,19 +15,25 @@
     $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
     $feed->init();
     $feed->handle_content_type();
-    $totPosts = 0;
+    session_start();
+    $Nposts = 3;
+    $_SESSION['posts_start'] = $_SESSION['posts_start'] ? $_SESSION['posts_start'] : $Nposts;
     function getnextNposts($thefeed,$curpostNumber,$N){
-        global $totPosts;
+        $outstring = "";
         for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
             $thispost = $thefeed->get_item($i);
             $thistitle = $thispost->get_title();
-            echo '<article id="' . str_replace(' ', '', $thistitle) . '">';
-            echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
-            echo $thispost->get_content();
-            echo "</article>";
-            $totPosts++;
+            $outstring .= '<article id="' . str_replace(' ', '', $thistitle) . '">';
+            $outstring .= "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
+            $outstring .= $thispost->get_content();
+            $outstring .= "</article>";
         }
-        return NULL;
+        return json_encode($outstring);
+    }
+    if(isset($_GET['start'])) {
+        echo json_decode(getnextNposts($feed, $_GET['start'], $_GET['desiredPosts']));
+        $_SESSION['posts_start']+= $_GET['desiredPosts'];
+        die();
     }
     function get_first_image_url($html){
         // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
@@ -67,9 +73,8 @@
                     echo "<h2>" . $feed->get_description() . "</h2>";
                     // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
                     echo '</div><div class="grid_9" id="postsdiv">';
-                    getnextNposts($feed,0,5);
-                    global $totPosts;
-                    if ($totPosts < $feed->get_item_quantity(0)) {
+                    echo json_decode(getnextNposts($feed,0,$_SESSION['posts_start']));
+                    if ($_SESSION['posts_start'] < $feed->get_item_quantity(0)) {
                         
                         echo '<a id="moreposts" class="button">Load More Posts</a>';
                     }
@@ -119,10 +124,31 @@
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
 											  });
 		});
-        
+    var start = <?php echo $_SESSION['posts_start']; ?>;
+    console.log('the start number is' + start);
+    var desiredPosts = <?php echo $Nposts; ?>;
+    console.log('The desired number of posts is' + desiredPosts);
     $('a#moreposts').click(function(){
-        alert('<?php echo preg_replace('\'','_',"Hello gov'na"); ?>');
-        //$('article:last').after('<?php #global $totPosts; getnextNposts($feed, $totPosts, 2); ?>');
+        $.ajax({
+            url: 'news.php',
+            data: {
+                'start': start,
+                'desiredPosts': desiredPosts
+            },
+            type: 'get',
+            cache: false,
+            success: function(responseJSON){
+                start += desiredPosts;
+//                console.log('We get this in response: \n'+responseJSON);
+                $('div#postsdiv article:last').after(responseJSON);
+            },
+            error: function(){
+                alert('Boooooo');
+            },
+            complete: function(){
+                alert('Holy cow it worked');
+            }
+        });
     })
 </script>
 	
