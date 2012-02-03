@@ -18,6 +18,7 @@
     session_start();
     $Nposts = 3;
     $_SESSION['posts_start'] = $_SESSION['posts_start'] ? $_SESSION['posts_start'] : $Nposts;
+//    print_r($_SESSION['posts_start']);
     function getnextNposts($thefeed,$curpostNumber,$N){
         $outstring = "";
         for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
@@ -31,8 +32,10 @@
         return json_encode($outstring);
     }
     if(isset($_GET['start'])) {
+//        print_r($_GET['start']);
         echo json_decode(getnextNposts($feed, $_GET['start'], $_GET['desiredPosts']));
         $_SESSION['posts_start']+= $_GET['desiredPosts'];
+//        print_r($_SESSION['posts_start']);
         die();
     }
     function get_first_image_url($html){
@@ -76,7 +79,7 @@
                     echo json_decode(getnextNposts($feed,0,$_SESSION['posts_start']));
                     if ($_SESSION['posts_start'] < $feed->get_item_quantity(0)) {
                         
-                        echo '<a id="moreposts" class="button">Load More Posts</a>';
+                        echo '<a id="moreposts" class="button sf-menu">Load More Posts</a>';
                     }
                     // End div#postsdiv.grid_8
                     echo '</div>';
@@ -128,7 +131,9 @@
     console.log('the start number is' + start);
     var desiredPosts = <?php echo $Nposts; ?>;
     console.log('The desired number of posts is' + desiredPosts);
-    $('a#moreposts').click(function(){
+    var morepostsbutton = $('a#moreposts');
+    morepostsbutton.click(function(){
+        morepostsbutton.addClass('activate').text('Loading...');
         $.ajax({
             url: 'news.php',
             data: {
@@ -139,14 +144,18 @@
             cache: false,
             success: function(responseJSON){
                 start += desiredPosts;
-//                console.log('We get this in response: \n'+responseJSON);
+                var globalJSON = responseJSON;
+                console.log(globalJSON);
                 $('div#postsdiv article:last').after(responseJSON);
             },
             error: function(){
                 alert('Boooooo');
             },
             complete: function(){
-                alert('Holy cow it worked');
+                morepostsbutton.removeClass('activate').text('Load More Posts');
+                console.log("Session Posts Start var: "+<?php echo $_SESSION['posts_start']; ?>);
+                console.log("Total item quantitiy: "+<?php echo $feed->get_item_quantity(0); ?>);
+//                alert('Holy cow it worked');
             }
         });
     })
