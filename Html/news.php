@@ -3,6 +3,7 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--TODO: How can we get DOM structure on called JSONresponse so that we can pull out only ARTCILE objects?-->
 
 <head>
     <?php require('commonhead.php'); ?>
@@ -67,15 +68,13 @@
       <div id="content">
           <div id="blogdiv" class="grid_12">
               <?php
-                if ($feed == NULL) {
-                    echo "<p>Please read my blog <a href=\"http://kcmckell.blogspot.com/\" target=\"_blank\">externally</a>.</p>";
-                    echo '</div>'; //End div#blogdiv.grid_12;
+                if ($feed->get_item_quantity() == 0) {
+                    echo '<p>Get the latest news over on <a href="http://kcmckell.blogspot.com" target="_blank">Blogger</a>.</p></div>';//End div#blogdiv.grid_12;
                 }
                 else {
-                    echo "<h1>" . $feed->get_title() . "</h1>";
-                    echo "<h2>" . $feed->get_description() . "</h2>";
-                    // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
-                    echo '</div><div class="grid_9" id="postsdiv">';
+                    echo "<h1>" . $feed->get_title() . "</h1><h2>" . $feed->get_description() . "</h2></div>"; // End div#blogdiv.grid_12
+                    // Begin div#postsdiv.grid_8
+                    echo '<div class="grid_9" id="postsdiv">';
                     echo json_decode(getnextNposts($feed,0,$_SESSION['posts_start']));
                     if ($_SESSION['posts_start'] < $feed->get_item_quantity(0)) {
                         
