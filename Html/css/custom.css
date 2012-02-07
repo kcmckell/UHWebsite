@@ -82,6 +82,10 @@ table.result .header {
     padding: 3px;
 }
 
+.bibitem > div.abstract {
+    padding-left: 2%;
+}
+
 div[class*="grid"] section:not(:first-child) {
     margin-top: 2.5em;
 }
