@@ -28,8 +28,11 @@
       <div id="content" class="grid_10">
           <section id="calendar">
               <h1>Upcoming Events</h1>
-            <iframe src="https://www.google.com/calendar/b/0/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style=" border:solid 1px #777 " width="760" height="800" frameborder="0" scrolling="no"></iframe>          <section id="pastpresentations">
-              
+                <iframe src="https://www.google.com/calendar/b/0/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23c0c0c0&amp;src=hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style=" border:solid 1px #777 " width="760" height="600" frameborder="0" scrolling="no"></iframe>              <p>
+                  <a href="http://www.google.com/calendar/feeds/hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com/public/basic
+                     "><img src="img/feed-icon-14x14.png" /></a>
+                  Subscribe to the RSS feed of events.
+              </p>
           </section>
           <section id="possibletopics">
               <h1>Possible Discussion Topics</h1>
