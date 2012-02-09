@@ -8,7 +8,12 @@
     <?php require('../commonhead.php'); ?>
 
   <title>Game Theory Reading Group</title>
-
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
