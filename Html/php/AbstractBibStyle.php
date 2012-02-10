@@ -115,7 +115,7 @@ function AbstractBibliographyStyle(&$bibentry) {
   
    // CUSTOMIZATION
   if ($bibentry->hasField('abstract')) {
-      $result.= '<br/><div class="abstract"><i>Abstract:</i> '.$bibentry->getField("abstract").'</span>';
+      $result.= '<br/><div class="abstract"><i>Abstract:</i> '.cleanMendeleyBibTex($bibentry->getField("abstract")).'</span>';
   }
   // END CUSTOM
 
@@ -128,6 +128,25 @@ function AbstractBibliographyStyle(&$bibentry) {
   $result .=  "\n".$bibentry->toCoins();
 
   return $result;
+}
+
+function cleanMendeleyBibTex($dirtystring){
+    // Create arrays that match looked-for strings with strings to replace them.  Order matters!
+    $pattern =     array('\{','\}','\\_','$\backslash$','\backslash ','\backslash','\$','{}','textit',  '<',  '>');
+    $replacement = array('{', '}', '_',          '\\',         '\\',        '\\', '$',  '',  'emph','\lt','\gt');
+    for ($i=0; $i<count($pattern); $i++) {
+        $pattern[$i] = '/'.preg_quote($pattern[$i],'/').'/';
+//        echo $pattern[$i] .' to '.$replacement[$i].'<br>';
+    }
+    /* Demo/test
+    $str = 'A buyer procures a network to span a given set of nodes; each seller bids to supply certain edges, then the buyer purchases a minimal cost spanning tree. Irrespective of the pattern of bidding licenses and costs, an efficient tree is constructed in any equilibrium of the Bertrand game. If each seller can only bid for a single edge, or for a set of mutually disconnected edges, we evaluate the $\backslash$textit\{price of imperfect competition\} (PIC), namely the ratio of the total cost that could be charged to the buyer in some equlibrium, to the true minimal cost. If costs satisfy the triangle inequality we show that the PIC is at most 2 for an odd number of nodes, and at most \$2\backslash frac\{n-1\}\{n-2\}\$ for an even number \$n\$ of nodes. Surprisingly, this worst case ratio does not improve when the cost pattern is ultrametric (a much mroe demanding substitutability requirement), although the overhead is much lower on average under typical probabilistic assumptions.';
+    echo 'Old string: <br>';
+    echo $str;
+    echo '<br>New string: <br>';
+    echo preg_replace($pattern,$replacement,$str);
+    */
+    $str = 'A buyer procures a network to span a given set of nodes; each seller bids to supply certain edges, then the buyer purchases a minimal cost spanning tree. Irrespective of the pattern of bidding licenses and costs, an efficient tree is constructed in any equilibrium of the Bertrand game. If each seller can only bid for a single edge, or for a set of mutually disconnected edges, we evaluate the $\backslash$textit\{price of imperfect competition\} (PIC), namely the ratio of the total cost that could be charged to the buyer in some equlibrium, to the true minimal cost. If costs satisfy the triangle inequality we show that the PIC is at most 2 for an odd number of nodes, and at most \$2\backslash frac\{n-1\}\{n-2\}\$ for an even number \$n\$ of nodes. Surprisingly, this worst case ratio does not improve when the cost pattern is ultrametric (a much mroe demanding substitutability requirement), although the overhead is much lower on average under typical probabilistic assumptions.';
+    return preg_replace($pattern,$replacement,$dirtystring);
 }
     
 /*    
