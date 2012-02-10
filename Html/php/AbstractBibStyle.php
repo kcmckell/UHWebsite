@@ -145,8 +145,11 @@ function cleanMendeleyBibTex($dirtystring){
     echo '<br>New string: <br>';
     echo preg_replace($pattern,$replacement,$str);
     */
-    $str = 'A buyer procures a network to span a given set of nodes; each seller bids to supply certain edges, then the buyer purchases a minimal cost spanning tree. Irrespective of the pattern of bidding licenses and costs, an efficient tree is constructed in any equilibrium of the Bertrand game. If each seller can only bid for a single edge, or for a set of mutually disconnected edges, we evaluate the $\backslash$textit\{price of imperfect competition\} (PIC), namely the ratio of the total cost that could be charged to the buyer in some equlibrium, to the true minimal cost. If costs satisfy the triangle inequality we show that the PIC is at most 2 for an odd number of nodes, and at most \$2\backslash frac\{n-1\}\{n-2\}\$ for an even number \$n\$ of nodes. Surprisingly, this worst case ratio does not improve when the cost pattern is ultrametric (a much mroe demanding substitutability requirement), although the overhead is much lower on average under typical probabilistic assumptions.';
-    return preg_replace($pattern,$replacement,$dirtystring);
+    $texified = preg_replace($pattern,$replacement,$dirtystring);
+    $emphpattern = '/\\\\emph{([^}]*)}/';
+    //echo preg_replace($emphpattern, '<i>$1</i>', $str);
+    $emphasized = preg_replace($emphpattern,'<i>$1</i>',$texified);
+    return $emphasized;
 }
     
 /*    
