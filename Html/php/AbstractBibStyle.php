@@ -115,7 +115,7 @@ function AbstractBibliographyStyle(&$bibentry) {
   
    // CUSTOMIZATION
   if ($bibentry->hasField('abstract')) {
-      $result.= '<br/><div class="abstract"><i>Abstract:</i> '.cleanMendeleyBibTex($bibentry->getField("abstract")).'</span>';
+      $result.= '<details><summary class="abstract">Abstract</summary><div class="abstract">'.cleanMendeleyBibTex($bibentry->getField("abstract")).'</div></details>';
   }
   // END CUSTOM
 

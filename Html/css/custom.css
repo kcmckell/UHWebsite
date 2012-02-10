@@ -82,8 +82,8 @@ table.result .header {
     padding: 3px;
 }
 
-.bibitem > div.abstract {
-    padding-left: 2%;
+.bibitem summary.abstract {
+    font-style: italic;
 }
 
 div[class*="grid"] section:not(:first-child) {
