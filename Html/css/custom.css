@@ -11,6 +11,10 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
+header {
+    padding-bottom: 20px;
+}
+
 footer {
 /*    text-align: center;*/
 }

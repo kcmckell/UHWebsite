@@ -29,9 +29,13 @@
 
 <!-- main content area -->   
     <div id="main" role="main">
-    <!-- content area -->    
-      <div id="content" class="grid_10">
-          <section id="calendar">
+    <!-- content area --> 
+      <div id="content">
+          <hgroup class="grid_12">
+              <h1>Game Theory Reading Group</h1>
+              <p>We have formed a small working group of economists and engineers that meets periodically to discuss interesting research topics.</p>
+          </hgroup>          
+          <section id="calendar" class="grid_10">
               <h1>Upcoming Events</h1>
                 <iframe src="https://www.google.com/calendar/b/0/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23c0c0c0&amp;src=hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style=" border:solid 1px #777 " width="760" height="600" frameborder="0" scrolling="no"></iframe>              <p>
                   <a href="http://www.google.com/calendar/feeds/hawaii.edu_m1br2c8t4c04ujic4ifn8bi7is%40group.calendar.google.com/public/basic
@@ -39,7 +43,19 @@
                   Subscribe to the RSS feed of events.
               </p>
           </section>
-          <section id="possibletopics">
+        <!-- right sidebar     -->
+            <aside class="grid_2">
+            <h2>Jump to</h2>
+                <nav id="secondary-navigation">
+                        <ul>
+                            <li><a href="Research_files/gametheory.php#calendar">Calendar</a></li>
+                            <li><a href="Research_files/gametheory.php#possibletopics">Possible Topics</a></li>
+                            <li><a href="Research_files/gametheory.php#pasttopics">Past Topics</a></li>
+                        </ul>
+                 </nav>
+              </aside>
+        <!-- #end right sidebar -->          
+          <section id="possibletopics" class="grid_5">
               <h1>Possible Discussion Topics</h1>
               <?php  
                 $_GET['bib']=('http://dl.dropbox.com/u/7288448/Literature/ReadingGroupFuture.bib')  ;
@@ -47,24 +63,15 @@
                 include( '../php/bibtexbrowser.php' );  
                 ?>
           </section>
-
+          <section id="pasttopics" class="grid_5">
+              <h1>Past Discussion Topics</h1>
+              <?php
+                $_GET['bib']=('http://dl.dropbox.com/u/7288448/Literature/ReadingGroupPast.bib');
+                $_GET['all']=1;
+                include('../php/bibtexbrowser.php');
+              ?>
+          </section>
       </div><!-- #end content area -->
-        
-        
-<!-- right sidebar     -->
-    <aside class="grid_2">
-    <h2>Jump to</h2>
-        <nav id="secondary-navigation">
-        		<ul>
-					<li><a href="Research_files/gametheory.php#calendar">Calendar</a></li>
-					<li><a href="Research_files/gametheory.php#possibletopics">Possible Topics</a></li>
-				</ul>
-         </nav>
-
-      </aside>
-<!-- #end right sidebar -->
-    
- 
   </div><!-- #end main -->
     
 
