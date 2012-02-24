@@ -3,7 +3,6 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<!--TODO: How can we get DOM structure on called JSONresponse so that we can pull out only ARTCILE objects?-->
 
 <head>
     <?php require('commonhead.php'); ?>
@@ -16,28 +15,17 @@
     $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
     $feed->init();
     $feed->handle_content_type();
-    session_start();
-    $Nposts = 3;
-    $_SESSION['posts_start'] = $_SESSION['posts_start'] ? $_SESSION['posts_start'] : $Nposts;
-//    print_r($_SESSION['posts_start']);
     function getnextNposts($thefeed,$curpostNumber,$N){
-        $outstring = "";
         for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
             $thispost = $thefeed->get_item($i);
             $thistitle = $thispost->get_title();
-            $outstring .= '<article id="' . str_replace(' ', '', $thistitle) . '">';
-            $outstring .= "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
-            $outstring .= $thispost->get_content();
-            $outstring .= "</article>";
+            echo '<article id="' . str_replace(' ', '', $thistitle) . '">';
+            echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
+            echo $thispost->get_content();
+            echo "</article>";
+            
         }
-        return json_encode($outstring);
-    }
-    if(isset($_GET['start'])) {
-//        print_r($_GET['start']);
-        echo json_decode(getnextNposts($feed, $_GET['start'], $_GET['desiredPosts']));
-        $_SESSION['posts_start']+= $_GET['desiredPosts'];
-//        print_r($_SESSION['posts_start']);
-        die();
+//        return $outArray;
     }
     function get_first_image_url($html){
         // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
@@ -68,22 +56,18 @@
       <div id="content">
           <div id="blogdiv" class="grid_12">
               <?php
-                if ($feed->get_item_quantity() == 0) {
-                    echo '<p>Get the latest news over on <a href="http://kcmckell.blogspot.com" target="_blank">Blogger</a>.</p></div>';//End div#blogdiv.grid_12;
+                if ($feed == NULL) {
+                    echo "<p>Please read my blog <a href=\"http://kcmckell.blogspot.com/\" target=\"_blank\">externally</a>.</p>";
+                    echo '</div>'; //End div#blogdiv.grid_12;
                 }
                 else {
-                    echo "<h1>" . $feed->get_title() . "</h1><h2>" . $feed->get_description() . "</h2></div>"; // End div#blogdiv.grid_12
-                    // Begin div#postsdiv.grid_8
-                    echo '<div class="grid_9" id="postsdiv">';
-                    echo json_decode(getnextNposts($feed,0,$_SESSION['posts_start']));
-                    if ($_SESSION['posts_start'] < $feed->get_item_quantity(0)) {
-                        
-                        echo '<a id="moreposts" class="button sf-menu">Load More Posts</a>';
-                    }
-                    // End div#postsdiv.grid_8
-                    echo '</div>';
-                    // Begin aside.grid_4
-                    echo '<aside id="recentposts" class="grid_3">';
+                    echo "<h1>" . $feed->get_title() . "</h1>";
+                    echo "<h2>" . $feed->get_description() . "</h2>";
+                    // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
+                    echo '</div><div class="grid_9" id="postsdiv">';
+                    getnextNposts($feed,0,5);
+                    // End div#postsdiv.grid_8 and Begin aside.grid_4
+                    echo '</div><aside id="recentposts" class="grid_3">';
                     echo '<hgroup><h1>Recent Posts</h1></hgroup>';
                     echo '<ul>';
                     for ($i=0; $i<5; $i++) {
@@ -126,38 +110,7 @@
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
 											  });
 		});
-    var start = <?php echo $_SESSION['posts_start']; ?>;
-    console.log('the start number is' + start);
-    var desiredPosts = <?php echo $Nposts; ?>;
-    console.log('The desired number of posts is' + desiredPosts);
-    var morepostsbutton = $('a#moreposts');
-    morepostsbutton.click(function(){
-        morepostsbutton.addClass('activate').text('Loading...');
-        $.ajax({
-            url: 'news.php',
-            data: {
-                'start': start,
-                'desiredPosts': desiredPosts
-            },
-            type: 'get',
-            cache: false,
-            success: function(responseJSON){
-                start += desiredPosts;
-                var globalJSON = responseJSON;
-                console.log(globalJSON);
-                $('div#postsdiv article:last').after(responseJSON);
-            },
-            error: function(){
-                alert('Boooooo');
-            },
-            complete: function(){
-                morepostsbutton.removeClass('activate').text('Load More Posts');
-                console.log("Session Posts Start var: "+<?php echo $_SESSION['posts_start']; ?>);
-                console.log("Total item quantitiy: "+<?php echo $feed->get_item_quantity(0); ?>);
-//                alert('Holy cow it worked');
-            }
-        });
-    })
+
 </script>
 	
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.  	 63	 +       mathiasbynens.be/notes/async-analytics-snippet -->
