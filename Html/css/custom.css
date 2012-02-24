@@ -133,3 +133,18 @@ aside#recentposts > hgroup {
 nav#topnav > ul.sf-menu {
     margin-top: 0;
 }
+
+a#moreposts {
+    background-color: rgb(61,51,51);
+    background-color: rgba(61,51,51,0.85); 
+    font-weight:bold; 
+    text-align:center; 
+    padding:10px 0; 
+    cursor:pointer;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.activate {
+    background: url(../img/ajax-loader.gif) no-repeat 50% 50%;
+}
