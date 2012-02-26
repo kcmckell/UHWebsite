@@ -19,7 +19,15 @@
     <header>
 		
         <?php require('nav.html'); ?>
+
         
+    </header><!-- end header -->
+    
+
+<!-- main content area -->   
+    <div id="main" role="main">
+    
+                
 <!-- responsive FlexSlider image slideshow -->
     <div class="flexslider">
 	    <ul class="slides">
@@ -72,12 +80,6 @@
 	  </div>
 <!-- FlexSlider -->
         
-    </header><!-- end header -->
-    
-
-<!-- main content area -->   
-    <div id="main" role="main">
-    
 <!-- left sidebar -->    
 <!--    <aside class="grid_4">
     <h2>Secondary Section menu</h2>
@@ -93,9 +95,25 @@
 <!-- #end left sidebar -->
     
 <!-- content area -->    
-<!--      <div id="content">-->
-         
-<!--      </div>-->
+      <div id="content">
+         <section class="grid_12">
+             <hgroup>
+                 <h1>
+                     Socially Speaking
+                 </h1>
+             </hgroup>
+             <div id="social">
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+            
+             </div>
+             
+             
+      </div>
 <!-- #end content area -->
   
       

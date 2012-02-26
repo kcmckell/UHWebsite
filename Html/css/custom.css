@@ -133,3 +133,33 @@ aside#recentposts > hgroup {
 nav#topnav > ul.sf-menu {
     margin-top: 0;
 }
+
+#social {
+    position: relative;
+    height: 95px;
+    width: 95px;
+}
+
+.clipwrapper {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pos-1 { clip: rect(0 100px 0 0); }
+.pos-2 { clip: rect(0 200px 0 100px); left: -100px; }
+.pos-3 { clip: rect(0 300px 0 200px); left: -200px;  }
+.pos-4 { clip: rect(0 400px 0 300px); left: -300px;  }
+.pos-5 { clip: rect(0 500px 0 400px); left: -400px;  }
+.pos-6 { clip: rect(0 600px 0 500px); left: -500px;  }
+.pos-7 { clip: rect(0 700px 0 600px); left: -600px;  }
+.pos-8 { clip: rect(0 800px 0 700px); left: -700px;  }
+.pos-9 { clip: rect(0 900px 0 800px); left: -800px;  }
+
