@@ -103,12 +103,12 @@
                  </h1>
              </hgroup>
              <div id="social">
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-stamp-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-2"src="img/social-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-3"src="img/social-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-4"src="img/social-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-5"src="img/social-sprite.png" /></a></div>
+                 <div class="clipwrapper"><a href="/"><img class="clip pos-6"src="img/social-sprite.png" /></a></div>
             
              </div>
              

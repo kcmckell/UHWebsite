@@ -153,13 +153,18 @@ nav#topnav > ul.sf-menu {
     left: 0;
 }
 
-.pos-1 { clip: rect(0 100px 0 0); }
-.pos-2 { clip: rect(0 200px 0 100px); left: -100px; }
-.pos-3 { clip: rect(0 300px 0 200px); left: -200px;  }
-.pos-4 { clip: rect(0 400px 0 300px); left: -300px;  }
-.pos-5 { clip: rect(0 500px 0 400px); left: -400px;  }
-.pos-6 { clip: rect(0 600px 0 500px); left: -500px;  }
-.pos-7 { clip: rect(0 700px 0 600px); left: -600px;  }
-.pos-8 { clip: rect(0 800px 0 700px); left: -700px;  }
-.pos-9 { clip: rect(0 900px 0 800px); left: -800px;  }
+#social img {
+    max-width: none;
+}
+
+.pos-1 { clip: rect(0 100px 100px 0); }
+.pos-2 { clip: rect(0 200px 100px 100px); left: -100px; }
+.pos-3 { clip: rect(0 300px 100px 200px); left: -200px;  }
+.pos-4 { clip: rect(0 400px 100px 300px); left: -300px;  }
+.pos-5 { clip: rect(0 500px 100px 400px); left: -400px;  }
+.pos-6 { clip: rect(0 600px 100px 500px); left: -500px;  }
+.pos-7 { clip: rect(0 700px 100px 600px); left: -600px;  }
+.pos-8 { clip: rect(0 800px 100px 700px); left: -700px;  }
+.pos-9 { clip: rect(0 900px 100px 800px); left: -800px;  }
+.pos-10{ clip: rect(0 1000px 100px 900px);left: -900px; }
 
