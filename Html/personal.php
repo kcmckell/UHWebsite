@@ -19,7 +19,15 @@
     <header>
 		
         <?php require('nav.html'); ?>
+
         
+    </header><!-- end header -->
+    
+
+<!-- main content area -->   
+    <div id="main" role="main">
+    
+                
 <!-- responsive FlexSlider image slideshow -->
     <div class="flexslider">
 	    <ul class="slides">
@@ -72,12 +80,6 @@
 	  </div>
 <!-- FlexSlider -->
         
-    </header><!-- end header -->
-    
-
-<!-- main content area -->   
-    <div id="main" role="main">
-    
 <!-- left sidebar -->    
 <!--    <aside class="grid_4">
     <h2>Secondary Section menu</h2>
@@ -93,9 +95,34 @@
 <!-- #end left sidebar -->
     
 <!-- content area -->    
-<!--      <div id="content">-->
-         
-<!--      </div>-->
+      <div id="content">
+         <section class="grid_12">
+             <hgroup>
+                 <h1>
+                     Socially Speaking
+                 </h1>
+             </hgroup>
+             <p>
+                 Catch up with me around the web!
+             </p>
+             <div id="social">
+<!--                 Facebook-->
+                 <div class="clipwrapper"><a href="https://www.facebook.com/claymckell"><img class="clip pos-1"src="img/social-sprite.png" /></a></div>
+<!--                 RSS-->
+                 <div class="clipwrapper"><a href="http://kcmckell.blogspot.com/feeds/posts/default"><img class="clip pos-2"src="img/social-sprite.png" /></a></div>
+<!--                 email-->
+                 <div class="clipwrapper"><a href="mailto:mckell@hawaii.edu"><img class="clip pos-3"src="img/social-sprite.png" /></a></div>
+<!--                 Skype-->
+                 <div class="clipwrapper"><a href="skype:kcmckell?call"><img class="clip pos-4"src="img/social-sprite.png" /></a></div>
+<!--                 GitHub-->
+                 <div class="clipwrapper"><a href="https://github.com/kcmckell"><img class="clip pos-5"src="img/social-sprite.png" /></a></div>
+<!--                 Evernote-->
+                 <div class="clipwrapper"><a href="https://www.evernote.com/pub/kcmckell/public"><img class="clip pos-6"src="img/social-sprite.png" /></a></div>
+            
+             </div>
+             
+             
+      </div>
 <!-- #end content area -->
   
       
