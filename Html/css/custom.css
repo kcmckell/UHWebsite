@@ -134,17 +134,11 @@ nav#topnav > ul.sf-menu {
     margin-top: 0;
 }
 
-#social {
-    position: relative;
-    height: 95px;
-    width: 95px;
-}
-
 .clipwrapper {
     position: relative;
     height: 100px;
     width: 100px;
-    float: left;
+    display: inline-block;
 }
 
 .clip {
@@ -154,7 +148,7 @@ nav#topnav > ul.sf-menu {
 }
 
 #social img {
-    max-width: none;
+    max-width: none; /*Needed to override*/
 }
 
 .pos-1 { clip: rect(0 100px 100px 0); }

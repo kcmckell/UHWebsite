@@ -102,13 +102,22 @@
                      Socially Speaking
                  </h1>
              </hgroup>
+             <p>
+                 Catch up with me around the web!
+             </p>
              <div id="social">
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-1"src="img/social-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-2"src="img/social-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-3"src="img/social-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-4"src="img/social-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-5"src="img/social-sprite.png" /></a></div>
-                 <div class="clipwrapper"><a href="/"><img class="clip pos-6"src="img/social-sprite.png" /></a></div>
+<!--                 Facebook-->
+                 <div class="clipwrapper"><a href="https://www.facebook.com/claymckell"><img class="clip pos-1"src="img/social-sprite.png" /></a></div>
+<!--                 RSS-->
+                 <div class="clipwrapper"><a href="http://kcmckell.blogspot.com/feeds/posts/default"><img class="clip pos-2"src="img/social-sprite.png" /></a></div>
+<!--                 email-->
+                 <div class="clipwrapper"><a href="mailto:mckell@hawaii.edu"><img class="clip pos-3"src="img/social-sprite.png" /></a></div>
+<!--                 Skype-->
+                 <div class="clipwrapper"><a href="skype:kcmckell?call"><img class="clip pos-4"src="img/social-sprite.png" /></a></div>
+<!--                 GitHub-->
+                 <div class="clipwrapper"><a href="https://github.com/kcmckell"><img class="clip pos-5"src="img/social-sprite.png" /></a></div>
+<!--                 Evernote-->
+                 <div class="clipwrapper"><a href="https://www.evernote.com/pub/kcmckell/public"><img class="clip pos-6"src="img/social-sprite.png" /></a></div>
             
              </div>
              
