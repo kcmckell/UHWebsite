@@ -14,6 +14,16 @@
     });
   </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+  $(document).ready(function(){
+      if (screen.width < 600) {
+          var sidebar = $('div#content>aside');
+          sidebar.remove();
+          $('div#content>hgroup').after(sidebar);
+      }
+  })
+  </script>
+      
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">

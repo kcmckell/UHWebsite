@@ -133,3 +133,7 @@ aside#recentposts > hgroup {
 nav#topnav > ul.sf-menu {
     margin-top: 0;
 }
+
+nav#secondary-navigation > ul {
+    padding: 0;
+} 
