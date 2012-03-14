@@ -7,7 +7,7 @@
 <head>
     <?php require('commonhead.php'); ?>
 
-  <title>K. Clay McKell: CV</title>
+  <title>CV: K. Clay McKell</title>
   <script type="text/javascript" src="js/mylibs/pdfobject.js"></script>
 
 </head>

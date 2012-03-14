@@ -7,7 +7,7 @@
 <head>
     <?php require('commonhead.php'); ?>
 
-  <title>K. Clay McKell: News</title>
+  <title>News: K. Clay McKell</title>
   
   <?php
     require_once 'php/simplepie.inc';

@@ -7,7 +7,7 @@
 <head>
       <?php require('commonhead.php'); ?>
   
-  <title>K. Clay McKell: Research</title>
+  <title>Research: K. Clay McKell</title>
   
 </head>
 

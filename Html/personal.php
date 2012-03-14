@@ -7,7 +7,7 @@
 <head>
         <?php require('commonhead.php'); ?>
 
-  <title>K. Clay McKell: Personal</title>
+  <title>Personal: K. Clay McKell</title>
   <script src="js/jquery.flexslider-min.js"></script>
 </head>
 

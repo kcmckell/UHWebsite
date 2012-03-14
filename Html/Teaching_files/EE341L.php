@@ -10,7 +10,7 @@
 <head>
      <?php require('../commonhead.php'); ?>
 
-    <title>K. Clay McKell: EE 341L</title>
+    <title>EE 341L: K. Clay McKell</title>
   
 </head>
 
