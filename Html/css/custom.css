@@ -162,3 +162,6 @@ nav#topnav > ul.sf-menu {
 .pos-9 { clip: rect(0 900px 100px 800px); left: -800px;  }
 .pos-10{ clip: rect(0 1000px 100px 900px);left: -900px; }
 
+nav#secondary-navigation > ul {
+    padding: 0;
+} 
