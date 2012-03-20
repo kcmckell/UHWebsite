@@ -9,32 +9,43 @@
 
   <title>News: K. Clay McKell</title>
   
-  <?php
-    require_once 'php/simplepie.inc';
-    $feed = new SimplePie();
-    $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
-    $feed->init();
-    $feed->handle_content_type();
-    function getnextNposts($thefeed,$curpostNumber,$N){
-        for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
-            $thispost = $thefeed->get_item($i);
-            $thistitle = $thispost->get_title();
-            echo '<article id="' . str_replace(' ', '', $thistitle) . '">';
-            echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
-            echo $thispost->get_content();
-            echo "</article>";
-            
+  <script>
+      /*
+    *  How to load a feed via the Feeds API.
+    */
+
+    google.load("feeds", "1");
+
+    // Our callback function, for when a feed is loaded.
+    function feedLoaded(result) {
+      if (!result.error) {
+        // Grab the container we will put the results into
+        var container = document.getElementById("blogdiv");
+        container.innerHTML = '';
+
+        // Loop through the feeds, putting the titles onto the page.
+        // Check out the result object for a list of properties returned in each entry.
+        // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
+        for (var i = 0; i < result.feed.entries.length; i++) {
+          var entry = result.feed.entries[i];
+          var art = document.createElement("article");
+          art.appendChild(document.createTextNode(entry.title));
+          container.appendChild(art);
         }
-//        return $outArray;
+      }
     }
-    function get_first_image_url($html){
-        // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
-        if (preg_match('/<img.+?src="(.+?)"/', $html, $matches)) {
-            return $matches[1];
-        }
-        else return NULL; // or: 'url_of_default_image_if_post_has_no_img_tags.jpg';
+
+    function OnLoad() {
+      // Create a feed instance that will grab your feed.
+      var feed = new google.feeds.Feed("http://kcmckell.blogspot.com/feeds/posts/default");
+
+      // Calling load sends the request off.  It requires a callback function.
+      feed.load(feedLoaded);
     }
-  ?>
+
+    google.setOnLoadCallback(OnLoad);
+  </script>
+  
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
@@ -54,33 +65,7 @@
     
 <!-- content area -->    
       <div id="content">
-          <div id="blogdiv" class="grid_12">
-              <?php
-                if ($feed == NULL) {
-                    echo "<p>Please read my blog <a href=\"http://kcmckell.blogspot.com/\" target=\"_blank\">externally</a>.</p>";
-                    echo '</div>'; //End div#blogdiv.grid_12;
-                }
-                else {
-                    echo "<h1>" . $feed->get_title() . "</h1>";
-                    echo "<h2>" . $feed->get_description() . "</h2>";
-                    // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
-                    echo '</div><div class="grid_9" id="postsdiv">';
-                    getnextNposts($feed,0,5);
-                    // End div#postsdiv.grid_8 and Begin aside.grid_4
-                    echo '</div><aside id="recentposts" class="grid_3">';
-                    echo '<hgroup><h1>Recent Posts</h1></hgroup>';
-                    echo '<ul>';
-                    for ($i=0; $i<5; $i++) {
-                        $recentpost = $feed->get_item($i);
-                        $posttitle = $recentpost->get_title();
-                        echo '<li class="recentpost"><a href="news.php#' . str_replace(' ', '', $posttitle) . '"><h1>' . $posttitle . '</h1></a>';
-                        if ($outurl = get_first_image_url($recentpost->get_content())) {
-                            echo '<img src="' . $outurl . '"/></li>';
-                        }
-                    }
-                    echo '</ul></aside>';
-                }
-              ?>          
+          <div id="blogdiv" class="grid_12"></div>      
       </div><!-- #end content area -->
      
       
