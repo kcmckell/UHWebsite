@@ -18,6 +18,9 @@
     
     // Month parsing
     var montharray = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+    var start = 5;
+    var desiredPosts = 5;
+    var maxPosts = 20;
 
     // Our callback function, for when a feed is loaded.
     function feedLoaded(result) {
@@ -29,7 +32,6 @@
         container.html('<div class="grid_12" id="blogdiv"><h1>'+result.feed.title+'</h1><h2>'+result.feed.description+'</h2></div>');
         container.after('<div id="postsdiv" class="grid_9"></div>');
         var postsdiv = $('#postsdiv');
-//        console.log(postsdiv);
         var postscontent = '';
 
         // Loop through the feeds, putting the titles onto the page.
@@ -43,23 +45,40 @@
           postscontent += '<article class="hidden" id="'+strippedtitle+'"><hgroup><h1>'+entry.title+'</h1><small>Posted on '+datestring+'</small></hgroup>';
           postscontent += entry.content;
           postscontent += '</article>';
-//          var art = document.createElement("article");
-//          art.appendChild(document.createTextNode(entry.title));
-//          container.appendChild(art);
         }
-//        console.log(postscontent);
         postsdiv.html(postscontent);
-         $('article:lt(4)').removeClass('hidden');
-
-//        console.log(postsdiv);
-      }
-    }
+         $('article:lt('+String(start-1)+')').removeClass('hidden');
+         postsdiv.append('<a id="moreposts" class="button sf-menu">Load More Posts</a>');
+        var morepostsbutton = $('a#moreposts');
+        morepostsbutton.click(function(){
+            if (start < maxPosts){
+                morepostsbutton.addClass('activate').text('Loading...');
+                $('article:gt('+String(start-1)+'):lt('+String(desiredPosts-1)+')').removeClass('hidden');
+                start += desiredPosts;
+                if (start < maxPosts) {
+                    morepostsbutton.removeClass('activate').text('Load More Posts');                
+                }
+                else {
+                    morepostsbutton.removeClass('activate')
+                        .text('For more, please head to Blogger')
+                        .attr('href','http://kcmckell.blogspot.com/');
+                }
+            }
+            else {
+                morepostsbutton.text('Sorry, no more posts');
+            }
+        }) //end morepostsbutton.click function;
+        }
+        else {
+            container.html('Sorry, the feed is down.  For the latest news, please head over to <a href="http://kcmckell.blogspot.com/">Blogger</a>');
+        }// end if-else.
+    }; // endfeedLoaded
 
     function OnLoad() {
       // Create a feed instance that will grab your feed.
       var feed = new google.feeds.Feed("http://kcmckell.blogspot.com/feeds/posts/default");
       feed.includeHistoricalEntries;
-      feed.setNumEntries(20);
+      feed.setNumEntries(maxPosts);
       // Calling load sends the request off.  It requires a callback function.
       feed.load(feedLoaded);
     }
