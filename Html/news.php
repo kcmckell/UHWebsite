@@ -15,35 +15,57 @@
     */
 
     google.load("feeds", "1");
+    
+    // Month parsing
+    var montharray = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
 
     // Our callback function, for when a feed is loaded.
     function feedLoaded(result) {
-      if (!result.error) {
         // Grab the container we will put the results into
-        var container = document.getElementById("blogdiv");
-        container.innerHTML = '';
+        var container = $("#content");
+        container.html('');
+      if (!result.error) {
+        // Place feed title.
+        container.html('<div class="grid_12" id="blogdiv"><h1>'+result.feed.title+'</h1><h2>'+result.feed.description+'</h2></div>');
+        container.after('<div id="postsdiv" class="grid_9"></div>');
+        var postsdiv = $('#postsdiv');
+//        console.log(postsdiv);
+        var postscontent = '';
 
         // Loop through the feeds, putting the titles onto the page.
         // Check out the result object for a list of properties returned in each entry.
         // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
         for (var i = 0; i < result.feed.entries.length; i++) {
           var entry = result.feed.entries[i];
-          var art = document.createElement("article");
-          art.appendChild(document.createTextNode(entry.title));
-          container.appendChild(art);
+          var strippedtitle = entry.title.replace(/ /g,'');
+          var pubdate = new Date(entry.publishedDate);
+          var datestring = montharray[pubdate.getMonth()]+' '+pubdate.getDate()+', '+pubdate.getFullYear();
+          postscontent += '<article class="hidden" id="'+strippedtitle+'"><hgroup><h1>'+entry.title+'</h1><small>Posted on '+datestring+'</small></hgroup>';
+          postscontent += entry.content;
+          postscontent += '</article>';
+//          var art = document.createElement("article");
+//          art.appendChild(document.createTextNode(entry.title));
+//          container.appendChild(art);
         }
+//        console.log(postscontent);
+        postsdiv.html(postscontent);
+         $('article:lt(4)').removeClass('hidden');
+
+//        console.log(postsdiv);
       }
     }
 
     function OnLoad() {
       // Create a feed instance that will grab your feed.
       var feed = new google.feeds.Feed("http://kcmckell.blogspot.com/feeds/posts/default");
-
+      feed.includeHistoricalEntries;
+      feed.setNumEntries(20);
       // Calling load sends the request off.  It requires a callback function.
       feed.load(feedLoaded);
     }
 
     google.setOnLoadCallback(OnLoad);
+
   </script>
   
 </head>
@@ -65,7 +87,6 @@
     
 <!-- content area -->    
       <div id="content">
-          <div id="blogdiv" class="grid_12"></div>      
       </div><!-- #end content area -->
      
       
@@ -85,7 +106,7 @@
 <script type="text/javascript">
 
 // Fireup the plugins
-	$(document).ready(function(){
+$(document).ready(function(){
 	// initialise menu
 	jQuery('ul.sf-menu').superfish();
 
@@ -93,9 +114,8 @@
 	$('#mobileselect').mobileMenu({
 		switchWidth: 480, // at what size to begin showing the select box
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
-											  });
-		});
-
+     });
+});
 </script>
 	
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.  	 63	 +       mathiasbynens.be/notes/async-analytics-snippet -->
