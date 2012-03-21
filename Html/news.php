@@ -30,7 +30,17 @@
       if (!result.error) {
         // Place feed title.
         container.html('<div class="grid_12" id="blogdiv"><h1>'+result.feed.title+'</h1><h2>'+result.feed.description+'</h2></div>');
-        container.after('<div id="postsdiv" class="grid_9"></div>');
+        container.after('<aside id="recentposts" class="grid_3"></aside><div id="postsdiv" class="grid_9"></div>');
+        var recentaside = $('#recentposts');
+        var asidecontent = '<hgroup><h1>Recent Posts</h1></hgroup><nav id="secondary-navigation"><ul>';
+        for (var i = 0; i<start; i++) {
+            var entry = result.feed.entries[i];
+            asidecontent += '<li class="recentpost"><a href="news.php#' + ConditionTitle(entry.title) + '"><h1>' + entry.title + '</h1></a>';
+            asidecontent += '</li>';
+        }
+//        asidecontent += '<h1>Archive</h1>';
+        asidecontent += '</ul></nav>';
+        recentaside.html(asidecontent);
         var postsdiv = $('#postsdiv');
         var postscontent = '';
 
@@ -39,7 +49,7 @@
         // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
         for (var i = 0; i < result.feed.entries.length; i++) {
           var entry = result.feed.entries[i];
-          var strippedtitle = entry.title.replace(/ /g,'');
+          var strippedtitle = ConditionTitle(entry.title);
           var pubdate = new Date(entry.publishedDate);
           var datestring = montharray[pubdate.getMonth()]+' '+pubdate.getDate()+', '+pubdate.getFullYear();
           postscontent += '<article class="hidden" id="'+strippedtitle+'"><hgroup><h1>'+entry.title+'</h1><small>Posted on '+datestring+'</small></hgroup>';
@@ -74,6 +84,11 @@
             container.html('Sorry, the feed is down.  For the latest news, please head over to <a href="http://kcmckell.blogspot.com/">Blogger</a>');
         }// end if-else.
     }; // endfeedLoaded
+    
+    function ConditionTitle(s) {
+      // Strip all whitespace from string s.
+      return s.replace(/ /g,'');
+    }
 
     function OnLoad() {
       // Create a feed instance that will grab your feed.
