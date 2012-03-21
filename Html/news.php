@@ -9,32 +9,100 @@
 
   <title>News: K. Clay McKell</title>
   
-  <?php
-    require_once 'php/simplepie.inc';
-    $feed = new SimplePie();
-    $feed->set_feed_url('http://kcmckell.blogspot.com/feeds/posts/default');
-    $feed->init();
-    $feed->handle_content_type();
-    function getnextNposts($thefeed,$curpostNumber,$N){
-        for ($i = $curpostNumber; $i < $curpostNumber+$N; $i++) {
-            $thispost = $thefeed->get_item($i);
-            $thistitle = $thispost->get_title();
-            echo '<article id="' . str_replace(' ', '', $thistitle) . '">';
-            echo "<hgroup><h1>" . $thistitle . "</h1><small>Posted on " . $thispost->get_date('F j, Y') . "</small></hgroup>";
-            echo $thispost->get_content();
-            echo "</article>";
-            
+  <script>
+      /*
+    *  How to load a feed via the Feeds API.
+    */
+
+    google.load("feeds", "1");
+    
+    // Month parsing
+    var montharray = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+    var start = 5;
+    var desiredPosts = 5;
+    var maxPosts = 20;
+
+    // Our callback function, for when a feed is loaded.
+    function feedLoaded(result) {
+        // Grab the container we will put the results into
+        var container = $("#content");
+        container.html('');
+      if (!result.error) {
+        // Place feed title.
+        container.html('<div class="grid_12" id="blogdiv"><h1>'+result.feed.title+'</h1><h2>'+result.feed.description+'</h2></div>');
+        container.after('<aside id="recentposts" class="grid_3"></aside><div id="postsdiv" class="grid_9"></div>');
+        var recentaside = $('#recentposts');
+        var asidecontent = '<hgroup><h1>Recent Posts</h1></hgroup><nav id="secondary-navigation"><ul>';
+        for (var i = 0; i<start; i++) {
+            var entry = result.feed.entries[i];
+            asidecontent += '<li class="recentpost"><a href="news.php#' + ConditionTitle(entry.title) + '"><h1>' + entry.title + '</h1></a>';
+            asidecontent += '</li>';
         }
-//        return $outArray;
-    }
-    function get_first_image_url($html){
-        // Courtesy mickyginger on http://www.sitepoint.com/forums/showthread.php?701264-Using-SimplePie-to-take-only-first-image-from-RSS-feed.
-        if (preg_match('/<img.+?src="(.+?)"/', $html, $matches)) {
-            return $matches[1];
+//        asidecontent += '<h1>Archive</h1>';
+        asidecontent += '</ul></nav>';
+        recentaside.html(asidecontent);
+        var postsdiv = $('#postsdiv');
+        var postscontent = '';
+
+        // Loop through the feeds, putting the titles onto the page.
+        // Check out the result object for a list of properties returned in each entry.
+        // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
+        for (var i = 0; i < result.feed.entries.length; i++) {
+          var entry = result.feed.entries[i];
+          var strippedtitle = ConditionTitle(entry.title);
+          var pubdate = new Date(entry.publishedDate);
+          var datestring = montharray[pubdate.getMonth()]+' '+pubdate.getDate()+', '+pubdate.getFullYear();
+          postscontent += '<article class="hidden" id="'+strippedtitle+'"><hgroup><h1>'+entry.title+'</h1><small>Posted on '+datestring+'</small></hgroup>';
+          postscontent += entry.content;
+          postscontent += '</article>';
         }
-        else return NULL; // or: 'url_of_default_image_if_post_has_no_img_tags.jpg';
+        postsdiv.html(postscontent);
+         $('article:lt('+String(start-1)+')').removeClass('hidden');
+         postsdiv.append('<a id="moreposts" class="button sf-menu">Load More Posts</a>');
+        var morepostsbutton = $('a#moreposts');
+        morepostsbutton.click(function(){
+            if (start < maxPosts){
+                morepostsbutton.addClass('activate').text('Loading...');
+                $('article:gt('+String(start-1)+'):lt('+String(desiredPosts-1)+')').removeClass('hidden');
+                start += desiredPosts;
+                if (start < maxPosts) {
+                    morepostsbutton.removeClass('activate').text('Load More Posts');                
+                }
+                else {
+                    morepostsbutton.removeClass('activate')
+                        .text('For more, please head to Blogger')
+                        .attr('href','http://kcmckell.blogspot.com/');
+                    return false;
+                }
+            }
+            else {
+                morepostsbutton.text('Sorry, no more posts');
+            }
+        }) //end morepostsbutton.click function;
+        }
+        else {
+            container.html('Sorry, the feed is down.  For the latest news, please head over to <a href="http://kcmckell.blogspot.com/">Blogger</a>');
+        }// end if-else.
+    }; // endfeedLoaded
+    
+    function ConditionTitle(s) {
+      // Strip all whitespace from string s.
+      return s.replace(/ /g,'');
     }
-  ?>
+
+    function OnLoad() {
+      // Create a feed instance that will grab your feed.
+      var feed = new google.feeds.Feed("http://kcmckell.blogspot.com/feeds/posts/default");
+      feed.includeHistoricalEntries;
+      feed.setNumEntries(maxPosts);
+      // Calling load sends the request off.  It requires a callback function.
+      feed.load(feedLoaded);
+    }
+
+    google.setOnLoadCallback(OnLoad);
+
+  </script>
+  
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
@@ -54,33 +122,6 @@
     
 <!-- content area -->    
       <div id="content">
-          <div id="blogdiv" class="grid_12">
-              <?php
-                if ($feed == NULL) {
-                    echo "<p>Please read my blog <a href=\"http://kcmckell.blogspot.com/\" target=\"_blank\">externally</a>.</p>";
-                    echo '</div>'; //End div#blogdiv.grid_12;
-                }
-                else {
-                    echo "<h1>" . $feed->get_title() . "</h1>";
-                    echo "<h2>" . $feed->get_description() . "</h2>";
-                    // End div#blogdiv.grid_12 and Begin div#postsdiv.grid_8
-                    echo '</div><div class="grid_9" id="postsdiv">';
-                    getnextNposts($feed,0,5);
-                    // End div#postsdiv.grid_8 and Begin aside.grid_4
-                    echo '</div><aside id="recentposts" class="grid_3">';
-                    echo '<hgroup><h1>Recent Posts</h1></hgroup>';
-                    echo '<ul>';
-                    for ($i=0; $i<5; $i++) {
-                        $recentpost = $feed->get_item($i);
-                        $posttitle = $recentpost->get_title();
-                        echo '<li class="recentpost"><a href="news.php#' . str_replace(' ', '', $posttitle) . '"><h1>' . $posttitle . '</h1></a>';
-                        if ($outurl = get_first_image_url($recentpost->get_content())) {
-                            echo '<img src="' . $outurl . '"/></li>';
-                        }
-                    }
-                    echo '</ul></aside>';
-                }
-              ?>          
       </div><!-- #end content area -->
      
       
@@ -100,7 +141,7 @@
 <script type="text/javascript">
 
 // Fireup the plugins
-	$(document).ready(function(){
+$(document).ready(function(){
 	// initialise menu
 	jQuery('ul.sf-menu').superfish();
 
@@ -108,9 +149,8 @@
 	$('#mobileselect').mobileMenu({
 		switchWidth: 480, // at what size to begin showing the select box
       	indentString: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'	 // how to indent the menu items in select box						  
-											  });
-		});
-
+     });
+});
 </script>
 	
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.  	 63	 +       mathiasbynens.be/notes/async-analytics-snippet -->
