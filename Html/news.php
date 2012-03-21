@@ -62,6 +62,7 @@
                     morepostsbutton.removeClass('activate')
                         .text('For more, please head to Blogger')
                         .attr('href','http://kcmckell.blogspot.com/');
+                    return false;
                 }
             }
             else {
