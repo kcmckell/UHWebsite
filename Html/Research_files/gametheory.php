@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <!--TODO: Get new page up to Spectra-->
 <head>
-    <?php require('../commonhead.php'); ?>
+    <?php require('../base.php'); require('../commonhead.php'); ?>
 
   <title>Game Theory Reading Group</title>
   <script type="text/x-mathjax-config">
