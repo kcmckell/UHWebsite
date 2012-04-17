@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-        <?php require('commonhead.php'); ?>
+        <?php require('base.php'); require('commonhead.php'); ?>
 
   <title>Personal: K. Clay McKell</title>
   <script src="js/jquery.flexslider-min.js"></script>

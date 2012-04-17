@@ -1,4 +1,3 @@
-<base href="http://localhost:8888/UHWebsite/Html/" />
 <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
