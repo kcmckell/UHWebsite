@@ -28,11 +28,10 @@
     MathJax.Hub.Config({
         tex2jax: {
         	inlineMath: [['$','$'], ['\\(','\\)']],
-        	processEscapes: true,
-        	style: {
-        		"font-size": 100%
-        		// Insert other CSS here.
-        	}
+                processEscapes: true,
+                style: {
+                    "font-size": "100%"
+                }
         }
     });
   </script>
@@ -47,6 +46,18 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
+        <section>
+            <h1>Modeling Ethnic Conflict with Altruism</h1>
+            <h2>K. Clay McKell</h2>
+            <h2>April 24, 2012</h2>
+            <h3>UH Manoa Game Theory Reading Group</h3>
+            <h4>Joint work with: Sun-Ki Chai and G&uuml;rdal Arslan</h4>
+        </section>
+        <section>
+            This is display math:
+            $$ e^{i\pi} = -1 $$
+            with text below
+        </section>
         
     </div>
 
