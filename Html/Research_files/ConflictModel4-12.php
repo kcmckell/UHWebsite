@@ -23,10 +23,17 @@
 <!--[if lt IE 9]><script src="js/libs/modernizr-2.0.6.min.js"></script><![endif]-->
 <!-- Shiv for HTML5 details tag in browsers other than Chrome: https://github.com/manuelbieh/Details-Polyfill -->
 <script src="js/mylibs/details.polyfill.min.js"></script>
-
+<!-- MathJax documentation: http://www.mathjax.org/docs/2.0/tex.html -->
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        tex2jax: {
+        	inlineMath: [['$','$'], ['\\(','\\)']],
+        	processEscapes: true,
+        	style: {
+        		"font-size": 100%
+        		// Insert other CSS here.
+        	}
+        }
     });
   </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>      
