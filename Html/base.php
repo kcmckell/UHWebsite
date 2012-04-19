@@ -1,1 +1,0 @@
-<base href="http://localhost:8080/UHWebsite/Html/" />
