@@ -52,11 +52,76 @@
             <h2>April 24, 2012</h2>
             <h3>UH Manoa Game Theory Reading Group</h3>
             <h4>Joint work with: Sun-Ki Chai and G&uuml;rdal Arslan</h4>
+            <script>
+                // Delicously hacky. Look away.
+                if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+                document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+            </script>
         </section>
         <section>
-            This is display math:
-            $$ e^{i\pi} = -1 $$
-            with text below
+            <h2>Questions to keep in mind</h2>
+            <ul>
+                <li class="fragment">Why this question?</li>
+                <li class="fragment">What's the math?</li>
+                <li class="fragment">Is there an equilibrium?</li>
+                <li class="fragment">Is it unique?</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Why Ethnic Conflict?</h2>
+            <section>
+                <p>Ethnic group map of former Yugoslavia</p>
+            </section>
+            <section>
+                <img src="Research_files/images/Philippine_ethnic_groups_per_province.png" />
+                <p>
+                    Ethnic group map of the Philippines
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Model description</h2>
+            <section>
+                <ul>
+                    <li>$L\geq 2$ players</li>
+                    <li>Budget: $\Pi_i$</li>
+                    <li>Action: $\theta_i = (\theta_{i1},\ldots,\theta_{iL})$</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Institutional oversight: $I$</li>
+                    <li>Fraction of investments spent: $c$</li>
+                    <li>Money in the bank: 
+                        $$ \bar{\Pi}_i(\theta_i) = \Pi_i - c\sum_{j\neq i}\theta_{ij} = (1-c)\Pi_i + c\theta_{ii} $$
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Likelihood of player $i$ beating player $j$:
+                        $$ \frac{\theta_{ij}}{\epsilon + \theta_{ij} + \theta_{ji}} $$
+                    </li>
+                    <li>Payout if $i$ beats $j$:
+                        $$ \frac{\lambda \bar{\Pi}_j}{L-1}, \quad \lambda\in[0,1] $$
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Personal utility:
+                        $$ \bar{U}_i(\theta) = I\Pi_i + (1-I)\left(\bar\Pi_i + \frac{\lambda}{L-1} \sum_{j\neq i} \frac{\theta_{ij}\bar{\Pi}_j - \theta_{ji}\bar{\Pi}_i}{\epsilon + \theta_{ij} + \theta_{ji}}\right) $$
+                    </li>
+                    <li>True utility: $$ U_i(\theta) = \sum_{j=1}^L \beta_{ij}\bar{U}_j(\theta) $$
+                    </li>
+                    <li>Altruism coefficients:
+                        \begin{gather}
+                            \beta_{ii} = 1, \\
+                            \beta_{ij} \in [-1,1], j\neq i
+                        \end{gather}
+                    </li>
+                </ul>
+            </section>
         </section>
         
     </div>
@@ -73,8 +138,9 @@
     <div class="progress"><span></span></div>
 </div>
 <script>
-// Rewrite internal link targets.
+// Clay's special jQuery.
 $(document).ready(function(){
+// Rewrite internal link targets.
     // Look for all anchors inside of the REVEAL div.
     $('div#reveal a').filter(function(index){
         var ref = $(this).attr('href');
@@ -85,7 +151,16 @@ $(document).ready(function(){
         $(this).attr('href',prefix+ref);    // Reassign the href as the above prefix (which points to the page we're on) concatenated with the original reference.
         console.log($(this).attr('href'));
     });
+// Adjust image dimensions so that they are never off screen.
+    jQuery.event.add(window, "load", resizeImg);    // Do it on page load.
+    jQuery.event.add(window, "resize", resizeImg);  // Also do it on window resize.
 });
+function resizeImg(){
+    var wh = $(window).height();
+    var ww = $(window).width();
+    // 65% of height and 80% of width seem to be nice.
+    $('div#reveal section img').css({'max-height':.65*wh, 'max-width':.8*ww});
+}
 </script>
 <script src="js/mylibs/hakimel-reveal.js/js/reveal.js"></script>
 
@@ -140,198 +215,198 @@ $(document).ready(function(){
 
 <!-- Notes -->
 <!--<section>
-            <h1>Reveal.js</h1>
-            <h3 class="inverted">A CSS 3D Slideshow</h3>
-            <script>
-                // Delicously hacky. Look away.
-                if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
-                document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
-            </script>
-        </section>
+    <h1>Reveal.js</h1>
+    <h3 class="inverted">A CSS 3D Slideshow</h3>
+    <script>
+        // Delicously hacky. Look away.
+        if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+        document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+    </script>
+</section>
 
-        <section>
-            <h2>Heads Up</h2>
-            <p>
-                reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-                support for CSS 3D transforms to see it in its full glory.
-            </p>
-            <p>
-                <i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-            </p>
-        </section>
+<section>
+    <h2>Heads Up</h2>
+    <p>
+        reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
+        support for CSS 3D transforms to see it in its full glory.
+    </p>
+    <p>
+        <i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
+    </p>
+</section>
 
-         Example of nested vertical slides 
-        <section>
-            <section>
-                <h2>Vertical Slides</h2>
-                <p>
-                    Slides can be nested inside of other slides,<br/>
-                    try pressing <a href="#/2/1">down</a>.
-                </p>
-                <a href="#/2/1" class="image">
-                    <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-                </a>
-            </section>
-            <section>
-                <h2>Basement Level 1</h2>
-                <p>Press down or up to navigate.</p>
-            </section>
-            <section>
-                <h2>Basement Level 2</h2>
-                <p>Cornify</p>
-                <a class="test" href="http://cornify.com">
-                    <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-                </a>
-            </section>
-            <section>
-                <h2>Basement Level 3</h2>
-                <p>That's it, time to go back up.</p>
-                <a href="#/2" class="image">
-                    <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-                </a>
-            </section>
-        </section>
+ Example of nested vertical slides 
+<section>
+    <section>
+        <h2>Vertical Slides</h2>
+        <p>
+            Slides can be nested inside of other slides,<br/>
+            try pressing <a href="#/2/1">down</a>.
+        </p>
+        <a href="#/2/1" class="image">
+            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+        </a>
+    </section>
+    <section>
+        <h2>Basement Level 1</h2>
+        <p>Press down or up to navigate.</p>
+    </section>
+    <section>
+        <h2>Basement Level 2</h2>
+        <p>Cornify</p>
+        <a class="test" href="http://cornify.com">
+            <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
+        </a>
+    </section>
+    <section>
+        <h2>Basement Level 3</h2>
+        <p>That's it, time to go back up.</p>
+        <a href="#/2" class="image">
+            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
+        </a>
+    </section>
+</section>
 
-        <section>
-            <h2>Holistic Overview</h2>
-            <p>
-                Press <strong>SPACE</strong> to enter the slide overview!
-            </p>
-        </section>
+<section>
+    <h2>Holistic Overview</h2>
+    <p>
+        Press <strong>SPACE</strong> to enter the slide overview!
+    </p>
+</section>
 
-        <section>
-            <h2>Transition Styles</h2>
-            <p>
-                You can select from different transitions, like:
-            </p>
-            <ul>
-                <li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-                <li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-                <li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-            </ul>
-        </section>
+<section>
+    <h2>Transition Styles</h2>
+    <p>
+        You can select from different transitions, like:
+    </p>
+    <ul>
+        <li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
+        <li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
+        <li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
+    </ul>
+</section>
 
-        <section>
-            <h2>Marvelous Unordered List</h2>
-            <ul>
-                <li>No order here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-            </ul>
-        </section>
+<section>
+    <h2>Marvelous Unordered List</h2>
+    <ul>
+        <li>No order here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+    </ul>
+</section>
 
-        <section>
-            <h2>Fantastic Ordered List</h2>
-            <ol>
-                <li>One is smaller than...</li>
-                <li>Two is smaller than...</li>
-                <li>Three!</li>
-            </ol>
-        </section>
+<section>
+    <h2>Fantastic Ordered List</h2>
+    <ol>
+        <li>One is smaller than...</li>
+        <li>Two is smaller than...</li>
+        <li>Three!</li>
+    </ol>
+</section>
 
-        <section>
-            <section data-state="alert">
-                <h2>Global State</h2>
-                <p>
-                    Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-                    will be added as a class to the document element when the slide is open. This let's you
-                    apply broader style changes, like switching the background.
-                </p>
-                <a href="#/7/1" class="image">
-                    <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-                </a>
-            </section>
-            <section data-state="blackout">
-                <h2>"blackout"</h2>
-                <a href="#/7/2" class="image">
-                    <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-                </a>
-            </section>
-            <section data-state="soothe">
-                <h2>"soothe"</h2>
-                <a href="#/7/0" class="image">
-                    <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-                </a>
-            </section>
-        </section>
+<section>
+    <section data-state="alert">
+        <h2>Global State</h2>
+        <p>
+            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+            will be added as a class to the document element when the slide is open. This let's you
+            apply broader style changes, like switching the background.
+        </p>
+        <a href="#/7/1" class="image">
+            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+        </a>
+    </section>
+    <section data-state="blackout">
+        <h2>"blackout"</h2>
+        <a href="#/7/2" class="image">
+            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+        </a>
+    </section>
+    <section data-state="soothe">
+        <h2>"soothe"</h2>
+        <a href="#/7/0" class="image">
+            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
+        </a>
+    </section>
+</section>
 
-        <section>
-            <h2>Clever Quotes</h2>
-            <p>
-                These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                The nice thing about standards is that there are so many to choose from</q> and block:
-            </p>
-            <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-                reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-            </blockquote>
-        </section>
+<section>
+    <h2>Clever Quotes</h2>
+    <p>
+        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+        The nice thing about standards is that there are so many to choose from</q> and block:
+    </p>
+    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+        For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
+        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+    </blockquote>
+</section>
 
-        <section>
-            <h2>Pretty Code</h2>
-            <pre><code contenteditable>
-    var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
-            document.body.style['MozPerspective'] !== undefined ||
-            document.body.style['perspective'] !== undefined;
+<section>
+    <h2>Pretty Code</h2>
+    <pre><code contenteditable>
+var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
+    document.body.style['MozPerspective'] !== undefined ||
+    document.body.style['perspective'] !== undefined;
 
-    function linkify( selector ) {
-    if( supports3DTransforms ) {
+function linkify( selector ) {
+if( supports3DTransforms ) {
 
-    var nodes = document.querySelectorAll( selector );
+var nodes = document.querySelectorAll( selector );
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-        var node = nodes[i];
+for( var i = 0, len = nodes.length; i < len; i++ ) {
+var node = nodes[i];
 
-        if( !node.className || !node.className.match( /roll/g ) ) {
-            node.className += ' roll';
-            node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
-        }
-    };
-    }
-    }
+if( !node.className || !node.className.match( /roll/g ) ) {
+    node.className += ' roll';
+    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+}
+};
+}
+}
 
-    linkify( 'a' );
-            </code></pre>
-            <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-        </section>
+linkify( 'a' );
+    </code></pre>
+    <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+</section>
 
-        <section>
-            <h2>Intergalactic Interconnections</h2>
-            <p>
-                You can link between slides internally,<br/>
-                <a href="#/2/3">like this</a>.
-            </p>
-        </section>
+<section>
+    <h2>Intergalactic Interconnections</h2>
+    <p>
+        You can link between slides internally,<br/>
+        <a href="#/2/3">like this</a>.
+    </p>
+</section>
 
-        <section>
-            <h2>Fragmented Views</h2>
-            <p>Hit the next arrow...</p>
-            <p class="fragment">... to step through ...</p>
-            <ol>
-                <li class="fragment"><code>any type</code></li>
-                <li class="fragment"><em>of view</em></li>
-                <li class="fragment"><strong>fragments</strong></li>
-            </ol>
-        </section>
+<section>
+    <h2>Fragmented Views</h2>
+    <p>Hit the next arrow...</p>
+    <p class="fragment">... to step through ...</p>
+    <ol>
+        <li class="fragment"><code>any type</code></li>
+        <li class="fragment"><em>of view</em></li>
+        <li class="fragment"><strong>fragments</strong></li>
+    </ol>
+</section>
 
-        <section>
-            <h2>Spectacular image!</h2>
-            <a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-                <img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-            </a>
-        </section>
+<section>
+    <h2>Spectacular image!</h2>
+    <a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
+        <img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
+    </a>
+</section>
 
-        <section>
-            <h2>Stellar Links</h2>
-            <ul>
-                <li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-                <li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-                <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-            </ul>
-        </section>
+<section>
+    <h2>Stellar Links</h2>
+    <ul>
+        <li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
+        <li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
+        <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+    </ul>
+</section>
 
-        <section>
-            <h1>THE END</h1>
-            <h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
-        </section>-->
+<section>
+    <h1>THE END</h1>
+    <h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
+</section>-->
