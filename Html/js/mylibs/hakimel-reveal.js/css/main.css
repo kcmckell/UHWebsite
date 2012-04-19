@@ -954,5 +954,9 @@ html {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+  /* My own special sauce */
+  .slides > section {page-break-inside: avoid; opacity: 100% !important; border: 1px solid black !important; float: left !important; clear: left; text-align: center; font-size: 1.7rem;}
+  .slides > section:nth-child(even) {page-break-after: always;} /* Should allow 2-up printing */
+  aside.controls, aside.controls * {display: none;}
 }
 
