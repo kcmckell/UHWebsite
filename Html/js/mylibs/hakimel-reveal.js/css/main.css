@@ -424,7 +424,7 @@ html {
 	left: 50%;
 	top: 50%;
 	margin-left: -450px;
-	margin-top: -320px;
+	margin-top: -350px;
 	padding: 20px 0px;
 	
 	text-align: center;
@@ -955,8 +955,7 @@ html {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
   /* My own special sauce */
-  .slides > section {page-break-inside: avoid; opacity: 100% !important; border: 1px solid black !important; float: left !important; clear: left; text-align: center; font-size: 1.7rem;}
-  .slides > section:nth-child(even) {page-break-after: always;} /* Should allow 2-up printing */
+  .slides > section { page-break-after: always; opacity: 100% !important; border: 1px solid black !important; float: left !important; clear: left !important; text-align: center; font-size: 1.7rem; display: inline-block; visibility: visible;}
   aside.controls, aside.controls * {display: none;}
 }
 

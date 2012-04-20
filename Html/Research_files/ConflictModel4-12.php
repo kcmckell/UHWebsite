@@ -70,13 +70,19 @@
         <section>
             <h2>Why Ethnic Conflict?</h2>
             <section>
+                <img src="Research_files/images/yugoslavia.png" title="Yugoslavia" alt="Ethnic group map of Yugoslavia"/>
                 <p>Ethnic group map of former Yugoslavia</p>
+                <p><small>from Rabushka and Shepsle 1972, p. 184</small></p>
             </section>
             <section>
-                <img src="Research_files/images/Philippine_ethnic_groups_per_province.png" />
-                <p>
-                    Ethnic group map of the Philippines
-                </p>
+                <img src="Research_files/images/Philippine_ethnic_groups_per_province.png" title="Philippines" alt="Ethnic group map of the Philippines"/>
+                <p>Ethnic group map of the Philippines</p>
+                <p><small>public domain</small></p>
+            </section>
+            <section>
+                <img src="Research_files/images/nigeria.png" title="Nigeria" alt="Ethnic group map of Nigeria"/>
+                <p>Ethnic group map of Nigeria</p>
+                <p><small>from Rabushka and Shepsle 1972, p. 181</small></p>
             </section>
         </section>
         <section>
@@ -122,6 +128,44 @@
                     </li>
                 </ul>
             </section>
+        </section>
+        <section>
+            <h2>Is there a pure Nash equilibrium?</h2>
+            <h3>For $L=2$ players: Yes</h3>
+            <p>The game is concave.</p>
+        </section>
+        <section>
+            <h2>Is there a pure Nash equilibrium?</h2>
+            <h3>For $L\geq 3$ players: ?</h3>
+            <section>
+                <p>We don&#039t have
+                <ul>
+                    <li>Supermodularity</li>
+                    <li>Quasiconcavity</li>
+                    <li>Potential function</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <img src="Research_files/images/QuasiConcavityCounterExampleScaled.jpg" title="Quasiconcavity violated" alt="A convex combination of player 3's utility between two actions that falls below the minimum of the payoffs of the two actions." />
+                <p>Quasiconcavity counterexample</p>
+                <p><small>from McKell et. al., 2012</small></p>
+            </section>
+        </section>
+        <section>
+            <h2>Parameter analysis</h2>
+            <section>
+                <img src="Research_files/images/Symmetric.png"/>
+                <p>Symmetric 2-player: $\Pi_1 = \Pi_2 = 10$, $\frac{\lambda}{c} = 1$, $\beta_{12}=\beta_{21}=0$.</p>
+                <p><small>from McKell et. al., 2012</small></p>
+            </section>
+        </section>
+        <section>
+            <h2>Bibliography</h2>
+            <ul>
+                <li>Rabushka, A. and K. A. Shepsle, <i>Politics in Plural Societies: A Theory of Democratic Instability</i>, Charles E. Merrill, 1972.</li>
+                <li>McKell, K. C., S.-K. Chai and G. Arslan, <i>Modeling Ethnic Conflict with Altruism</i>, submitted to the 51st IEEE CDC, 2012</li>
+            </ul>
         </section>
         
     </div>
