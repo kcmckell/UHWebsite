@@ -159,9 +159,26 @@
                 <p>Symmetric 2-player: $\Pi_1 = \Pi_2 = 10$, $\frac{\lambda}{c} = 1$, $\beta_{12}=\beta_{21}=0$.</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
+            <section>
+                <img src="Research_files/images/Lopsided.png"/>
+                <p>Lopsided budget: $\Pi_1 = 100$, $ \Pi_2 = 10$, $\frac{\lambda}{c} = 1$, $\beta_{12}=\beta_{21}=0$.</p>
+                <p><small>from McKell et. al., 2012</small></p>
+            </section>
+            <section>
+                <img src="Research_files/images/RatioComp.png"/>
+                <p>Comparison of $\frac{\lambda}{c}$.  $\Pi_1 = \Pi_2 = 10$,  $\beta_{12}=\beta_{21}=0$.</p>
+                <p><small>from McKell et. al., 2012</small></p>
+            </section>
+            <section>
+                <img src="Research_files/images/AltComp.png"/>
+                <p>Comparison of altruisms.  $\Pi_1 = \Pi_2 = 10$,  $\frac{\lambda}{c} = 1$.</p>
+                <p><small>from McKell et. al., 2012</small></p>
+            </section>
         </section>
         <section>
-            <h2>Bibliography</h2>
+            <h2>Mahalo</h2>
+            <h3>Questions?</h3>
+            <h3>Bibliography</h3>
             <ul>
                 <li>Rabushka, A. and K. A. Shepsle, <i>Politics in Plural Societies: A Theory of Democratic Instability</i>, Charles E. Merrill, 1972.</li>
                 <li>McKell, K. C., S.-K. Chai and G. Arslan, <i>Modeling Ethnic Conflict with Altruism</i>, submitted to the 51st IEEE CDC, 2012</li>
