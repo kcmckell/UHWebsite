@@ -210,7 +210,6 @@ $(document).ready(function(){
         var ref = $(this).attr('href');
         var prefix = $('base').attr('href') + 'Research_files/ConflictModel4-12.php';
         $(this).attr('href',prefix+ref);    // Reassign the href as the above prefix (which points to the page we're on) concatenated with the original reference.
-        console.log($(this).attr('href'));
     });
 // Adjust image dimensions so that they are never off screen.
     jQuery.event.add(window, "load", resizeImg);    // Do it on page load.
