@@ -75,7 +75,7 @@
                 <p><small>from Rabushka and Shepsle 1972, p. 184</small></p>
             </section>
             <section>
-                <img src="Research_files/images/Philippine_ethnic_groups_per_province.png" title="Philippines" alt="Ethnic group map of the Philippines"/>
+                <img src="Research_files/images/Philippine_ethnic_groups_per_province.PNG" title="Philippines" alt="Ethnic group map of the Philippines"/>
                 <p>Ethnic group map of the Philippines</p>
                 <p><small>public domain</small></p>
             </section>
