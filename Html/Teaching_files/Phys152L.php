@@ -1,12 +1,16 @@
 <!doctype html>
+<!-- Phys 152L College Physics Laboratory II: Phys152L.php -->
+<!--Copyright 2012 K. Clay McKell
+<!--mckell@hawaii.edu-->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-    <?php require('base.php'); require('commonhead.php'); ?>
-  <title>Teaching: K. Clay McKell</title>
+    <?php require('../base.php'); require('../commonhead.php'); ?>
+
+  <title>Phys 152L: K. Clay McKell</title>
   
 </head>
 
@@ -17,7 +21,7 @@
 <!-- header area -->
     <header>
 		
-        <?php require('nav.html'); ?>
+        <?php require('../nav.html'); ?>
         
     </header><!-- end header -->
     
@@ -27,56 +31,16 @@
     
 <!-- content area -->    
       <div id="content">
-          <section>
-              <details>
-                  <summary>Spring 2010 - ECEN 5018 Game Theory and Multiagent Systems</summary>
-                  <div>Substitute lecturer and TA office hours at the  University of Colorado at Boulder.</div>
-              </details>
-              <details>
-                  <summary>Fall 2009 - EE 341L Communication Systems Lab</summary>
-                  <div>Two 3-hour sections per week.  From the University of Hawaii course catalog:  Experiments illustrating the basic principles of communication systems.</div>
-              </details>
-							<details>
-									<summary>Fall 2012 - Phys 152L College Physics Laboratory II</summary>
-									<div>Two 3-hour sections per week.  From the University of Hawaii course catalog: Optics, electric and magnetic fields, DC and AC circuitry.</div>
-							</details>
-          </section>
+          <div class="grid_12">
+              <h1>Fall 2012</h1>
+              <h2>
+                  Physics 162L College Physics Lab II - Instructor/Teaching Assistant
+              </h2>
+							<p>
+									All class materials will be posted on UH's online learning portal, <a href="http://laulima.hawaii.edu">Laulima</a>.
+							</p>
+          </div>
       </div><!-- #end content area -->
-      
- <!-- columns demo-->
-<!--<div id="columnsdemo">
-<h2 style="width:100%; clear:both">Columns demo</h2>
-<div class="grid_12"><h1>12</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_11"><h1>11</h1></div>
-
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_10"><h1>10</h1></div>
-
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_9"><h1>9</h1></div>
-
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_8"><h1>8</h1></div>
-
-<div class="grid_5"><h1>5</h1></div>
-<div class="grid_7"><h1>7</h1></div>
-
-<div class="grid_6"><h1>6</h1></div>
-<div class="grid_6"><h1>6</h1></div>
-		
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-<div class="grid_4"><h1>4</h1></div>
-
-<div class="grid_1"><h1>1</h1></div>
-<div class="grid_2"><h1>2</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-<div class="grid_3"><h1>3</h1></div>
-</div>-->
-<!-- end columns demo -->  
       
   </div><!-- #end main -->
     
@@ -86,7 +50,7 @@
 <footer>
 	<div id="colophon" class="clearfix">
                 <!--#include virtual="/contact.html"-->
-        <?php require('contact.html'); ?>
+        <?php require('../contact.html'); ?>
 
     </div>
 </footer>
