@@ -32,7 +32,7 @@
 <!-- content area -->    
       <div id="content">
           <div class="grid_12">
-              <a href="http://www.flickr.com/photos/valerianasolaris/3700647391/" class="ext"><img class="classimg" id="gamecards" src="Teaching_files/ECEN5018_files/Gamecards.png" alt="Image derived from Valeriana Solaris."/></a>
+              <a href="http://www.flickr.com/photos/valerianasolaris/3700647391/" class="ext"><img class="classimg" id="gamecards" src="Teaching-files/ECEN5018_files/Gamecards.png" alt="Image derived from Valeriana Solaris."/></a>
               <h1>Spring 2009</h1>
               <h2>
                   <a href="http://ecee.colorado.edu/marden/5018.html" class="ext">ECEN 4018/5018 Game Theory and Multiagent Systems</a> - Teaching Assistant

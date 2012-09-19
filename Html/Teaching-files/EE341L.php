@@ -32,7 +32,7 @@
 <!-- content area -->    
       <div id="content">
           <div class="grid_12">
-              <a href="http://www.flickr.com/photos/valerianasolaris/3700647391/" class="ext"><img class="classimg" id="oscope" src="Teaching_files/EE341L_files/Oscope.png" alt="Image derived from Valeriana Solaris."/></a>
+              <a href="http://www.flickr.com/photos/valerianasolaris/3700647391/" class="ext"><img class="classimg" id="oscope" src="Teaching-files/EE341L_files/Oscope.png" alt="Image derived from Valeriana Solaris."/></a>
               <h1>Fall 2009</h1>
               <h2>
                   EE 341L Communications Systems Laboratory - Instructor/Teaching Assistant
@@ -70,7 +70,7 @@
 			<tr>
 				<td>2</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/Matlab341-2.pdf">Lab 0</a>
+					<a href="Teaching-files/EE341L_files/Matlab341-2.pdf">Lab 0</a>
 				</td>
 				<td>
 					Holmes 387
@@ -88,7 +88,7 @@
 			<tr>
 				<td>4</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/LabInt.pdf">Lab 1</a>
+					<a href="Teaching-files/EE341L_files/LabInt.pdf">Lab 1</a>
 				</td>
 				<td>
 					Holmes 386
@@ -97,7 +97,7 @@
 			<tr>
 				<td>5</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/Spctra.pdf">Lab 2</a>
+					<a href="Teaching-files/EE341L_files/Spctra.pdf">Lab 2</a>
 				</td>
 				<td>
 					Holmes 386
@@ -106,10 +106,10 @@
 			<tr>
 				<td>6</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/LTISys.pdf">Lab 3</a>
+					<a href="Teaching-files/EE341L_files/LTISys.pdf">Lab 3</a>
 					<br>
 					<i>Hint:</i>
-					<a href="Teaching_files/EE341L_files/PreLab3.jpg">PreLab Simulink</a>
+					<a href="Teaching-files/EE341L_files/PreLab3.jpg">PreLab Simulink</a>
 				</td>
 				<td>
 					Holmes 386
@@ -121,7 +121,7 @@
 					Lab 3 (con't)
 					<br>
 					<i>Hint:</i>
-					<a href="Teaching_files/EE341L_files/PreLab3.m">Simulation Code</a>
+					<a href="Teaching-files/EE341L_files/PreLab3.m">Simulation Code</a>
 				</td>
 				<td>
 					Holmes 386
@@ -130,7 +130,7 @@
 			<tr>
 				<td>8</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/ModInt.pdf">Lab 4</a>
+					<a href="Teaching-files/EE341L_files/ModInt.pdf">Lab 4</a>
 				</td>
 				<td>
 					Holmes 386
@@ -139,7 +139,7 @@
 			<tr>
 				<td>9</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/AmpMod.pdf">Lab 5</a>
+					<a href="Teaching-files/EE341L_files/AmpMod.pdf">Lab 5</a>
 				</td>
 				<td>
 					Holmes 386
@@ -157,7 +157,7 @@
 			<tr>
 				<td>11</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/FrqMod.pdf">Lab 6</a>
+					<a href="Teaching-files/EE341L_files/FrqMod.pdf">Lab 6</a>
 				</td>
 				<td>
 					Holmes 386
@@ -184,7 +184,7 @@
 			<tr>
 				<td>14</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/Samplg.pdf">Lab 7</a>
+					<a href="Teaching-files/EE341L_files/Samplg.pdf">Lab 7</a>
 				</td>
 				<td>
 					Holmes 386
@@ -193,7 +193,7 @@
 			<tr>
 				<td>15</td>
 				<td>
-					<a href="Teaching_files/EE341L_files/PulsCd.pdf">Lab 8</a>
+					<a href="Teaching-files/EE341L_files/PulsCd.pdf">Lab 8</a>
 				</td>
 				<td>
 					Holmes 387
@@ -241,7 +241,7 @@
 			<ul class="classmaterials">
 				<li>Entire Lab Manual <i>(not yet available)</i>
 				<li><a href="Teching_files/EE341L_files/LabRpt.pdf">Appendix A</a>: Lab Report Guidelines
-				<li><a href="Teaching_files/EE341L_files/AppMat341.pdf">Appendix B</a>: MATLAB Overview
+				<li><a href="Teaching-files/EE341L_files/AppMat341.pdf">Appendix B</a>: MATLAB Overview
 				<li>Agilent Spectrum Analyzer <a href="http://www.home.agilent.com/agilent/techSupport.jspx?pid=1000002785%3Aepsg%3Apro&pageMode=MN&cc=US&lc=eng">Manual website</a>.  Check out the "Getting Started Guide."
 				<li>HP Function Generator <a href="http://www.me.berkeley.edu/ME135/Lab/HP33120A_UsersGuide.pdf">User's Guide (pdf)</a>.
 			</ul>
