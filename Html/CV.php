@@ -65,7 +65,7 @@
         var winloadheight = $(window).height();
         var displayfraciton = 0.95;
         var cvembed = new PDFObject({
-            url: "CV_files/McKellResume.pdf",
+            url: "CV-files/McKellResume.pdf",
             width: displayfraciton*mainloadwidth,
             height: displayfraciton*winloadheight
         }).embed("cvdiv");
