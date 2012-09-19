@@ -70,17 +70,17 @@
         <section>
             <h2>Why Ethnic Conflict?</h2>
             <section>
-                <img src="Research_files/images/yugoslavia.png" title="Yugoslavia" alt="Ethnic group map of Yugoslavia"/>
+                <img src="Research-files/images/yugoslavia.png" title="Yugoslavia" alt="Ethnic group map of Yugoslavia"/>
                 <p>Ethnic group map of former Yugoslavia</p>
                 <p><small>from Rabushka and Shepsle 1972, p. 184</small></p>
             </section>
             <section>
-                <img src="Research_files/images/Philippine_ethnic_groups_per_province.PNG" title="Philippines" alt="Ethnic group map of the Philippines"/>
+                <img src="Research-files/images/Philippine_ethnic_groups_per_province.PNG" title="Philippines" alt="Ethnic group map of the Philippines"/>
                 <p>Ethnic group map of the Philippines</p>
                 <p><small>public domain</small></p>
             </section>
             <section>
-                <img src="Research_files/images/nigeria.png" title="Nigeria" alt="Ethnic group map of Nigeria"/>
+                <img src="Research-files/images/nigeria.png" title="Nigeria" alt="Ethnic group map of Nigeria"/>
                 <p>Ethnic group map of Nigeria</p>
                 <p><small>from Rabushka and Shepsle 1972, p. 181</small></p>
             </section>
@@ -147,7 +147,7 @@
                 </p>
             </section>
             <section>
-                <img src="Research_files/images/QuasiConcavityCounterExampleScaled.jpg" title="Quasiconcavity violated" alt="A convex combination of player 3's utility between two actions that falls below the minimum of the payoffs of the two actions." />
+                <img src="Research-files/images/QuasiConcavityCounterExampleScaled.jpg" title="Quasiconcavity violated" alt="A convex combination of player 3's utility between two actions that falls below the minimum of the payoffs of the two actions." />
                 <p>Quasiconcavity counterexample</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
@@ -155,22 +155,22 @@
         <section>
             <h2>Parameter analysis</h2>
             <section>
-                <img src="Research_files/images/Symmetric.png"/>
+                <img src="Research-files/images/Symmetric.png"/>
                 <p>Symmetric 2-player: $\Pi_1 = \Pi_2 = 10$, $\frac{\lambda}{c} = 1$, $\beta_{12}=\beta_{21}=0$.</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
             <section>
-                <img src="Research_files/images/Lopsided.png"/>
+                <img src="Research-files/images/Lopsided.png"/>
                 <p>Lopsided budget: $\Pi_1 = 100$, $ \Pi_2 = 10$, $\frac{\lambda}{c} = 1$, $\beta_{12}=\beta_{21}=0$.</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
             <section>
-                <img src="Research_files/images/RatioComp.png"/>
+                <img src="Research-files/images/RatioComp.png"/>
                 <p>Comparison of $\frac{\lambda}{c}$.  $\Pi_1 = \Pi_2 = 10$,  $\beta_{12}=\beta_{21}=0$.</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
             <section>
-                <img src="Research_files/images/AltComp.png"/>
+                <img src="Research-files/images/AltComp.png"/>
                 <p>Comparison of altruisms.  $\Pi_1 = \Pi_2 = 10$,  $\frac{\lambda}{c} = 1$.</p>
                 <p><small>from McKell et. al., 2012</small></p>
             </section>
@@ -208,7 +208,7 @@ $(document).ready(function(){
         return ref.indexOf('http') == -1    // Filter through all anchros with hrefs that don't contain "http".
     }).each(function(index){                // On each of these, do:
         var ref = $(this).attr('href');
-        var prefix = $('base').attr('href') + 'Research_files/ConflictModel4-12.php';
+        var prefix = $('base').attr('href') + 'Research-files/ConflictModel4-12.php';
         $(this).attr('href',prefix+ref);    // Reassign the href as the above prefix (which points to the page we're on) concatenated with the original reference.
     });
 // Adjust image dimensions so that they are never off screen.

@@ -1,6 +1,6 @@
 Redirect 301 /~mckell/Publications_files http://ee.hawaii.edu/~mckell/Research_files 
 #Redirect 301 /~mckell/Teaching_files http://ee.hawaii.edu/~mckell/Teaching-files
-#Redirect 301 /~mckell/Research_files http://ee.hawaii.edu/~mckell/Research-files
+Redirect 301 /~mckell/Research_files http://ee.hawaii.edu/~mckell/Research-files
 Redirect 301 /~mckell/Personal_files http://ee.hawaii.edu/~mckell/Personal-files
 
 ErrorDocument 404 /~mckell/404.html
