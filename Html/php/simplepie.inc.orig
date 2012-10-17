@@ -44,7 +44,6 @@
  * @link http://simplepie.org/ SimplePie
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
-<<<<<<< HEAD
 
 /**
  * SimplePie class.
@@ -1094,13 +1093,11 @@ class SimplePie_Cache_File implements SimplePie_Cache_Base
 		if (file_exists($this->name))
 		{
 			return touch($this->name);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return false;
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Retrieve the last modified time for the cache
 	 *
 	 * @return int Timestamp
@@ -1590,12 +1587,10 @@ class SimplePie_Cache_Memcache implements SimplePie_Cache_Base
 			return $this->cache->set($this->name, $data, MEMCACHE_COMPRESSED, (int) $this->duration);
 		}
 
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		return false;
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Retrieve the data saved to the cache
 	 *
 	 * @return array Data for SimplePie::$data
@@ -2261,13 +2256,11 @@ class SimplePie_Cache_MySQL extends SimplePie_Cache_DB
 				}
 			}
 			return $data;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return false;
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get the start time
 	 *
 	 * @return string|null Time in the format 'hh:mm:ss.SSS'
@@ -2319,12 +2312,10 @@ class SimplePie_Cache_MySQL extends SimplePie_Cache_DB
 		else
 		{
 			return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get the content type (not MIME type)
 	 *
 	 * @return string|null Either 'text' or 'html'
@@ -2362,7 +2353,6 @@ class SimplePie_Cache_MySQL extends SimplePie_Cache_DB
 		{
 			return false;
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 }
 
@@ -2378,7 +2368,6 @@ class SimplePie_Cache_MySQL extends SimplePie_Cache_DB
 class SimplePie_Category
 {
 	/**
-<<<<<<< HEAD
 	 * Category identifier
 	 *
 	 * @var string
@@ -2617,12 +2606,10 @@ class SimplePie_Sanitize
 		else
 		{
 			$this->strip_htmltags = false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
 
-<<<<<<< HEAD
 /**
  * Content-type sniffing
  *
@@ -2676,7 +2663,6 @@ class SimplePie_Content_Type_Sniffer
 		{
 			$this->strip_attributes = false;
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 
 	public function strip_comments($strip = false)
@@ -2690,7 +2676,6 @@ class SimplePie_Content_Type_Sniffer
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get the Content-Type of the specified file
 	 *
 	 * @return string Actual Content-Type
@@ -3184,7 +3169,6 @@ class SimplePie_Content_Type_Sniffer
 		foreach ($elements as $element)
 		{
 			$element->removeAttribute($attrib);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
@@ -3201,7 +3185,6 @@ class SimplePie_Content_Type_Sniffer
 class SimplePie_Enclosure
 {
 	/**
-<<<<<<< HEAD
 	 * Sniff HTML
 	 *
 	 * @return string Actual Content-Type
@@ -3299,7 +3282,6 @@ class SimplePie_Enclosure
 	 * @see get_categories()
 	 */
 	var $categories;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 
 /**
  * Manages `<media:copyright>` copyright tags as defined in Media RSS
@@ -3313,7 +3295,6 @@ class SimplePie_Enclosure
 class SimplePie_Copyright
 {
 	/**
-<<<<<<< HEAD
 	 * Copyright URL
 	 *
 	 * @var string
@@ -5513,7 +5494,6 @@ class SimplePie_XML_Declaration_Parser
 			$this->position++;
 			$this->skip_whitespace();
 			$this->state = 'encoding_value';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		// Other objects, instances created here so we can set options on them
@@ -5522,7 +5502,6 @@ class SimplePie_XML_Declaration_Parser
 
 		if (func_num_args() > 0)
 		{
-<<<<<<< HEAD
 			trigger_error('Passing parameters to the constructor is no longer supported. Please use set_feed_url(), set_cache_location(), and set_cache_location() directly.');
 		}
 	}
@@ -5670,12 +5649,10 @@ class SimplePie_XML_Declaration_Parser
 		else
 		{
 			$this->state = false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return false;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Allows you to use a string of RSS/Atom data instead of a remote feed.
 	 *
@@ -5768,7 +5745,6 @@ class SimplePie_XML_Declaration_Parser
 		{
 			$this->state = false;
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 }
 
@@ -5794,7 +5770,6 @@ class SimplePie_File
 	var $error;
 	var $method = SIMPLEPIE_FILE_SOURCE_NONE;
 
-<<<<<<< HEAD
 	/**
 	 * Set the length of time (in seconds) that the contents of a feed
 	 * will be cached.
@@ -6143,10 +6118,8 @@ class SimplePie_File
 				$this->success = false;
 			}
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Allows you to change which class SimplePie uses for data sanitization.
 	 */
@@ -6767,22 +6740,16 @@ class SimplePie_IRI
 		if ($case & SIMPLEPIE_LOWERCASE)
 		{
 			$string = strtolower($string);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($case & SIMPLEPIE_UPPERCASE)
 		{
-<<<<<<< HEAD
 			$this->image_handler = '';
-=======
 			$string = strtoupper($string);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
-
 		return $string;
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Set the limit for items returned per-feed with multifeeds.
 	 *
 	 * @access public
@@ -6985,7 +6952,6 @@ class SimplePie_IRI
 		if ($scheme === null || $scheme === '')
 		{
 			$this->scheme = null;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		// Pass whatever was set with config options over to the sanitizer.
@@ -6995,7 +6961,6 @@ class SimplePie_IRI
 
 		if (!empty($this->multifeed_url))
 		{
-<<<<<<< HEAD
 			$i = 0;
 			$success = 0;
 			$this->multifeed_objects = array();
@@ -7424,7 +7389,6 @@ class SimplePie_IRI
 			$this->port = null;
 			$this->valid[__FUNCTION__] = false;
 			return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		$this->registry->call('Misc', 'error', array($this->error, E_USER_NOTICE, __FILE__, __LINE__));
@@ -7433,7 +7397,6 @@ class SimplePie_IRI
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Return the error message for the occured error
 	 *
 	 * @access public
@@ -7635,7 +7598,6 @@ class SimplePie_IRI
 		if ($fragment === null || $fragment === '')
 		{
 			$this->fragment = null;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -7645,7 +7607,6 @@ class SimplePie_IRI
 		return true;
 	}
 
-<<<<<<< HEAD
 	public function get_feed_tags($namespace, $tag)
 	{
 		$type = $this->get_type();
@@ -7703,7 +7664,6 @@ class SimplePie_IRI
 		if ($iri !== '')
 		{
 			return $iri;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		if ($type & SIMPLEPIE_TYPE_RSS_SYNDICATION)
 		{
@@ -7715,7 +7675,6 @@ class SimplePie_IRI
 		return null;
 	}
 
-<<<<<<< HEAD
 	public function get_channel_tags($namespace, $tag)
 	{
 		$type = $this->get_type();
@@ -7832,18 +7791,14 @@ class SimplePie_IRI
 		if ($this->host !== null)
 		{
 			$authority .= $this->host;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		if ($this->port !== null)
 		{
-<<<<<<< HEAD
 			return $this->subscribe_url();
 =======
 			$authority .= ':' . $this->port;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
-<<<<<<< HEAD
 	public function sanitize($data, $type, $base = '')
 	{
 		return $this->sanitize->sanitize($data, $type, $base);
@@ -7882,7 +7837,6 @@ class SimplePie_IRI
 		if ($authority !== '')
 		{
 			return $authority;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -7890,7 +7844,6 @@ class SimplePie_IRI
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_category($key = 0)
 	{
 		$categories = $this->get_categories();
@@ -8400,7 +8353,6 @@ class SimplePie_Net_IPv6
 			else
 			{
 				return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 		}
 		foreach ((array) $this->get_channel_tags(SIMPLEPIE_NAMESPACE_DC_11, 'creator') as $author)
@@ -8416,7 +8368,6 @@ class SimplePie_Net_IPv6
 			$authors[] = $this->registry->create('Author', array($this->sanitize($author['data'], SIMPLEPIE_CONSTRUCT_TEXT), null, null));
 		}
 
-<<<<<<< HEAD
 		if (!empty($authors))
 		{
 			return $this->registry->call('Misc', 'array_unique', array($authors));
@@ -8731,7 +8682,6 @@ class SimplePie_Category
 		if ($this->scheme !== null)
 		{
 			return $this->scheme;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -8739,7 +8689,6 @@ class SimplePie_Category
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_copyright()
 	{
 		if ($return = $this->get_channel_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'rights'))
@@ -9036,7 +8985,6 @@ class SimplePie_Caption
 		if ($this->endTime !== null)
 		{
 			return $this->endTime;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -9044,7 +8992,6 @@ class SimplePie_Caption
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_image_height()
 	{
 		if ($return = $this->get_image_tags(SIMPLEPIE_NAMESPACE_RSS_20, 'height'))
@@ -9066,7 +9013,6 @@ class SimplePie_Caption
 		if ($this->lang !== null)
 		{
 			return $this->lang;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -9074,7 +9020,6 @@ class SimplePie_Caption
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_item_quantity($max = 0)
 	{
 		$max = (int) $max;
@@ -9106,14 +9051,12 @@ class SimplePie_Caption
 		if ($this->startTime !== null)
 		{
 			return $this->startTime;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
 			return null;
 		}
 	}
-<<<<<<< HEAD
 
 	public function get_items($start = 0, $end = 0)
 	{
@@ -10282,13 +10225,11 @@ class SimplePie_Parse_Date
 		else
 		{
 			return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return $this->data;
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Consume the next byte
 	 *
 	 * @access private
@@ -10358,7 +10299,6 @@ class SimplePie_Parse_Date
 			}
 
 			return gmmktime($match[5], $match[6], $match[7], $month, $match[2], $match[4]) - $timezone;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -10367,7 +10307,6 @@ class SimplePie_Parse_Date
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Consume a range of characters
 	 *
 	 * @access private
@@ -10444,7 +10383,6 @@ class SimplePie_Parse_Date
 		else
 		{
 			return $strtotime;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
@@ -10489,7 +10427,6 @@ class SimplePie_Rating
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Unconsume one byte
 	 *
 	 * @access private
@@ -10629,13 +10566,11 @@ class SimplePie_Rating
 		else
 		{
 			return null;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
 
 /**
-<<<<<<< HEAD
  * Handles everything related to enclosures (including Media RSS and iTunes RSS)
  *
  * Used by {@see SimplePie_Item::get_enclosure()} and {@see SimplePie_Item::get_enclosures()}
@@ -11100,7 +11035,6 @@ class SimplePie_Content_Type_Sniffer
 		elseif (preg_match('/[\x00-\x08\x0E-\x1A\x1C-\x1F]/', $this->file->body))
 		{
 			return 'application/octect-stream';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -11109,7 +11043,6 @@ class SimplePie_Content_Type_Sniffer
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get a single caption
 	 *
 	 * @param int $key
@@ -11134,13 +11067,11 @@ class SimplePie_Content_Type_Sniffer
 			|| strtolower(substr($this->file->body, $ws, 7)) === '<script')
 		{
 			return 'text/html';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif (substr($this->file->body, 0, 5) === '%PDF-')
 		{
 			return 'application/pdf';
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -11214,7 +11145,6 @@ class SimplePie_Content_Type_Sniffer
 		elseif (substr($this->file->body, 0, 4) === "\x00\x00\x01\x00")
 		{
 			return 'image/vnd.microsoft.icon';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -11223,7 +11153,6 @@ class SimplePie_Content_Type_Sniffer
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get the number of audio channels
 	 *
 	 * @return int|null
@@ -11260,7 +11189,6 @@ class SimplePie_Content_Type_Sniffer
 		elseif (substr($this->file->body, 0, 4) === "\x00\x00\x01\x00")
 		{
 			return 'image/vnd.microsoft.icon';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -11269,7 +11197,6 @@ class SimplePie_Content_Type_Sniffer
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get the copyright information
 	 *
 	 * @return SimplePie_Copyright|null
@@ -11421,11 +11348,9 @@ class SimplePie_Locator
 			{
 				return null;
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get a single credit
 	 *
@@ -11442,12 +11367,10 @@ class SimplePie_Locator
 		else
 =======
 		if ($type & ~SIMPLEPIE_LOCATOR_NONE)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			$this->get_base();
 		}
 
-<<<<<<< HEAD
 	/**
 	 * Get all credits
 	 *
@@ -11462,11 +11385,9 @@ class SimplePie_Locator
 		else
 =======
 		if ($type & SIMPLEPIE_LOCATOR_AUTODISCOVERY && $working = $this->autodiscovery())
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			return $working[0];
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -11602,7 +11523,6 @@ class SimplePie_Locator
 		elseif ($file->method & SIMPLEPIE_FILE_SOURCE_LOCAL)
 		{
 			return true;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -11610,7 +11530,6 @@ class SimplePie_Locator
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get the preferred handler
 	 *
@@ -11643,7 +11562,6 @@ class SimplePie_Locator
 		$this->base = $this->http_base;
 		$elements = $this->dom->getElementsByTagName('base');
 		foreach ($elements as $element)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			if ($element->hasAttribute('href'))
 			{
@@ -11654,7 +11572,6 @@ class SimplePie_Locator
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get all credits
 	 *
@@ -11677,7 +11594,6 @@ class SimplePie_Locator
 		if (!empty($feeds))
 		{
 			return array_values($feeds);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -11685,7 +11601,6 @@ class SimplePie_Locator
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get the height
 	 *
@@ -11703,7 +11618,6 @@ class SimplePie_Locator
 	{
 		$links = $this->dom->getElementsByTagName($name);
 		foreach ($links as $link)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			if ($this->checked_feeds === $this->max_checked_feeds)
 			{
@@ -11741,7 +11655,6 @@ class SimplePie_Locator
 		return $feeds;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get the language
 	 *
@@ -11786,7 +11699,6 @@ class SimplePie_Locator
 					}
 				}
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		$this->local = array_unique($this->local);
 		$this->elsewhere = array_unique($this->elsewhere);
@@ -11797,7 +11709,6 @@ class SimplePie_Locator
 		return null;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get a single keyword
 	 *
@@ -11836,7 +11747,6 @@ class SimplePie_Locator
 					unset($array[$key]);
 				}
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return null;
 	}
@@ -11868,7 +11778,6 @@ class SimplePie_Locator
 		}
 		return null;
 	}
-<<<<<<< HEAD
 
 	/**
 	 * Get all keywords
@@ -11939,13 +11848,11 @@ class SimplePie_Item
 	public function __destruct()
 	{
 		if ((version_compare(PHP_VERSION, '5.3', '<') || !gc_enabled()) && !ini_get('zend.ze1_compatibility_mode'))
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			unset($this->feed);
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get the URL
 	 *
@@ -11962,14 +11869,12 @@ class SimplePie_Item
 		if (isset($this->data['child'][$namespace][$tag]))
 		{
 			return $this->data['child'][$namespace][$tag];
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
 			return null;
 		}
 	}
-<<<<<<< HEAD
 
 	/**
 	 * Get the medium
@@ -12022,7 +11927,6 @@ class SimplePie_Item
 	public function get_id($hash = false)
 	{
 		if (!$hash)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'id'))
 			{
@@ -12057,7 +11961,6 @@ class SimplePie_Item
 				return $return;
 			}
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12164,11 +12067,9 @@ class SimplePie_Item
 	public function get_description($description_only = false)
 	{
 		if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'summary'))
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_10_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12185,13 +12086,11 @@ class SimplePie_Item
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_03, 'summary'))
 		{
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_03_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_RSS_10, 'description'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_MAYBE_HTML, $this->get_base($return[0]));
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12208,13 +12107,11 @@ class SimplePie_Item
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_RSS_20, 'description'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_HTML, $this->get_base($return[0]));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_DC_11, 'description'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12232,13 +12129,11 @@ class SimplePie_Item
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_DC_10, 'description'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'summary'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_HTML, $this->get_base($return[0]));
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12257,14 +12152,12 @@ class SimplePie_Item
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'subtitle'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_RSS_090, 'description'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_HTML);
 		}
 
-<<<<<<< HEAD
 	/**
 	 * Get all thumbnails
 	 *
@@ -12279,7 +12172,6 @@ class SimplePie_Item
 		elseif (!$description_only)
 		{
 			return $this->get_content(true);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -12287,7 +12179,6 @@ class SimplePie_Item
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Get the title
 	 *
@@ -12304,11 +12195,9 @@ class SimplePie_Item
 	public function get_content($content_only = false)
 	{
 		if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'content'))
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_10_content_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12326,13 +12215,11 @@ class SimplePie_Item
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_03, 'content'))
 		{
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_03_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_RSS_10_MODULES_CONTENT, 'encoded'))
 		{
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_HTML, $this->get_base($return[0]));
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -12349,7 +12236,6 @@ class SimplePie_Item
 		elseif (!$content_only)
 		{
 			return $this->get_description(true);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -12357,7 +12243,6 @@ class SimplePie_Item
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Embed the enclosure using `<embed>`
 	 *
@@ -12443,7 +12328,6 @@ class SimplePie_Item
 		if (isset($categories[$key]))
 		{
 			return $categories[$key];
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -12501,7 +12385,6 @@ class SimplePie_Item
 			}
 		}
 
-<<<<<<< HEAD
 		$mime = explode('/', $type, 2);
 		$mime = $mime[0];
 
@@ -12535,11 +12418,9 @@ class SimplePie_Item
 			if (isset($category['attribs']['']['term']))
 			{
 				$term = $this->sanitize($category['attribs']['']['term'], SIMPLEPIE_CONSTRUCT_TEXT);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 			if (isset($category['attribs']['']['scheme']))
 			{
-<<<<<<< HEAD
 				$width = '100%';
 =======
 				$scheme = $this->sanitize($category['attribs']['']['scheme'], SIMPLEPIE_CONSTRUCT_TEXT);
@@ -12547,11 +12428,9 @@ class SimplePie_Item
 			if (isset($category['attribs']['']['label']))
 			{
 				$label = $this->sanitize($category['attribs']['']['label'], SIMPLEPIE_CONSTRUCT_TEXT);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 			$categories[] = $this->registry->create('Category', array($term, $scheme, $label));
 		}
-<<<<<<< HEAD
 
 		if ($height === 'auto')
 		{
@@ -12670,7 +12549,6 @@ class SimplePie_Item
 		if (isset($authors[$key]))
 		{
 			return $authors[$key];
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		// QuickTime 7 file types.  Need to test with QuickTime 6.
@@ -12695,7 +12573,6 @@ class SimplePie_Item
 			}
 		}
 
-<<<<<<< HEAD
 		// Windows Media
 		elseif ($handler === 'wmedia')
 		{
@@ -12746,14 +12623,12 @@ class SimplePie_Item
 		if (isset($contributors[$key]))
 		{
 			return $contributors[$key];
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
 			$type = null;
 		}
 
-<<<<<<< HEAD
 		// If we encounter an unsupported mime-type, check the file extension and guess intelligently.
 		if (!in_array($type, array_merge($types_flash, $types_fmedia, $types_quicktime, $types_wmedia, $types_mp3)))
 		{
@@ -13124,7 +12999,6 @@ class SimplePie_Item
 
 				default:
 					return date($date_format, $this->data['date']['parsed']);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 		}
 		else
@@ -13156,7 +13030,6 @@ class SimplePie_File
 	var $error;
 	var $method = SIMPLEPIE_FILE_SOURCE_NONE;
 
-<<<<<<< HEAD
 	public function __construct($url, $timeout = 10, $redirects = 5, $headers = null, $useragent = null, $force_fsockopen = false)
 	{
 		if (class_exists('idna_convert'))
@@ -13675,7 +13548,6 @@ class SimplePie_File
 						$credit_name = $this->sanitize($credit['data'], SIMPLEPIE_CONSTRUCT_TEXT);
 					}
 					$credits_parent[] = $this->registry->create('Credit', array($credit_role, $credit_scheme, $credit_name));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 				}
 			}
 			if (is_array($credits_parent))
@@ -13688,7 +13560,6 @@ class SimplePie_File
 			{
 				if (isset($description_parent[0]['data']))
 				{
-<<<<<<< HEAD
 					$info = curl_getinfo($fp);
 					curl_close($fp);
 					$this->headers = explode("\r\n\r\n", $this->headers, $info['redirect_count'] + 1);
@@ -13708,12 +13579,10 @@ class SimplePie_File
 					}
 =======
 					$description_parent = $this->sanitize($description_parent[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 				}
 			}
 			elseif ($description_parent = $parent->get_channel_tags(SIMPLEPIE_NAMESPACE_MEDIARSS, 'description'))
 			{
-<<<<<<< HEAD
 				$this->method = SIMPLEPIE_FILE_SOURCE_REMOTE | SIMPLEPIE_FILE_SOURCE_FSOCKOPEN;
 				$url_parts = parse_url($url);
 				$socket_host = $url_parts['host'];
@@ -16355,18 +16224,15 @@ class SimplePie_IRI
 							{
 								$thumbnails = array_values($this->registry->call('Misc', 'array_unique', array($thumbnails)));
 							}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 						}
 						// If it is invalid, count the sequence as invalid and reprocess the current byte:
 						else
 						{
-<<<<<<< HEAD
 							$valid = false;
 							$position--;
 							break;
 =======
 							$thumbnails = $thumbnails_parent;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 						}
 
 						// TITLES
@@ -16382,7 +16248,6 @@ class SimplePie_IRI
 						$this->data['enclosures'][] = $this->registry->create('Enclosure', array($url, $type, $length, null, $bitrate, $captions, $categories, $channels, $copyrights, $credits, $description, $duration, $expression, $framerate, $hashes, $height, $keywords, $lang, $medium, $player, $ratings, $restrictions, $samplingrate, $thumbnails, $title, $width));
 					}
 				}
-<<<<<<< HEAD
 				else
 				{
 					$position = $strlen - 1;
@@ -16672,7 +16537,6 @@ class SimplePie_IRI
 
 					// Since we don't have group or content for these, we'll just pass the '*_parent' variables directly to the constructor
 					$this->data['enclosures'][] = $this->registry->create('Enclosure', array($url, $type, $length, null, $bitrate, $captions_parent, $categories_parent, $channels, $copyrights_parent, $credits_parent, $description_parent, $duration_parent, $expression, $framerate, $hashes_parent, $height, $keywords_parent, $lang, $medium, $player_parent, $ratings_parent, $restrictions_parent, $samplingrate, $thumbnails_parent, $title_parent, $width));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 				}
 			}
 
@@ -16693,7 +16557,6 @@ class SimplePie_IRI
 		// mid-way through a multi-byte sequence)
 		if ($remaining)
 		{
-<<<<<<< HEAD
 			for ($j = $start; $j < $len; $j++)
 			{
 				$string .= '%' . strtoupper($bytes[$j]);
@@ -16748,13 +16611,11 @@ class SimplePie_IRI
 		else
 		{
 			return null;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		return $string;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Check if the object represents a valid IRI
 	 *
@@ -17412,7 +17273,6 @@ class SimplePie_gzdecode
 		else
 		{
 			return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
@@ -17425,7 +17285,6 @@ class SimplePie_gzdecode
 class SimplePie_HTTP_Parser
 {
 	/**
-<<<<<<< HEAD
 	 * Get the user information
 	 *
 	 * @access public
@@ -18071,7 +17930,6 @@ class SimplePie_Item
 				$this->state = 'emit';
 				$this->body = $decoded;
 				return;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 
 			$chunk_length = strlen($matches[0]);
@@ -18080,7 +17938,6 @@ class SimplePie_Item
 
 			if (trim($encoded) === '0' || empty($encoded))
 			{
-<<<<<<< HEAD
 				$this->data['title'] = null;
 			}
 		}
@@ -18091,11 +17948,9 @@ class SimplePie_Item
 				return;
 			}
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 }
 
-<<<<<<< HEAD
 	public function get_description($description_only = false)
 	{
 		if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'summary'))
@@ -19190,7 +19045,6 @@ class SimplePie_Core
 		{
 			trigger_error('PHP 4.x is no longer supported. Please upgrade to PHP 5.2 or newer.');
 			die();
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		// Other objects, instances created here so we can set options on them
@@ -19199,7 +19053,6 @@ class SimplePie_Core
 
 		if (func_num_args() > 0)
 		{
-<<<<<<< HEAD
 			return null;
 		}
 	}
@@ -19268,7 +19121,6 @@ class SimplePie_Core
 				foreach ($this->data['items'] as $item)
 				{
 					$item->__destruct();
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 				}
 				unset($item, $this->data['items']);
 			}
@@ -19280,7 +19132,6 @@ class SimplePie_Core
 				}
 				unset($item, $this->data['ordered_items']);
 			}
-<<<<<<< HEAD
 
 			$keys = array_keys($this->data['links']);
 			foreach ($keys as $key)
@@ -19328,12 +19179,10 @@ class SimplePie_Core
 		{
 			return null;
 =======
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Grabs all available enclosures (podcasts, etc.)
 	 *
 	 * Supports the <enclosure> RSS tag, as well as Media RSS and iTunes RSS.
@@ -22407,7 +22256,6 @@ class SimplePie_Core
 		if (!empty($authors))
 		{
 			return $this->registry->call('Misc', 'array_unique', array($authors));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -22415,7 +22263,6 @@ class SimplePie_Core
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_latitude()
 	{
 		if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_W3C_BASIC_GEO, 'lat'))
@@ -22432,7 +22279,6 @@ class SimplePie_Core
 		if (isset($contributors[$key]))
 		{
 			return $contributors[$key];
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -22440,7 +22286,6 @@ class SimplePie_Core
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_longitude()
 	{
 		if ($return = $this->get_item_tags(SIMPLEPIE_NAMESPACE_W3C_BASIC_GEO, 'long'))
@@ -22518,14 +22363,12 @@ class SimplePie_Core
 		if (!empty($contributors))
 		{
 			return $this->registry->call('Misc', 'array_unique', array($contributors));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
 			return null;
 		}
 	}
-<<<<<<< HEAD
 }
 
 /**
@@ -23009,7 +22852,6 @@ class SimplePie_Locator
 		elseif ($this->get_type() & SIMPLEPIE_TYPE_RSS_SYNDICATION && $this->get_image_tags(SIMPLEPIE_NAMESPACE_RSS_20, 'url'))
 		{
 			return 88.0;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else
 		{
@@ -23017,7 +22859,6 @@ class SimplePie_Locator
 		}
 	}
 
-<<<<<<< HEAD
 	protected function search_elements_by_tag($name, &$done, $feeds)
 	{
 		$links = $this->dom->getElementsByTagName($name);
@@ -23351,12 +23192,10 @@ class SimplePie_Locator
 			trigger_error('Cannot merge zero SimplePie objects', E_USER_WARNING);
 			return array();
 		}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 }
 
 /**
-<<<<<<< HEAD
  * Miscellanous utilities
  *
  * @package SimplePie
@@ -30259,7 +30098,6 @@ class SimplePie_Misc
 
 			default:
 				return $charset;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		$ret .= '<html><head>';
@@ -30268,7 +30106,6 @@ class SimplePie_Misc
 		return $ret;
 	}
 
-<<<<<<< HEAD
 	public function replace_urls(&$document, $tag, $attributes)
 	{
 		if (!is_array($attributes))
@@ -30288,12 +30125,10 @@ class SimplePie_Misc
 		elseif (substr($curl, 0, 8) === 'libcurl/')
 		{
 			$curl = substr($curl, 8, strcspn($curl, "\x09\x0A\x0B\x0C\x0D", 8));
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		if (!is_array($this->strip_htmltags) || !in_array($tag, $this->strip_htmltags))
 		{
-<<<<<<< HEAD
 			$elements = $document->getElementsByTagName($tag);
 			foreach ($elements as $element)
 			{
@@ -30308,12 +30143,10 @@ class SimplePie_Misc
 			}
 =======
 			$curl = 0;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return $curl;
 	}
 
-<<<<<<< HEAD
 	public function do_strip_htmltags($match)
 	{
 		if ($this->encode_instead_of_strip)
@@ -30338,11 +30171,9 @@ class SimplePie_Misc
 		if (func_num_args() !== 2)
 		{
 			trigger_error('Wrong parameter count for SimplePie_Misc::is_subclass_of()', E_USER_WARNING);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif (version_compare(PHP_VERSION, '5.0.3', '>=') || is_object($class1))
 		{
-<<<<<<< HEAD
 			return '';
 		}
 	}
@@ -30468,13 +30299,11 @@ class SimplePie_Misc
 			else
 			{
 				$data = '';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 		}
 		return $output . $data;
 	}
 
-<<<<<<< HEAD
 	protected function strip_attr($attrib, &$document)
 	{
 		$xpath = new DOMXPath($document);
@@ -30489,11 +30318,9 @@ class SimplePie_Misc
 	{
 		$parser = SimplePie_Parse_Date::get();
 		return $parser->parse($dt);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	}
 }
 
-<<<<<<< HEAD
 /**
  * Handles `<atom:source>`
  *
@@ -30648,11 +30475,9 @@ class SimplePie_Source
 		if (function_exists('htmlspecialchars_decode'))
 		{
 			return htmlspecialchars_decode($string, $quote_style);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_ATOM_03, 'title'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_03_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_RSS_10, 'title'))
@@ -30668,11 +30493,9 @@ class SimplePie_Source
 		if (isset($attribs['']['mode']) && strtolower(trim($attribs['']['mode']) === 'base64'))
 		{
 			$mode = SIMPLEPIE_CONSTRUCT_BASE64;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_RSS_090, 'title'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_MAYBE_HTML, $this->get_base($return[0]));
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_RSS_20, 'title'))
@@ -30753,11 +30576,9 @@ class SimplePie_Source
 			{
 				return SIMPLEPIE_CONSTRUCT_BASE64;
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_DC_11, 'title'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_DC_10, 'title'))
@@ -30804,13 +30625,11 @@ class SimplePie_Source
 			$tokens[] = substr($string, $position, $len);
 			$position += $len;
 			$position += strspn($string, $space_characters, $position);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
 		return $tokens;
 	}
 
-<<<<<<< HEAD
 	public function get_categories()
 	{
 		$categories = array();
@@ -30896,10 +30715,8 @@ class SimplePie_Source
 				}
 			}
 			return $new_array;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 
-<<<<<<< HEAD
 		if (!empty($categories))
 		{
 			return $this->registry->call('Misc', 'array_unique', array($categories));
@@ -30917,11 +30734,9 @@ class SimplePie_Source
 		if ($codepoint < 0)
 		{
 			return false;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		else if ($codepoint <= 0x7f)
 		{
-<<<<<<< HEAD
 			return null;
 		}
 	}
@@ -31019,11 +30834,9 @@ class SimplePie_Source
 			{
 				list($name, $value) = explode('=', $section, 2);
 				$return[urldecode($name)][] = urldecode($value);
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 			if (isset($author[0]['child'][SIMPLEPIE_NAMESPACE_ATOM_03]['email'][0]['data']))
 			{
-<<<<<<< HEAD
 				$email = $this->sanitize($author[0]['child'][SIMPLEPIE_NAMESPACE_ATOM_03]['email'][0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
 			}
 			if ($name !== null || $email !== null || $url !== null)
@@ -31156,11 +30969,9 @@ class SimplePie_Source
 				{
 					$encoding[] = $parser->encoding;
 				}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 			$encoding[] = 'UTF-32LE';
 		}
-<<<<<<< HEAD
 		foreach ((array) $this->get_source_tags(SIMPLEPIE_NAMESPACE_ATOM_03, 'contributor') as $contributor)
 		{
 			$name = null;
@@ -31205,11 +31016,9 @@ class SimplePie_Source
 				{
 					$encoding[] = $parser->encoding;
 				}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 			}
 			$encoding[] = 'UTF-16LE';
 		}
-<<<<<<< HEAD
 
 		if (!empty($contributors))
 		{
@@ -31227,21 +31036,17 @@ class SimplePie_Source
 				}
 			}
 			$encoding[] = 'UTF-8';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		// Fallback to UTF-8
 		else
 		{
-<<<<<<< HEAD
 			return null;
 =======
 			$encoding[] = 'UTF-8';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return $encoding;
 	}
 
-<<<<<<< HEAD
 	public function get_link($key = 0, $rel = 'alternate')
 	{
 		$links = $this->get_links($rel);
@@ -31258,7 +31063,6 @@ class SimplePie_Source
 		if (function_exists('ob_gzhandler'))
 		{
 			ob_start('ob_gzhandler');
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		header('Content-type: text/javascript; charset: UTF-8');
 		header('Cache-Control: must-revalidate');
@@ -31288,7 +31092,6 @@ function embed_wmedia(width, height, link) {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Added for parity between the parent-level and the item/entry-level.
 	 */
 	public function get_permalink()
@@ -31488,7 +31291,6 @@ class SimplePie_Parser
 	{
 		// Use UTF-8 if we get passed US-ASCII, as every US-ASCII character is a UTF-8 character
 		if (strtoupper($encoding) === 'US-ASCII')
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			return $this->data['links'][$rel];
 		}
@@ -31522,7 +31324,6 @@ class SimplePie_Parser
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_DC_11, 'description'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['data'], SIMPLEPIE_CONSTRUCT_TEXT);
 =======
 			$declaration = $this->registry->create('XML_Declaration_Parser', array(substr($data, 5, $pos - 5)));
@@ -31536,7 +31337,6 @@ class SimplePie_Parser
 				$this->error_string = 'SimplePie bug! Please report this!';
 				return false;
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_DC_10, 'description'))
 		{
@@ -31552,7 +31352,6 @@ class SimplePie_Parser
 		}
 		else
 		{
-<<<<<<< HEAD
 			return null;
 		}
 	}
@@ -31667,18 +31466,15 @@ class SimplePie_Parser
 
 		$attribs = array();
 		foreach ($attributes as $name => $value)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		{
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_10_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_ATOM_03, 'copyright'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['data'], $this->registry->call('Misc', 'atom_03_construct_type', array($return[0]['attribs'])), $this->get_base($return[0]));
 =======
 			$this->xml_base[] = $this->registry->call('Misc', 'absolutize_url', array($attribs[SIMPLEPIE_NAMESPACE_XML]['base'], end($this->xml_base)));
 			$this->xml_base_explicit[] = true;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_RSS_20, 'copyright'))
 		{
@@ -31722,11 +31518,9 @@ class SimplePie_Parser
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_latitude()
 =======
 	public function cdata($parser, $cdata)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	{
 		if ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_W3C_BASIC_GEO, 'lat'))
 		{
@@ -31742,11 +31536,9 @@ class SimplePie_Parser
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_longitude()
 =======
 	public function tag_close($parser, $tag)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	{
 		if ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_W3C_BASIC_GEO, 'long'))
 		{
@@ -31766,15 +31558,12 @@ class SimplePie_Parser
 		}
 	}
 
-<<<<<<< HEAD
 	public function get_image_url()
 =======
 	public function split_ns($string)
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	{
 		if ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'image'))
 		{
-<<<<<<< HEAD
 			return $this->sanitize($return[0]['attribs']['']['href'], SIMPLEPIE_CONSTRUCT_IRI);
 		}
 		elseif ($return = $this->get_source_tags(SIMPLEPIE_NAMESPACE_ATOM_10, 'logo'))
@@ -31818,13 +31607,11 @@ class SimplePie_Parser
 			{
 				$cache[$string] = array('', $string);
 			}
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
 
 /**
-<<<<<<< HEAD
  * Parses the XML Declaration
  *
  * @package SimplePie
@@ -31877,13 +31664,11 @@ class SimplePie_Decode_HTML_Entities
 {
 	/**
 	 * Data to be parsed
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 	 *
 	 * @access private
 	 * @var string
 	 */
 	var $data = '';
-<<<<<<< HEAD
 
 	/**
 	 * Input data length (to avoid calling strlen() everytime this is needed)
@@ -32062,12 +31847,10 @@ class SimplePie_Decode_HTML_Entities
 			$this->consume();
 			$this->entity();
 			$this->consumed = '';
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 		return $this->data;
 	}
 
-<<<<<<< HEAD
 	public function version_value()
 	{
 		if ($this->version = $this->get_value())
@@ -32336,7 +32119,6 @@ class SimplePie_Decode_HTML_Entities
 					$this->position += strlen($entities[$match]) - strlen($consumed) - 1;
 				}
 				break;
->>>>>>> 87f619e231746151894b6f8cee0c6d1c85fc18e2
 		}
 	}
 }
