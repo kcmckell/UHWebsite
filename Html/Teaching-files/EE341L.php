@@ -240,7 +240,7 @@
 			<p>
 			<ul class="classmaterials">
 				<li>Entire Lab Manual <i>(not yet available)</i>
-				<li><a href="Teching_files/EE341L_files/LabRpt.pdf">Appendix A</a>: Lab Report Guidelines
+				<li><a href="Teaching_files/EE341L_files/LabRpt.pdf">Appendix A</a>: Lab Report Guidelines
 				<li><a href="Teaching-files/EE341L_files/AppMat341.pdf">Appendix B</a>: MATLAB Overview
 				<li>Agilent Spectrum Analyzer <a href="http://www.home.agilent.com/agilent/techSupport.jspx?pid=1000002785%3Aepsg%3Apro&pageMode=MN&cc=US&lc=eng">Manual website</a>.  Check out the "Getting Started Guide."
 				<li>HP Function Generator <a href="http://www.me.berkeley.edu/ME135/Lab/HP33120A_UsersGuide.pdf">User's Guide (pdf)</a>.
