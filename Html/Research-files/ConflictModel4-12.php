@@ -17,13 +17,9 @@
 			document.write( '<link rel="stylesheet" href="js/mylibs/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 <!-- grab jQuery from Google SDN , fallback on local, if offline -->
-
 <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAyKn8HaXYbbw-mn2gmwFcRRShAtsdeGT-UGtm-dQfxBjmpMYAexTFEqIuhdDi8zEBagigNPSTab7PQg"></script>
 <!--Call jQuery with permissions from above-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!--This method came stock with YAMB to access Google CDN's jQuery library.  The above should work just fine.-->
-    <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">google.load("jquery", "1.6.2");</script>-->
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 <!-- modernizr library for IE 6-8 -->
 <!--[if lt IE 9]><script src="js/libs/modernizr-2.0.6.min.js"></script><![endif]-->
@@ -47,9 +43,6 @@
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
 <div class="reveal">
-    <!-- Used to fade in a background when a specific slide state is reached -->
-    <!--<div class="state-background"></div>-->
-
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
@@ -192,17 +185,6 @@
         </section>
         
     </div>
-
-    <!-- The navigational controls UI -->
-    <aside class="controls">
-        <a class="left" href="#">&#x25C4;</a>
-        <a class="right" href="#">&#x25BA;</a>
-        <a class="up" href="#">&#x25B2;</a>
-        <a class="down" href="#">&#x25BC;</a>
-    </aside>
-
-    <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
-    <div class="progress"><span></span></div>
 </div>
 <script>
 // Clay's special jQuery.
