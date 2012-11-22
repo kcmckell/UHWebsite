@@ -250,7 +250,12 @@ function resizeImg(){
 
         // If true; each slide will be pushed to the browser history
         history: true,
-		center: true,
+		center: false,
+		keyboard: true,
+		overview: true,
+		loop: false,
+		autoSlide: 0,
+		
 
         // Flags if mouse wheel navigation should be enabled
         mouseWheel: true,
