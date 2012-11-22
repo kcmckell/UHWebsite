@@ -228,19 +228,10 @@ function resizeImg(){
     $('div#reveal section img').css({'max-height':.65*wh, 'max-width':.8*ww});
 }
 </script>
+<script src="js/mylibs/reveal.js/lib/js/head.min.js"></script>
 <script src="js/mylibs/reveal.js/js/reveal.js"></script>
 
-<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-<!--<script src="js/mylibs/hakimel-reveal.js/lib/highlight.js"></script>-->
-<!--<script src="js/mylibs/hakimel-reveal.js/lib/classList.js"></script>-->
-
 <script>
-    // Parse the query string into a key/value object
-    // var query = {};
-    // location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
-        // query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-    // } );
-
     Reveal.initialize({
         // Display controls in the bottom right corner
         controls: true,
@@ -271,14 +262,14 @@ function resizeImg(){
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
 		
 		// Optional libraries used to extend on reveal.js
-				// dependencies: [
-					// { src: 'js/mylibs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				dependencies: [
+					{ src: 'js/mylibs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					// { src: 'js/mylibs/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					// { src: 'js/mylibs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					// { src: 'js/mylibs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					// { src: 'js/mylibs/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'js/mylibs/reveal.js/plugin/zoom-js/zoom.js', async: false, condition: function() { return !!document.body.classList; } }
 					// { src: 'js/mylibs/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				// ]
+				]
     });
 
     // hljs.initHighlightingOnLoad();
