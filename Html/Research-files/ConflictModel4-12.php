@@ -37,7 +37,7 @@
         }
     });
   </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>      
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>      
   <!-- end JS-->
 </head>
 
@@ -196,7 +196,7 @@ $(document).ready(function(){
         return ref.indexOf('http') == -1    // Filter through all anchros with hrefs that don't contain "http".
     }).each(function(index){                // On each of these, do:
         var ref = $(this).attr('href');
-        var prefix = $('base').attr('href') + 'Research-files/ConflictModel4-12.php';
+        var prefix = $('base').attr('href') + '<?php echo basename(dirname(__FILE__)) . DIRECTORY_SEPARATOR . basename(__FILE__); ?>';
         $(this).attr('href',prefix+ref);    // Reassign the href as the above prefix (which points to the page we're on) concatenated with the original reference.
     });
 // Adjust image dimensions so that they are never off screen.
