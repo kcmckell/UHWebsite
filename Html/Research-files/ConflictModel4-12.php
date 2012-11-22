@@ -5,11 +5,17 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <?php require('../base.php'); ?>
+	<meta charset="utf-8">
+
   <title>Conflict Model @ UH Game Theory Reading Group</title>
-  <link rel="stylesheet" href="js/mylibs/hakimel-reveal.js/css/reset.css">
-  <link rel="stylesheet" href="js/mylibs/hakimel-reveal.js/css/main.css">
-  <link rel="stylesheet" href="js/mylibs/hakimel-reveal.js/lib/zenburn.css">
+  <link rel="stylesheet" href="js/mylibs/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="js/mylibs/reveal.js/css/theme/default.css">
+  <!--<link rel="stylesheet" href="js/mylibs/reveal.js/lib/zenburn.css">-->
   <!-- JS-->
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="js/mylibs/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 <!-- grab jQuery from Google SDN , fallback on local, if offline -->
 
 <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAyKn8HaXYbbw-mn2gmwFcRRShAtsdeGT-UGtm-dQfxBjmpMYAexTFEqIuhdDi8zEBagigNPSTab7PQg"></script>
@@ -40,9 +46,9 @@
 </head>
 
 <body onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100)" id="home">
-<div id="reveal">
+<div class="reveal">
     <!-- Used to fade in a background when a specific slide state is reached -->
-    <div class="state-background"></div>
+    <!--<div class="state-background"></div>-->
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
@@ -222,18 +228,18 @@ function resizeImg(){
     $('div#reveal section img').css({'max-height':.65*wh, 'max-width':.8*ww});
 }
 </script>
-<script src="js/mylibs/hakimel-reveal.js/js/reveal.js"></script>
+<script src="js/mylibs/reveal.js/js/reveal.js"></script>
 
 <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-<script src="js/mylibs/hakimel-reveal.js/lib/highlight.js"></script>
-<script src="js/mylibs/hakimel-reveal.js/lib/classList.js"></script>
+<!--<script src="js/mylibs/hakimel-reveal.js/lib/highlight.js"></script>-->
+<!--<script src="js/mylibs/hakimel-reveal.js/lib/classList.js"></script>-->
 
 <script>
     // Parse the query string into a key/value object
-    var query = {};
-    location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
-        query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-    } );
+    // var query = {};
+    // location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+        // query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+    // } );
 
     Reveal.initialize({
         // Display controls in the bottom right corner
@@ -244,6 +250,7 @@ function resizeImg(){
 
         // If true; each slide will be pushed to the browser history
         history: true,
+		center: true,
 
         // Flags if mouse wheel navigation should be enabled
         mouseWheel: true,
@@ -252,13 +259,24 @@ function resizeImg(){
         rollingLinks: true,
 
         // UI style
-        theme: query.theme || 'default', // default/neon
+        //theme: query.theme || 'default', // default/neon
+		theme: Reveal.getQueryHash().theme,
 
         // Transition style
-        transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+		
+		// Optional libraries used to extend on reveal.js
+				// dependencies: [
+					// { src: 'js/mylibs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: 'js/mylibs/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: 'js/mylibs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: 'js/mylibs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// { src: 'js/mylibs/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					// { src: 'js/mylibs/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				// ]
     });
 
-    hljs.initHighlightingOnLoad();
+    // hljs.initHighlightingOnLoad();
 </script>
     
         
