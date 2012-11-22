@@ -10,7 +10,7 @@
   <title>Conflict Model @ UH Game Theory Reading Group</title>
   <link rel="stylesheet" href="js/mylibs/reveal.js/css/reveal.css">
   <link rel="stylesheet" href="js/mylibs/reveal.js/css/theme/default.css">
-  <!--<link rel="stylesheet" href="js/mylibs/reveal.js/lib/zenburn.css">-->
+  <link rel="stylesheet" href="js/mylibs/reveal.js/lib/css/zenburn.css">
   <!-- JS-->
   <!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -209,7 +209,7 @@
 $(document).ready(function(){
 // Rewrite internal link targets.
     // Look for all anchors inside of the REVEAL div.
-    $('div#reveal a').filter(function(index){
+    $('div.reveal a').filter(function(index){
         var ref = $(this).attr('href');
         return ref.indexOf('http') == -1    // Filter through all anchros with hrefs that don't contain "http".
     }).each(function(index){                // On each of these, do:
@@ -218,14 +218,14 @@ $(document).ready(function(){
         $(this).attr('href',prefix+ref);    // Reassign the href as the above prefix (which points to the page we're on) concatenated with the original reference.
     });
 // Adjust image dimensions so that they are never off screen.
-    jQuery.event.add(window, "load", resizeImg);    // Do it on page load.
-    jQuery.event.add(window, "resize", resizeImg);  // Also do it on window resize.
+	$(window).load(resizeImg);
+	$(window).resize(resizeImg);
 });
 function resizeImg(){
     var wh = $(window).height();
     var ww = $(window).width();
-    // 65% of height and 80% of width seem to be nice.
-    $('div#reveal section img').css({'max-height':.65*wh, 'max-width':.8*ww});
+    // 55% of height and 80% of width seem to be nice.
+    $('div.reveal section img').css({'max-height':.55*wh, 'max-width':.8*ww});
 }
 </script>
 <script src="js/mylibs/reveal.js/lib/js/head.min.js"></script>
