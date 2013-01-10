@@ -34,7 +34,7 @@
           <div class="grid_12">
               <h1>Fall 2012</h1>
               <h2>
-                  Physics 162L College Physics Lab II - Instructor/Teaching Assistant
+                  Physics 152L College Physics Lab II - Instructor/Teaching Assistant
               </h2>
 							<p>
 									All class materials will be posted on UH's online learning portal, <a href="http://laulima.hawaii.edu">Laulima</a>.
