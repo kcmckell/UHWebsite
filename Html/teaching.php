@@ -29,6 +29,18 @@
       <div id="content">
           <section>
               <details>
+                <summary>Spring 2013 - EE 211 Basic Circuit Analysis I Lab</summary>
+                <div>One 3-hour section per week.  From the University of Hawaii course catalog: Linear passive circuits, time domain analysis, transient and steady-state responses, phasors, impedance and admittance; power and energy, frequency responses, resonance.</div>
+              </details>
+              <details>
+                      <summary>Spring 2013 - EE 351L Linear Feedback-Control Systems Lab</summary>
+                      <div>One 3-hour section per week.  From the University of Hawaii course catalog: Provides experience in applying theoretical tools to analyze linear systems. Extensive use is made of computer-aided analysis and design packages study system performance.</div>
+              </details>
+              <details>
+                      <summary>Fall 2012 - Phys 152L College Physics Laboratory II</summary>
+                      <div>Two 3-hour sections per week.  From the University of Hawaii course catalog: Optics, electric and magnetic fields, DC and AC circuitry.</div>
+              </details>
+              <details>
                   <summary>Spring 2010 - ECEN 5018 Game Theory and Multiagent Systems</summary>
                   <div>Substitute lecturer and TA office hours at the  University of Colorado at Boulder.</div>
               </details>
@@ -36,10 +48,6 @@
                   <summary>Fall 2009 - EE 341L Communication Systems Lab</summary>
                   <div>Two 3-hour sections per week.  From the University of Hawaii course catalog:  Experiments illustrating the basic principles of communication systems.</div>
               </details>
-							<details>
-									<summary>Fall 2012 - Phys 152L College Physics Laboratory II</summary>
-									<div>Two 3-hour sections per week.  From the University of Hawaii course catalog: Optics, electric and magnetic fields, DC and AC circuitry.</div>
-							</details>
           </section>
       </div><!-- #end content area -->
       
