@@ -48,33 +48,40 @@
 			  </h3>
                 <table class="schedule">
 			<tr>
-				<td>
-					Week
-				</td>
-				<td>
-					Lab Number
-				</td>
-				<td>
-					Location
-				</td>
+				<th>Week</th>
+				<th>Lab Number</th>
+				<th>Location</th>
+				<th>Resources</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>
-					No Lab
-				</td>
-				<td>
-					--
-				</td>
+				<td><i>No Lab</i></td>
+				<td>--</td>
+				<td>--</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>
-					Tutorial
-				</td>
-				<td>
-					Holmes 386
-				</td>
+				<td><i>Tutorial</i></td>
+				<td>Holmes 386</td>
+				<td>--</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>Lab 1: <a href="Teaching-files/EE351L_files/Matlab.pdf">MATLAB Structure and Use</a></td>
+					<td>Holmes 387</td>
+					<td>Appendix B: <a href="Teaching-files/EE351L_files/AppMat.pdf">MATLAB Overview</a></td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>Lab 2: <a href="Teaching-files/EE351L_files/StaVar.pdf">State Variable Modeling</a></td>
+					<td>Holmes 387</td>
+					<td>Appendix C: <a href="Teaching-files/EE351L_files/AppSta.pdf">Basics of State Space Modeling</a></td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>Lab 3: <a href="Teaching-files/EE351L_files/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
+					<td>Holmes 387</td>
+					<td>--</td>
 			</tr>
 			</table>
 			<h3>
@@ -95,8 +102,7 @@
 			</h3>
 			<p>
 			<ul class="classmaterials">
-				<li><a href="Teaching_files/EE341L_files/LabRpt.pdf">Appendix A</a>: Lab Report Guidelines
-				<li><a href="Teaching-files/EE341L_files/AppMat341.pdf">Appendix B</a>: MATLAB Overview
+				<li><a href="Teaching-files/EE351L_files/AppRpt.pdf">Appendix A</a>: Lab Report Guidelines
 			</ul>
 			<p>
 			Information on this page is tentative and subject to change.
