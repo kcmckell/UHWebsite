@@ -66,7 +66,8 @@
       <div id="content">
           <div class="grid_7">
               <section id="bio">
-                  <h1>Graduate Student, University of Hawai&#699i at M&#257noa</h1>
+                  <h1>Graduate Student, University of Hawaii at Manoa</h1>
+									<?php # The okina symbol is &#699 and the macron on an "a" is &#257 ?>
             <p>
                 As a PhD student I am researching game theoretic methods of controlling distributed networks.  As technology advances, networks of devices will only grow larger, and centralized control algorithms prove to be deficient in both robustness and computational tractability, we will lean towards more decentralized control.
             </p>
