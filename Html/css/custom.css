@@ -90,6 +90,14 @@ table.schedule tr:nth-child(even) {
 table.schedule tr td:nth-child(1), td:nth-child(3) {
 	text-align: center;
 }
+table.schedule tr td:nth-child(3) {
+	min-width: 6em;
+}
+
+table.schedule ul {
+	margin: 0 !important;
+	padding: 0 0 0 1em !important;
+}
 
 table.result .header {
     visibility: hidden;

@@ -67,21 +67,58 @@
 			</tr>
 			<tr>
 					<td>3</td>
-					<td>Lab 1: <a href="Teaching-files/EE351L_files/Matlab.pdf">MATLAB Structure and Use</a></td>
+					<td>Lab 1: <a href="Teaching-files/EE351L_files/Lab01/Matlab.pdf">MATLAB Structure and Use</a></td>
 					<td>Holmes 387</td>
-					<td>Appendix B: <a href="Teaching-files/EE351L_files/AppMat.pdf">MATLAB Overview</a></td>
+					<td>Appendix B: <a href="Teaching-files/EE351L_files/Lab01/AppMat.pdf">MATLAB Overview</a></td>
 			</tr>
 			<tr>
 					<td>4</td>
-					<td>Lab 2: <a href="Teaching-files/EE351L_files/StaVar.pdf">State Variable Modeling</a></td>
+					<td>Lab 2: <a href="Teaching-files/EE351L_files/Lab02/StaVar.pdf">State Variable Modeling</a></td>
 					<td>Holmes 387</td>
-					<td>Appendix C: <a href="Teaching-files/EE351L_files/AppSta.pdf">Basics of State Space Modeling</a></td>
+					<td>Appendix C: <a href="Teaching-files/EE351L_files/Lab02/AppSta.pdf">Basics of State Space Modeling</a></td>
 			</tr>
 			<tr>
 					<td>5</td>
-					<td>Lab 3: <a href="Teaching-files/EE351L_files/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
+					<td>Lab 3: <a href="Teaching-files/EE351L_files/Lab03/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
 					<td>Holmes 387</td>
 					<td>--</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td>Lab 4: <a href="Teaching-files/EE351L_files/Lab04/IntDAQ.pdf">Introduction to Data Acquisition and Real-Time Control</a></td>
+					<td>Holmes 386</td>
+					<td><ul>
+									<li><a href="Teaching-files/EE351L_files/QuanserDocs/exp00.pdf">Quanser Student Manual: Using SRV02 with QuaRC</a></li>
+									<li><a href="Teaching-files/EE351L_files/QuanserDocs/srv02.pdf">SRV02 User Manual</a></li>
+									<li><a href="Teaching-files/EE351L_files/QuanserDocs/upm.pdf">UPM User Manual</a></li>
+							</ul></td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td>Lab 5: <a href="Teaching-files/EE351L_files/Lab05/Modeling.pdf">Modeling SRV-02</a></td>
+					<td>Holmes 386</td>
+					<td><ul>
+									<li><a href="Teaching-files/EE351L_files/QuanserDocs/exp01.pdf">Quanser Student Manual: SRV02 Modeling using QuaRC</a></li>
+									<li><a href="Teaching-files/EE351L_files/QuanserDocs/srv02.pdf">SRV02 User Manual</a></li>
+							</ul></td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td>Lab 6: <a href="Teaching-files/EE351L_files/Lab06/PositionControl.pdf">Position Control</a></td>
+					<td>Holmes 386</td>
+					<td><a href="Teaching-files/EE351L_files/QuanserDocs/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></td>
+			</tr>-->
+			<tr>
+					<td>9</td>
+					<td>Lab 7: <a href="Teaching-files/EE351L_files/Lab07/exp03.pdf">Quanser Student Manual: SRV02 Speed Control using QuaRC</a></td>
+					<td>Holmes 386</td>
+					<td>--</td>
+			</tr>
+			<tr>
+					<td>10</td>
+					<td>Lab 8: <a href="Teaching-files/EE351L_files/Lab08/exp04.pdf">Quanser Student Manual: Ball and Beam Position Control using QuaRC</a></td>
+					<td>Holmes 386</td>
+					<td><a href="Teaching-files/EE351L_files/QuanserDocs/bb.pdf">SRV02 Ball and Beam User Manual</a></td>
 			</tr>
 			</table>
 			<h3>
