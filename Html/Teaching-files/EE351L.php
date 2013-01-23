@@ -46,7 +46,7 @@
 			  <h3>
 			Lab Schedule
 			  </h3>
-                <table class="schedule">
+		  <table class="schedule">
 			<tr>
 				<th>Week</th>
 				<th>Lab Number</th>
@@ -88,7 +88,7 @@
 					<td>Lab 4: <a href="Teaching-files/EE351L_files/Lab04/IntDAQ.pdf">Introduction to Data Acquisition and Real-Time Control</a></td>
 					<td>Holmes 386</td>
 					<td><ul>
-									<li><a href="Teaching-files/EE351L_files/QuanserDocs/exp00.pdf">Quanser Student Manual: Using SRV02 with QuaRC</a></li>
+									<li><a href="Teaching-files/EE351L_files/Lab04/exp00.pdf">Quanser Student Manual: Using SRV02 with QuaRC</a></li>
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/srv02.pdf">SRV02 User Manual</a></li>
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/upm.pdf">UPM User Manual</a></li>
 							</ul></td>
@@ -98,7 +98,7 @@
 					<td>Lab 5: <a href="Teaching-files/EE351L_files/Lab05/Modeling.pdf">Modeling SRV-02</a></td>
 					<td>Holmes 386</td>
 					<td><ul>
-									<li><a href="Teaching-files/EE351L_files/QuanserDocs/exp01.pdf">Quanser Student Manual: SRV02 Modeling using QuaRC</a></li>
+									<li><a href="Teaching-files/EE351L_files/Lab05/exp01.pdf">Quanser Student Manual: SRV02 Modeling using QuaRC</a></li>
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/srv02.pdf">SRV02 User Manual</a></li>
 							</ul></td>
 			</tr>
@@ -106,8 +106,8 @@
 					<td>8</td>
 					<td>Lab 6: <a href="Teaching-files/EE351L_files/Lab06/PositionControl.pdf">Position Control</a></td>
 					<td>Holmes 386</td>
-					<td><a href="Teaching-files/EE351L_files/QuanserDocs/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></td>
-			</tr>-->
+					<td><a href="Teaching-files/EE351L_files/Lab06/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></td>
+			</tr>
 			<tr>
 					<td>9</td>
 					<td>Lab 7: <a href="Teaching-files/EE351L_files/Lab07/exp03.pdf">Quanser Student Manual: SRV02 Speed Control using QuaRC</a></td>
