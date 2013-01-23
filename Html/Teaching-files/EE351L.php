@@ -54,37 +54,31 @@
 				<th>Resources</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td><?php $w = 1; echo $w; ?></td>
 				<td><i>No Lab</i></td>
 				<td>--</td>
 				<td>--</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td><?php echo ++$w; ?></td>
 				<td><i>Tutorial</i></td>
 				<td>Holmes 386</td>
 				<td>--</td>
 			</tr>
 			<tr>
-					<td>3</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 1: <a href="Teaching-files/EE351L_files/Lab01/Matlab.pdf">MATLAB Structure and Use</a></td>
 					<td>Holmes 387</td>
 					<td>Appendix B: <a href="Teaching-files/EE351L_files/Lab01/AppMat.pdf">MATLAB Overview</a></td>
 			</tr>
 			<tr>
-					<td>4</td>
-					<td>Lab 2: <a href="Teaching-files/EE351L_files/Lab02/StaVar.pdf">State Variable Modeling</a></td>
-					<td>Holmes 387</td>
-					<td>Appendix C: <a href="Teaching-files/EE351L_files/Lab02/AppSta.pdf">Basics of State Space Modeling</a></td>
-			</tr>
-			<tr>
-					<td>5</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 3: <a href="Teaching-files/EE351L_files/Lab03/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
 					<td>Holmes 387</td>
 					<td>--</td>
 			</tr>
 			<tr>
-					<td>6</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 4: <a href="Teaching-files/EE351L_files/Lab04/IntDAQ.pdf">Introduction to Data Acquisition and Real-Time Control</a></td>
 					<td>Holmes 386</td>
 					<td><ul>
@@ -94,7 +88,7 @@
 							</ul></td>
 			</tr>
 			<tr>
-					<td>7</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 5: <a href="Teaching-files/EE351L_files/Lab05/Modeling.pdf">Modeling SRV-02</a></td>
 					<td>Holmes 386</td>
 					<td><ul>
@@ -103,22 +97,28 @@
 							</ul></td>
 			</tr>
 			<tr>
-					<td>8</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 6: <a href="Teaching-files/EE351L_files/Lab06/PositionControl.pdf">Position Control</a></td>
 					<td>Holmes 386</td>
 					<td><a href="Teaching-files/EE351L_files/Lab06/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></td>
 			</tr>
 			<tr>
-					<td>9</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 7: <a href="Teaching-files/EE351L_files/Lab07/exp03.pdf">Quanser Student Manual: SRV02 Speed Control using QuaRC</a></td>
 					<td>Holmes 386</td>
 					<td>--</td>
 			</tr>
 			<tr>
-					<td>10</td>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 8: <a href="Teaching-files/EE351L_files/Lab08/exp04.pdf">Quanser Student Manual: Ball and Beam Position Control using QuaRC</a></td>
 					<td>Holmes 386</td>
 					<td><a href="Teaching-files/EE351L_files/QuanserDocs/bb.pdf">SRV02 Ball and Beam User Manual</a></td>
+			</tr>
+			<tr>
+					<td><?php echo ++$w; ?></td>
+					<td>Lab 2: <a href="Teaching-files/EE351L_files/Lab02/StaVar.pdf">State Variable Modeling</a></td>
+					<td>Holmes 387</td>
+					<td>Appendix C: <a href="Teaching-files/EE351L_files/Lab02/AppSta.pdf">Basics of State Space Modeling</a></td>
 			</tr>
 			</table>
 			<h3>
