@@ -79,7 +79,7 @@
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 3: <a href="Teaching-files/EE351L_files/Lab03/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
 					<td>Holmes 387</td>
-					<td>--</td>
+					<td>Matlab utilities: <a href="Teaching-files/EE351L_files/Lab03/Lab03Utilities.zip">ZIP</a></td>
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
