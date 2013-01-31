@@ -39,7 +39,7 @@
               </h2>
 			  <h3>Syllabus</h3>
 			  <p>
-			  The syllabus may be found <a href="Teaching-files/EE351L_files/syllabus">here</a>.
+			  The syllabus may be found <a href="Teaching-files/EE351L_files/syllabus.pdf">here</a>.
 			  </p>
 			  <h3>
                 Office Hours
