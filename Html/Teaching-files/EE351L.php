@@ -93,6 +93,12 @@
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
+					<td>Lab 4b: <a href="Teaching-files/EE351L_files/Lab04b/Lab05.pdf">Op-Amps, A/D-D/A Converters and Compensator Emulation</a></td>
+					<td>Holmes 386</td>
+					<td>--</td>
+			</tr>
+			<tr>
+					<td><?php echo ++$w; ?></td>
 					<td>Lab 5: <a href="Teaching-files/EE351L_files/Lab05/Modeling.pdf">Modeling SRV-02</a></td>
 					<td>Holmes 386</td>
 					<td><ul>
