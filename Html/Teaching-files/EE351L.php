@@ -91,6 +91,18 @@
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/upm.pdf">UPM User Manual</a></li>
 							</ul></td>
 			</tr>
+            <tr>
+				<td><?php echo ++$w; ?></td>
+				<td><i>Postponed</i></td>
+				<td>--</td>
+				<td>--</td>
+			</tr>
+            <tr>
+				<td><?php echo ++$w; ?></td>
+				<td><i>Postponed</i></td>
+				<td>--</td>
+				<td>--</td>
+			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 4b: <a href="Teaching-files/EE351L_files/Lab04b/Lab05.pdf">Op-Amps, A/D-D/A Converters and Compensator Emulation</a></td>
