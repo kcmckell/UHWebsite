@@ -116,6 +116,7 @@
 					<td><ul>
 									<li><a href="Teaching-files/EE351L_files/Lab05/exp01.pdf">Quanser Student Manual: SRV02 Modeling using QuaRC</a></li>
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/srv02.pdf">SRV02 User Manual</a></li>
+									<li>Matlab utilities: <a href="Teaching-files/EE351L_files/Lab05/Lab05Utilities.zip">ZIP</a></li>
 							</ul></td>
 			</tr>
 			<tr>
