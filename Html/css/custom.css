@@ -75,6 +75,10 @@ div#content img.classimg {
     text-align: center;
 }
 
+table {
+	margin-bottom: 1em;
+}
+
 table.schedule th, td {
 	padding: .5em .5em;
 }
