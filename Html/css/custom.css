@@ -83,7 +83,7 @@ table.schedule th, td {
 	padding: .5em .5em;
 }
 
-table.schedule tbody, tr:first-child {
+table.schedule tbody, table.schedule tr:first-child {
 	border: 1px solid #222;
 }
 
