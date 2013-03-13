@@ -123,7 +123,10 @@
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 6: <a href="Teaching-files/EE351L_files/Lab06/PositionControl.pdf">Position Control</a></td>
 					<td>Holmes 386</td>
-					<td><a href="Teaching-files/EE351L_files/Lab06/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></td>
+					<td><ul>
+						<li><a href="Teaching-files/EE351L_files/Lab06/exp02.pdf">Quanser Student Manual: SRV02 Position Control using QuaRC</a></li>
+						<li>Matlab utilities: <a href="Teaching-files/EE351L_files/Lab06/Lab06Utilities.zip">ZIP</a></li>
+					</ul></td>
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
