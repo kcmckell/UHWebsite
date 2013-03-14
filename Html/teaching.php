@@ -29,23 +29,23 @@
       <div id="content">
           <section>
               <details>
-                <summary>Spring 2013 - EE 211 Basic Circuit Analysis I Lab</summary>
+                <summary>Spring 2013 - <a href="Teaching-files/EE211.php">EE 211 Basic Circuit Analysis I Lab</a></summary>
                 <div>One 3-hour section per week.  From the University of Hawaii course catalog: Linear passive circuits, time domain analysis, transient and steady-state responses, phasors, impedance and admittance; power and energy, frequency responses, resonance.</div>
               </details>
               <details>
-                      <summary>Spring 2013 - EE 351L Linear Feedback-Control Systems Lab</summary>
+                      <summary>Spring 2013 - <a href="Teaching-files/EE351L.php">EE 351L Linear Feedback-Control Systems Lab</a></summary>
                       <div>One 3-hour section per week.  From the University of Hawaii course catalog: Provides experience in applying theoretical tools to analyze linear systems. Extensive use is made of computer-aided analysis and design packages study system performance.</div>
               </details>
               <details>
-                      <summary>Fall 2012 - Phys 152L College Physics Laboratory II</summary>
+                      <summary>Fall 2012 - <a href="Teaching-files/Phys152L.php">Phys 152L College Physics Laboratory II</a></summary>
                       <div>Two 3-hour sections per week.  From the University of Hawaii course catalog: Optics, electric and magnetic fields, DC and AC circuitry.</div>
               </details>
               <details>
-                  <summary>Spring 2010 - ECEN 5018 Game Theory and Multiagent Systems</summary>
+                  <summary>Spring 2010 - <a href="Teaching-files/EVEN5018.php">ECEN 5018 Game Theory and Multiagent Systems</a></summary>
                   <div>Substitute lecturer and TA office hours at the  University of Colorado at Boulder.</div>
               </details>
               <details>
-                  <summary>Fall 2009 - EE 341L Communication Systems Lab</summary>
+                  <summary>Fall 2009 - <a href="Teaching-files/EE341L.php">EE 341L Communication Systems Lab</a></summary>
                   <div>Two 3-hour sections per week.  From the University of Hawaii course catalog:  Experiments illustrating the basic principles of communication systems.</div>
               </details>
           </section>
