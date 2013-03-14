@@ -132,13 +132,17 @@
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 7: <a href="Teaching-files/EE351L_files/Lab07/exp03.pdf">Quanser Student Manual: SRV02 Speed Control using QuaRC</a></td>
 					<td>Holmes 386</td>
-					<td>--</td>
+                    <td>MATLAB Utilities: <a href="Teaching-files/EE351L_files/Lab07/Lab07Utilities.zip">ZIP</a></td>
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 8: <a href="Teaching-files/EE351L_files/Lab08/exp04.pdf">Quanser Student Manual: Ball and Beam Position Control using QuaRC</a></td>
 					<td>Holmes 386</td>
-					<td><a href="Teaching-files/EE351L_files/QuanserDocs/bb.pdf">SRV02 Ball and Beam User Manual</a></td>
+                    <td><ul>
+                        <li><a href="Teaching-files/EE351L_files/QuanserDocs/bb.pdf">SRV02 Ball and Beam User Manual</a></li>
+                        <li>MATLAB Utilities: <a href="Teaching-files/EE351L_files/Lab08/Lab08Utilities.zip">ZIP</a></li>
+                      </ul>
+                    </td>
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
