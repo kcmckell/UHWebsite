@@ -34,12 +34,6 @@
           <ul>
               <li><a href="Research-files/ConflictModel4-12.php"><emph>Modeling Ethnic Conflict with Altruism</emph></a>, April 24, 2012. UH Manoa Game Theory Reading Group.</li>
           </ul>
-          <h1>
-              Published Works
-          </h1>
-          <p>
-              Coming soon.
-          </p>
           
       </div><!-- #end content area -->
             
