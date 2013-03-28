@@ -39,6 +39,7 @@
         </h1>
         <ul>
           <li><a href="Research-files/TwoPlayerConflictModel.pdf">Modeling Ethnic Conflict with Altruism</a>, March 2012.</li>
+		  <li><a href="Research-files/RoleOfInformation.pdf">The Role of Information in Distributed Control</a>, November 2010.</li>
         </ul>
           
       </div><!-- #end content area -->
