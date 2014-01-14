@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- EE 351L Linear Feedback-Control Systems Laboratory: EE351L.php -->
-<!--Copyright 2013 K. Clay McKell
+<!--Copyright 2014 K. Clay McKell
 <!--mckell@hawaii.edu-->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
