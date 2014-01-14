@@ -91,18 +91,6 @@
 									<li><a href="Teaching-files/EE351L_files/QuanserDocs/upm.pdf">UPM User Manual</a></li>
 							</ul></td>
 			</tr>
-            <tr>
-				<td><?php echo ++$w; ?></td>
-				<td><i>Postponed</i></td>
-				<td>--</td>
-				<td>--</td>
-			</tr>
-            <tr>
-				<td><?php echo ++$w; ?></td>
-				<td><i>Postponed</i></td>
-				<td>--</td>
-				<td>--</td>
-			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 4b: <a href="Teaching-files/EE351L_files/Lab04b/Lab05.pdf">Op-Amps, A/D-D/A Converters and Compensator Emulation</a></td>
@@ -135,7 +123,7 @@
                     <td>MATLAB Utilities: <a href="Teaching-files/EE351L_files/Lab07/Lab07Utilities.zip">ZIP</a></td>
 			</tr>
 			<tr>
-					<td><?php echo ++$w; ?></td>
+					<td><?php echo ++$w . '-' . ++$w; ?></td>
 					<td>Lab 8: <a href="Teaching-files/EE351L_files/Lab08/exp04.pdf">Quanser Student Manual: Ball and Beam Position Control using QuaRC</a></td>
 					<td>Holmes 386</td>
                     <td><ul>
