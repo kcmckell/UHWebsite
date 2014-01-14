@@ -45,7 +45,7 @@
                 Office Hours
               </h3>
                 <p>
-    			Tue 12:00 - 1:00 in Holmes 386, or by appointment in Holmes 390.
+    			Tue 1:30 - 2:30 in Holmes 386, or by appointment in Holmes 390.
                 </p>
 			  <h3>
 			Lab Schedule
