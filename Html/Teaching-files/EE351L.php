@@ -33,7 +33,7 @@
       <div id="content">
           <div class="grid_12">
               <img class="classimg" id="ballbeam" src="Teaching-files/EE351L_files/BallBeam.jpg" alt="Image derived from Quanser Rotary Experiment #04 manual"/>
-              <h1>Spring 2013</h1>
+              <h1>Spring 2014</h1>
               <h2>
                   EE 351L Linear Feedback-Control Systems Lab - Instructor/Teaching Assistant
               </h2>
