@@ -72,13 +72,13 @@
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 1: <a href="Teaching-files/EE351L_files/Lab01/Matlab.pdf">MATLAB Structure and Use</a></td>
-					<td>Holmes 387</td>
+					<td>Holmes 386</td>
 					<td>Appendix B: <a href="Teaching-files/EE351L_files/Lab01/AppMat.pdf">MATLAB Overview</a></td>
 			</tr>
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 3: <a href="Teaching-files/EE351L_files/Lab03/ModSim.pdf">Modeling and Digital Simulation Case Studies</a></td>
-					<td>Holmes 387</td>
+					<td>Holmes 386</td>
 					<td>Matlab utilities: <a href="Teaching-files/EE351L_files/Lab03/Lab03Utilities.zip">ZIP</a></td>
 			</tr>
 			<tr>
