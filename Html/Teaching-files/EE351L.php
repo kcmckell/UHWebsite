@@ -116,6 +116,7 @@
 						<li>Matlab utilities: <a href="Teaching-files/EE351L_files/Lab06/Lab06Utilities.zip">ZIP</a></li>
 					</ul></td>
 			</tr>
+			<?php ++$w; ?>
 			<tr>
 					<td><?php echo ++$w; ?></td>
 					<td>Lab 7: <a href="Teaching-files/EE351L_files/Lab07/exp03.pdf">Quanser Student Manual: SRV02 Speed Control using QuaRC</a></td>
